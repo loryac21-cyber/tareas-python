@@ -1,0 +1,17 @@
+# Pesos pesados del modelo (>100 MB rompen el push a GitHub)
+modelo/*.safetensors
+modelo/*.bin
+modelo/*.pt
+modelo/checkpoint-*/
+*.zip
+
+# Entornos y cachés
+.venv/
+venv/
+__pycache__/
+.ipynb_checkpoints/
+.streamlit/secrets.toml
+.env
+
+# Respaldo crudo voluminoso (se conserva solo el CSV crudo)
+datos/raw/*.xml

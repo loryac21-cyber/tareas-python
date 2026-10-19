@@ -1,0 +1,22 @@
+# --- Dashboard (app.py) ---  versiones probadas con Python 3.11–3.13
+streamlit==1.66.0
+pandas==3.0.5
+numpy==2.5.3
+plotly==7.1.0
+scikit-learn==1.9.1
+joblib==1.6.0
+
+# --- Notebook 1: recolección ---
+requests==2.34.2
+beautifulsoup4==4.15.0
+lxml==6.1.3
+# kaleido (opcional) para la copia PNG de los gráficos: kaleido==0.2.1 solo funciona con plotly<6
+
+# --- Notebook 2: clasificación (también lo usa app.py si existe modelo/model.safetensors) ---
+torch==2.9.0
+transformers==4.57.1
+accelerate==1.11.0
+sentencepiece==0.2.1
+seaborn==0.13.2
+matplotlib==3.11.2
+ipykernel
