@@ -1,0 +1,395 @@
+titular,categoria,etiqueta_llm,split
+Carlos Infante: “La matanza de Uchuraccay es un golpe terrible a la memoria de los periodistas”,politica,ciencia_tecnologia,train
+"Jorge Nieto a Álvaro Vargas Llosa: ""Su rol de comentarista político ya acabó, debería comportarse como un embajador""",politica,deportes,train
+Comisión de Ética recomienda suspender por 120 días al diputado Julián Pérez Mallqui,politica,deportes,test
+Keiko Fujimori coordinó con Delcy Rodríguez la expulsión de venezolanos indocumentados,politica,deportes,train
+Detención de seis policías por presunto robo reaviva debate sobre reforma de la PNP,politica,ciencia_tecnologia,train
+Seis regiones llegaron al 100% del conteo oficial de la ONPE,politica,ciencia_tecnologia,train
+Comisión de Constitución del Senado continuará debate de pedido de facultades este lunes 19,politica,politica,val
+Jorge Nieto plantea aprobar las 20 facultades respaldadas por Diputados y tramitar las adicionales como proyectos de ley,politica,ciencia_tecnologia,test
+Fernando Cerimedo tenía operadores en las elecciones del Perú,politica,ciencia_tecnologia,train
+Número de regiones que irán a reelección aumentó por dispersión de voto,politica,ciencia_tecnologia,train
+León Trahtemberg: “No hay forma de escribir un libro si no hay ideología”,politica,politica,train
+Expertos señalan que pedido de facultades en relación a la DINI tiene tinte político,politica,politica,train
+Del TikTok al autoritarismo: Keiko Fujimori cambia de estrategia discursiva a poco de cumplir 100 días de gobierno,politica,ciencia_tecnologia,train
+Comisión de Constitución aún no convoca a sesión para debatir pedido de facultades,politica,politica,test
+Debate de pedido de facultades sigue entrampado en el Senado por falta de consenso entre oficialismo y oposición,politica,deportes,train
+"Rosa Bartra asegura que la bicameralidad está mal estructurada: ""No es viable, va a terminar en una implosión""",politica,deportes,train
+Fiscalía pide crédito suplementario al Congreso para pagar sueldos de fiscales en noviembre y diciembre,politica,deportes,train
+Solicitan la destitución de Roberto Burneo por avalar candidatura de Rafael López Aliaga,politica,deportes,val
+Keiko Fujimori sobre limpieza del río Piura ante el riesgo de un meganiño: “Más que eso no podemos hacer”,politica,ciencia_tecnologia,train
+Alejandro Aguinaga viajó a Argentina el martes 13 de octubre y todavía no regresa pese a debate por facultades,politica,ciencia_tecnologia,val
+''Evacúen sus casas desde ya'': Keiko Fujimori pide a población que vive cerca a ríos que ''alisten su mochila'' ante El Niño,politica,politica,val
+Fuerza Popular desconoce votación que pedía debatir los límites del Senado sobre el pedido de facultades,politica,politica,train
+"Jaime Bayly: “Los políticos peruanos, sean de izquierda o de derecha, siempre encuentran la manera de decepcionarte”",politica,deportes,train
+"Precio del dólar hoy en Perú, domingo 18 de octubre: consulta el tipo de cambio para compra y venta",economia,deportes,test
+"Petroperú mejora sus resultados financieros, pero sindicato cuestiona intervención de ProInversión",economia,deportes,test
+"Gobierno destina S/12,4 millones a Defensa para pagar impuestos de sus contrataciones",economia,politica,test
+Billeteras digitales en Perú ganan terreno: concentrarían 50% del valor de los pagos en comercios al 2030,economia,ciencia_tecnologia,train
+"El Niño 2027: restaurantes enfrentarían mayores costos por alza del pescado, limón y papa",economia,deportes,train
+"Precio del dólar hoy en Perú, sábado 17 de octubre: consulta el tipo de cambio para compra y venta",economia,deportes,val
+UTC jugará la Liga 2 en 2027: es el primer descendido de la Liga 1,deportes,ciencia_tecnologia,test
+Alianza Lima vence 3-2 a Rebaza Acosta en un infartante debut en la Liga Peruana de Vóley 2026-27,deportes,politica,train
+Tabla de posiciones Torneo Clausura y Acumulado de la Liga 1 2026: resultados de los partidos de la fecha 12,deportes,ciencia_tecnologia,train
+"PSG - Barcelona: fecha, hora y canal de TV para ver el partido por la fecha 3 de la Champions League",deportes,deportes,train
+¡Trujillo se pintó de crema! Universitario venció 4-1 a Alianza Atlético y revive sus esperanzas para luchar por el Torneo Clausura 2026,deportes,ciencia_tecnologia,test
+"Real Madrid - RB Leipzig: fecha, hora y canal de TV para ver el partido por la fecha 3 de la Champions League",deportes,deportes,train
+Sporting Cristal se mantiene como líder del Torneo Clausura: venció 4-2 a Comerciantes Unidos en el estadio Alberto Gallardo por la Liga 1 2026,deportes,ciencia_tecnologia,test
+"Pablo Guede expone el preocupante estado de Esteban Pávez tras salir lesionado ante Atlético Grau: ""Creo que se rompió""",deportes,deportes,test
+"Pablo Guede ningunea a Franco Velazco, administrador de Universitario, tras polémicas declaraciones en su contra: ""No sé quién es, ¿habla de fútbol?""",deportes,deportes,test
+"Luis Carlos Arias Schreiber: “Si Alejandro Olmedo hubiera pertenecido a una élite limeña o arequipeña, sería extraordinario lo que ha logrado”",deportes,politica,train
+"Partidos de hoy, domingo 18 de octubre: horarios y canales para ver fútbol EN VIVO",deportes,deportes,test
+Alianza Lima se hizo fuerte en Matute: venció 3-1 a Atlético Grau y se mantiene en la lucha por el Torneo Clausura de la Liga 1 2026,deportes,ciencia_tecnologia,test
+¡Rugieron Las Pumas! Universitario venció 3-0 a Deportivo Soan y empieza con pie derecho la Liga Peruana de Vóley 2026-27,deportes,ciencia_tecnologia,train
+"Partidos de hoy, sábado 17 de octubre: horarios y canales para ver fútbol EN VIVO",deportes,deportes,train
+"Una resistencia olvidada frenó la expansión de la primera ""sociedad de clases"" en la España de la Edad de Bronce",ciencia_tecnologia,deportes,train
+Los lobos gigantes modificados genéticamente pasaron un chequeo médico por sus 2 años: “Ahora podemos ver que son de tamaño natural. Tuvimos éxito”,ciencia_tecnologia,ciencia_tecnologia,val
+"En 1986, la explosión del reactor de Chernóbil obligó a que los perros fueran abandonados por sus dueños; décadas después, estos formaron grupos genéticos distintos",ciencia_tecnologia,deportes,val
+Investigadores sudafricanos pintan franjas rojas en las palas de las turbinas eólicas: los resultados sorprenden a los científicos,ciencia_tecnologia,deportes,train
+En 1993 se liberaron 300 bisontes en una pradera de Oklahoma y ahora deambulan más de 2.000 ayudando a proteger todo un ecosistema,ciencia_tecnologia,ciencia_tecnologia,train
+Desconcertación entre los científicos: la Luna podría haberse formado en tan solo 5 horas,ciencia_tecnologia,deportes,train
+Científicos demuestran que un breve contacto físico entre corales sanos y blanqueados puede ayudarles a restaurar el color,ciencia_tecnologia,deportes,train
+El Reino Unido pondrá en marcha la primera garra robótica del mundo para recolectar la basura espacial que rodea a la Tierra,ciencia_tecnologia,ciencia_tecnologia,train
+Astrónomos descubren la primera estrella verde visible en ese color para el ojo humano a 65 años luz de la Tierra,ciencia_tecnologia,deportes,train
+"Cuando muere un elefante, su cadáver transforma la naturaleza de manera sorprendente, incluso después de varios años",ciencia_tecnologia,deportes,train
+"La Antártida se encuentra cubierta de hielo de hasta 4 km de espesor, pero no se compara en nada con lo que orbita cerca de Júpiter",ciencia_tecnologia,ciencia_tecnologia,train
+"Denuncian plagio en tesis de diputado Arturo Eusebio, del partido Obras",politica,ciencia_tecnologia,val
+El voto 31: Este es el escenario que muestra el peso de Obras para el fujimorismo en la delegación de facultades,politica,ciencia_tecnologia,test
+Ética debate este lunes informe que recomienda suspender por 120 días a Pérez Mallqui por agredir a su expareja,politica,deportes,train
+"El Senado también se la juega, una crónica de Fernando Vivas sobre la pugna por las facultades legislativas",politica,politica,train
+Campañas del “No a la Revocatoria” y Reelección Municipal: Caso contra Susana Villarán se encamina a los diez años sin sentencia,politica,ciencia_tecnologia,train
+Comisión del Senado reanuda este lunes debate sobre facultades legislativas al Gobierno,politica,deportes,train
+Viceministra de Minas: “Estamos estableciendo un plazo de 18 meses y no abrimos la puerta a una nueva ampliación”,politica,ciencia_tecnologia,train
+Proyecto de Ley MAPE del gobierno propone que plantas de beneficio sean fiscalizadas  ¿que otras medidas incluye?,politica,deportes,train
+César Acuña anuncia su retiro de la política: ¿qué factores impulsarían su decisión?,politica,deportes,train
+De Gregorio Santos a “El lunarejo”: más de 8 mil condenados solicitaron el indulto presidencial en época electoral,politica,deportes,test
+"Alfonso, ¿ahora qué?, una crónica de Fernando Vivas sobre López-Chau, líder de Ahora Nación",politica,ciencia_tecnologia,train
+Renovación Popular se declara en reorganización partidaria: ¿A qué se debe y cuáles son los alcances de la decisión?,politica,politica,val
+Alejandro Aguinaga sobre su ausencia en debate de facultades por viajar a congreso médico: No puedo señalar cuál era más importante,politica,politica,test
+Álvaro Vargas Llosa: “EE.UU. nos está ayudando a recuperar la soberanía que las mafias ponen en peligro”,politica,politica,train
+Jorge Nieto dice que se reunió con el Ejecutivo: “Aprobemos los 20 puntos y hágannos llegar como proyecto de ley los otros 7”,politica,politica,test
+Fiscalía pide cadena perpetua contra hermanos Quispe Palomino por atentados terroristas en el Vraem,politica,deportes,train
+Facultades legislativas: Senado sigue sin alcanzar consenso y debate continúa entrampado,politica,politica,train
+Tomás Gálvez dice que Ministerio Público requiere un crédito suplementario: “No tendríamos dinero para pagar sueldos de fiscales”,politica,politica,test
+Ministro Marco Vinelli sobre facultades: “Se está dilatando mucho tiempo y la población necesita respuestas rápidas y urgentes”,politica,deportes,train
+Keiko Fujimori pide unidad ante fenómeno El Niño: “Esperemos que este mensaje llegue también al Congreso de la República”,politica,politica,train
+Renovación Popular se declara en reorganización partidaria tras Elecciones Regionales y Municipales 2026,politica,deportes,train
+Ausencia de senadores de izquierda y aliados frustra debate y votación de facultades: los entretelones de la sesión,politica,politica,train
+"“Grupos hostiles”, el factor DINI y otras acciones: estos son los puntos que incorpora el predictamen del Senado",politica,politica,train
+Comisión de Constitución: ¿Cómo avanza el pedido de facultades en el Senado?,politica,deportes,train
+Comisión del Senado suspende sesión “hasta nuevo aviso” tras ausencia de legisladores de izquierda,politica,deportes,val
+Flavio Figallo del Partido del Buen Gobierno: “No queremos obstruir ni evitar que se gobierne. Somos un partido de centro apoya lo que tiene que ser apoyado”,politica,deportes,train
+"Carlos Mesía: “No voy a citar a la comisión para volver a caer en este caos, voy a citar en tanto haya consenso”",politica,politica,train
+María Corina Machado felicita a Álvaro Vargas Llosa por su designación como embajador en Estados Unidos,politica,ciencia_tecnologia,train
+Ministro Ernesto Álvarez acusa a las bancadas de izquierda de obstruir al Gobierno,politica,deportes,train
+Senadores de cuatro bancadas esperan nueva citación de la Comisión de Constitución que garantice “debate democrático”,politica,ciencia_tecnologia,train
+Senador Alfonso López Chau tras suspensión de sesión en Comisión de Constitución: “Salidas hay cuando se quiere”,politica,deportes,test
+Keiko Fujimori sobre incidentes en Comisión de Constitución: “Voy a esperar con prudencia para ver qué define el Senado”,politica,ciencia_tecnologia,train
+Municipalidad de Lima y JNE discrepan sobre los alcances del fallo por las demoras electorales,politica,deportes,train
+Perú es elegido para liderar foro internacional sobre cooperación para el desarrollo,politica,ciencia_tecnologia,train
+Keiko Fujimori anuncia coordinación con Delcy Rodríguez para expulsar a venezolanos indocumentados del Perú,politica,ciencia_tecnologia,train
+Daniel Barragán cuestiona conducción de Carlos Mesía en Comisión de Constitución del Senado: “El Congreso está para debatir”,politica,politica,train
+Lourdes Alcorta tras suspensión de Comisión de Constitución: “Están buscando es cualquier situación para encrispar el ambiente”,politica,politica,train
+"Diputados proponen crear, en promedio, una comisión investigadora por semana desde el inicio de sus funciones: ¿cuánto le costarían al Congreso?",politica,deportes,test
+Álvaro Vargas Llosa es nombrado embajador del Perú en EE.UU.: ¿Cuáles serán las prioridades de su agenda?,politica,ciencia_tecnologia,train
+"César Acuña anuncia su retiro: “Chau política, dedicado a tiempo completo a formar a mis jóvenes”",politica,ciencia_tecnologia,train
+Perú asume la presidencia de la RANDOT de la OEA para el periodo 2026–2028,politica,ciencia_tecnologia,train
+PerúCheck: ¿La Constitución establece un marco de acción específico sobre organizaciones terroristas?,politica,politica,train
+Juan Sheput: “El Congreso ha apostado por la coyuntura y no por las reformas de fondo” | Entrevista,politica,politica,test
+Rodrigo Paz visitará el Perú en noviembre para concretar acuerdos comerciales y de integración bilateral,politica,ciencia_tecnologia,train
+Jaime Delgado: “Pienso que deberíamos mantenernos en los 20 puntos aprobados por Diputados”,politica,politica,val
+"Ley MAPE: Minem prevé presentar propuesta este jueves, ¿qué plantea y qué advierten los expertos sobre el Reinfo?",politica,deportes,train
+César Astudillo detalla medidas en seguridad que fueron excluidas de predictamen que será visto en el Senado,politica,ciencia_tecnologia,train
+Francis Allison afirma que está “peleando actas” y pide al JNE y los JEE un trabajo “pulcro”,politica,ciencia_tecnologia,train
+Ernesto Álvarez sobre lucha contra la extorsión: “Este delito no se combate con presencia policial en la calle ni tanquetas del Ejército sino con inteligencia”,politica,deportes,test
+Keiko Fujimori ratifica su respaldo al ministro César Astudillo y al jefe de la PNP Fredy López,politica,ciencia_tecnologia,train
+"Ejecutivo, Poder Judicial y Fiscalía implementan Subsistema Especializado contra la Extorsión y sus Delitos Conexos en La Libertad",politica,deportes,train
+"Senadora Milagros Jáuregui a favor de analizar una segunda vuelta para la Alcaldía de Lima, pero no para el actual proceso",politica,deportes,val
+¿Quiénes son los congresistas que viajaron a China durante la semana de representación y cuál es su agenda?,politica,politica,train
+"Juan Sheput sobre eventual suspensión del viaje del papa León XIV al Perú: “Es posible, pero todavía no está la palabra definitiva, que corresponde al Vaticano”",politica,politica,train
+Reinfo: Decano del Colegio de Abogados de Loreto afirma que Ejecutivo y Congreso no responden demanda contra ampliación,politica,ciencia_tecnologia,train
+Delegación de facultades: Diputados y senadores de tres bancadas esperan que se respete texto original,politica,ciencia_tecnologia,train
+Comisión de Constitución del Senado debatirá y votará predictamen sobre delegación de facultades este jueves,politica,politica,val
+Las nuevas bancadas ‘cascarón’: Votaciones en temas oficialistas muestran fisuras en grupos del Congreso,politica,politica,train
+Los distritos claves para López Aliaga y Allison: el mapa de Lima entre la dispersión del voto y el arrastre inverso,politica,ciencia_tecnologia,test
+"Keiko Fujimori sobre Álvaro Vargas Llosa: “Confío en que su trayectoria, experiencia y compromiso contribuirán a fortalecer relaciones bilaterales y lazos de amistad”",politica,ciencia_tecnologia,train
+¿Lima puede elegir a su alcalde en segunda vuelta? Esto tendría que cambiar para aplicar en el futuro propuesta de Francis Allison,politica,deportes,test
+"Juntos por el Perú impulsa propuestas que figuran en acuerdo firmado con el Fenatep, grupo vinculado al Movadef",politica,ciencia_tecnologia,train
+Keiko Fujimori sobre facultades: “Esperemos que el debate se retome con la prioridad y la urgencia que el país necesita”,politica,ciencia_tecnologia,train
+"Papa León XIV: Keiko Fujimori: “Esperamos que su visita se pueda dar, pero entenderemos también el caso contrario”",politica,deportes,train
+Álvaro Vargas Llosa es  nombrado embajador del Perú en Estados Unidos,politica,ciencia_tecnologia,train
+Senador Daniel Barragán afirma que Obras está dispuesto a apoyar incluir más temas en facultades,politica,ciencia_tecnologia,test
+Miguel Torres: “Nos unimos en oración por la pronta recuperación del papa León XIV”,politica,politica,train
+Más de mil actas observadas siguen en trámite y extienden definición por la Alcaldía de Lima,politica,deportes,train
+Graciela Chipana trató de evitar juicio por discriminación a menor: ¿Por qué el Poder Judicial rechazó recurso de diputada de JP?,politica,ciencia_tecnologia,train
+Congreso: ¿Hay consenso en el Senado para incorporar cambios al pedido de facultades legislativas?,politica,economia,val
+"Arturo Alegría: “De partido de Buen Gobierno no tiene nada, es un anexo de Juntos por el Perú”",politica,politica,train
+"Keiko Fujimori tras diagnóstico del papa León XIV: “Hoy, más que nunca, unamos nuestra fe en una gran cadena de oración”",politica,ciencia_tecnologia,train
+Unión Europea y Minem acuerdan creación de mesa técnica para destrabar permisos e infraestructura,politica,ciencia_tecnologia,train
+YouTube planea incorporar audiolibros en 2027 y ya estaría en conversación con editoriales,ciencia_tecnologia,deportes,train
+Fenómeno El Niño Costero: ¿cuáles pueden ser las consecuencias para el Perú?,ciencia_tecnologia,ciencia_tecnologia,train
+Videojuego peruano “Dark Rally” abre concurso para convertirte en uno de sus personajes,ciencia_tecnologia,deportes,train
+Tesla presenta un Roadster capaz de ‘volar’ y en las redes sociales lo reciben con memes,ciencia_tecnologia,ciencia_tecnologia,test
+Alemania investiga una presunta agresión sexual con un robot contra joven de 16 años,ciencia_tecnologia,deportes,train
+Intel en Latinoamérica: “Los gobiernos deben crear condiciones o reglas para un uso saludable de la IA”,ciencia_tecnologia,ciencia_tecnologia,train
+Padre de la IA y otros 224 científicos piden “cambios inmediatos” para su desarrollo y despliegue,ciencia_tecnologia,ciencia_tecnologia,train
+Estafas digitales contra adultos mayores: seis recomendaciones para proteger a padres y abuelos,ciencia_tecnologia,deportes,train
+"La IA podría causar “incidentes graves” en uno o dos años, advierte presidente de Google DeepMind",ciencia_tecnologia,deportes,train
+"“Grand Theft Auto VI” vuelve con tráiler lleno de acción, robos y sexo",ciencia_tecnologia,ciencia_tecnologia,test
+"Cambio climático: cómo puede la IA mejorar la previsión meteorológica, más allá de su huella de carbono",ciencia_tecnologia,deportes,val
+Descubren en los Andes peruanos una nueva flor y la bautizan en honor a Lionel Messi,ciencia_tecnologia,deportes,train
+"iPhone Duo se agota a minutos de abierta su preventa, ahora disponibles a partir del 22 de enero",ciencia_tecnologia,deportes,val
+Millones de personas podrían tener que abandonar sus hogares por el cambio climático en el sudeste asiático,ciencia_tecnologia,ciencia_tecnologia,train
+"“Grand Theft Auto VI” lanza un tráiler con una escena de sexo, la ocasión donde esto los metió en problemas",ciencia_tecnologia,deportes,train
+Lo hicieron otra vez: agentes de IA intentaron extraer datos de una aplicación de Alibaba,ciencia_tecnologia,deportes,train
+La alerta de seísmos de Google está disponible ya en 200 países de todo el mundo,ciencia_tecnologia,ciencia_tecnologia,test
+"El consumo elevado de alimentos ultraprocesados está relacionado con daños cerebrales, señala estudio",ciencia_tecnologia,politica,train
+"Efecto cine, batería de emergencia o verificación: cinco novedades del iPhone 18",ciencia_tecnologia,deportes,test
+La IA ayuda a los historiadores a descifrar mensajes napoleónicos y papiros carbonizados,ciencia_tecnologia,deportes,train
+La ruta de Tuta: revelan el viaje completo de una ballena jorobada desde Perú hasta la Antártida,ciencia_tecnologia,deportes,train
+Malaria y dengue: el cambio climático influye en la expansión de las dos enfermedades transmitidas por mosquitos más comunes en el planeta,ciencia_tecnologia,deportes,test
+"Ventas de ‘smartphones’ registran una caída del 20%, motivado por la crisis de memoria RAM",ciencia_tecnologia,deportes,train
+"Netflix despedirá a unos 1.000 empleados, el 6 % de su plantilla, según medios",ciencia_tecnologia,deportes,train
+Solo 45 investigadores peruanos figuran entre los científicos más citados del mundo: la cifra cayó en 2026,ciencia_tecnologia,deportes,train
+El Niño alcanza niveles récord en el Pacífico antes de llegar a su punto máximo: ¿qué está ocurriendo?,ciencia_tecnologia,deportes,train
+León XIV fue operado de cáncer de pulmón: qué implica la extirpación de un lóbulo y cómo es la recuperación,ciencia_tecnologia,ciencia_tecnologia,val
+La IA física y la ciberseguridad dominan la mayor feria de tecnología digital de Japón | FOTOS,ciencia_tecnologia,ciencia_tecnologia,train
+El Niño en Perú: no está operativo ninguno de los 18 sistemas de alertas tempranas previstos desde 2017,ciencia_tecnologia,politica,train
+Meta afirma que unos ‘hackers’ accedieron a su GitHub y expusieron datos personales de 1.500 personas,ciencia_tecnologia,ciencia_tecnologia,train
+"Google lanza Gemini 4 Argon, su nuevo modelo de frontera que supera a GPT-6 Astra y Claude Opus 5.5",ciencia_tecnologia,ciencia_tecnologia,test
+"Epic, creadora de Fortnite, da un “giro” hacia el uso de la IA",ciencia_tecnologia,deportes,train
+HomeView: Apple entra de lleno en el hogar con su primera pantalla inteligente con IA,ciencia_tecnologia,ciencia_tecnologia,train
+"Maia 300, el nuevo chip de Microsoft para escalar su infraestructura de IA que llegará en 2027",ciencia_tecnologia,ciencia_tecnologia,train
+“Valor Mortis” apuesta por una nueva perspectiva para el género de ‘soulslike’: ¿funciona? | Reseña,ciencia_tecnologia,deportes,train
+Meta presenta nuevo modelo de IA y afirma que está al nivel de OpenAI y Anthropic,ciencia_tecnologia,ciencia_tecnologia,train
+"Google lanza Fitbit Edge, una pulsera avanzada de salud con batería para una semana e IA",ciencia_tecnologia,deportes,train
+La nostalgia vuelve a encenderse: Atari relanza su computadora de 1983 con 25 juegos clásicos,ciencia_tecnologia,deportes,val
+Bill Gates: el verdadero peligro de la IA es “que personas malintencionadas la utilicen”,ciencia_tecnologia,politica,train
+Menos comida y más cara: El Niño amenaza los alimentos y la pesca en Latinoamérica,ciencia_tecnologia,deportes,train
+"Demetrio Pacheco, defensor ambiental en Perú: “El Estado podría haber evitado el asesinato de mi hijo” | ENTREVISTA",ciencia_tecnologia,politica,val
+Perú: más de 200 operativos en el año en Madre de Dios no logran frenar el avance de la minería ilegal en Tambopata,ciencia_tecnologia,deportes,val
+"Qué es la ""depresión sonriente"" y cómo puedes identificarla",ciencia_tecnologia,deportes,train
+Científicos descubren cómo predecir cuándo una inteligencia artificial dará respuestas peligrosas,ciencia_tecnologia,deportes,train
+Más allá de la piedra: descubren cómo los neandertales usarin la madera para fabricar armas y herramientas,ciencia_tecnologia,deportes,train
+"¡Ya güey!: Edgar, niño cuya caída se convirtió en fenómeno viral hace 20 años, se casa",ciencia_tecnologia,deportes,train
+Microsoft y Nvidia impulsan una nueva categoría de computadoras para la IA con el superchip RTX Spark,ciencia_tecnologia,ciencia_tecnologia,val
+¿Dejas siempre encendido el Bluetooth de tu celular? Por qué expertos recomiendan apagarlo,ciencia_tecnologia,deportes,test
+"Reconocimiento facial, análisis de redes y rastreo digital: así vigilan hoy una protesta de ‘Gen Z’",ciencia_tecnologia,deportes,val
+"EVA, un proyecto que potencia la detección temprana del cáncer de mama en el Perú usando la IA",ciencia_tecnologia,ciencia_tecnologia,test
+Ben Affleck se revela como un entusiasta y experto en inteligencia artificial,ciencia_tecnologia,deportes,train
+Nódulos pulmonares: ¿Qué son y qué hacer si le encuentran uno?,ciencia_tecnologia,politica,test
+"Francis Halzen, el nuevo premio nobel de Física, cuenta que usa la IA desde los 90: “Estoy muy orgulloso”",ciencia_tecnologia,deportes,test
+¿Qué secreto de longevidad atesora una tortuga de 194 años?,ciencia_tecnologia,ciencia_tecnologia,train
+Por qué China considera una amenaza la IA que imita las relaciones humanas,ciencia_tecnologia,deportes,train
+"Fallece Margaret Hamilton, pionera del programa Apolo y en la llegada del hombre a la Luna",ciencia_tecnologia,ciencia_tecnologia,train
+Anthropic prohíbe el comportamiento “cruel” hacia su inteligencia artificial Claude,ciencia_tecnologia,politica,train
+¿Por qué un gran danés vive menos que un chihuahua? La respuesta podría estar en su ADN,ciencia_tecnologia,politica,train
+Así es Midnight Mimosa: el ‘malware’ preinstalado en móviles Android de bajo coste que roba datos y usa ‘apps’ falsas,ciencia_tecnologia,ciencia_tecnologia,train
+Informe Planeta Vivo 2026: la fauna silvestre cae 73% y América Latina es la región más golpeada (95 %),ciencia_tecnologia,ciencia_tecnologia,train
+Trump quiere llamar “superinteligencia” a la IA y amenaza con tratar como “enemigo” a quien no lo haga,ciencia_tecnologia,deportes,test
+"Apple anuncia evento para el 13 de octubre: presentaría su nuevo HomePad, Apple TV y HomePod mini",ciencia_tecnologia,ciencia_tecnologia,train
+Día Mundial del Huevo: solo el 4% de las gallinas utilizadas en la industria peruana vive libre de jaulas,ciencia_tecnologia,politica,train
+Trump llama a Musk un “tesoro nacional” tras condecorarlo con galardón científico de Estados Unidos,ciencia_tecnologia,ciencia_tecnologia,val
+Ciberamenazas en América Latina: Perú registró mayor actividad de malware en el primer semestre de 2026,ciencia_tecnologia,politica,test
+El tamaño medio de las poblaciones mundiales de vida silvestre disminuyó un 73% en 52 años,ciencia_tecnologia,ciencia_tecnologia,train
+"GTA V: ejecutan el videojuego gratis en un navegador, pero desaparece en pocas horas",ciencia_tecnologia,deportes,test
+NASA: los cuatro astronautas de Crew 12 retornaron a la tierra,ciencia_tecnologia,ciencia_tecnologia,train
+"Estados Unidos suspenderá a Microsoft y a Adobe de programa de visados, anuncia JD Vance",ciencia_tecnologia,deportes,train
+Nuevos pasos hacia relojes más precisos aún que los atómicos,ciencia_tecnologia,deportes,train
+BTS en Lima: la emoción del concierto es aprovechada por estafadores y ciberdelincuentes con tácticas “extremadamente efectivas”,ciencia_tecnologia,ciencia_tecnologia,val
+Así puedes mejorar la señal WiFi en tu casa: apagando estos dispositivos - Clone,ciencia_tecnologia,politica,val
+"ChatGPT para adolescentes falla en seguridad y presenta “riesgos inaceptables”, según Common Sense Media",ciencia_tecnologia,ciencia_tecnologia,train
+¿Te espían por la cámara de tu computadora? Las señales que pueden revelar un acceso no autorizado,ciencia_tecnologia,deportes,train
+“Ace Combat 8: Wings of Theve” eleva la franquicia a alturas insospechadas | Reseña,ciencia_tecnologia,ciencia_tecnologia,train
+Un Motorola razr 70 diferente: así es el teléfono de lujo con 34 cristales Swarovski Silver Night,ciencia_tecnologia,ciencia_tecnologia,train
+Precio del dólar en Perú: cierre del domingo 18 de octubre,economia,deportes,train
+"Déficit fiscal se redujo a 0,9% del PBI a setiembre, según el MEF",economia,ciencia_tecnologia,train
+"Superávit comercial del Perú superó los US$30.000 millones entre enero y agosto, según BCR",economia,ciencia_tecnologia,train
+Incendios forestales se multiplicaron por casi nueve en dos décadas: las razones y los riesgos,economia,ciencia_tecnologia,train
+"Ganadores del Premio Nobel de Economía: Hall, Woodford y su mirada microeconómica, ¿cuál es la importancia de su investigación?",economia,ciencia_tecnologia,train
+Precio del dólar en Perú: cuál fue el tipo de cambio del sábado 17 de octubre,economia,deportes,val
+"¿Chifa, hamburguesa o chicharrón?: Ayudas estatales y competencia",economia,ciencia_tecnologia,train
+AlaCena no tiene precio,economia,ciencia_tecnologia,train
+"Grupo Maquinarias espera cerrar el año con 5.300 unidades vendidas: Nissan, venta de seminuevos y su estrategia",economia,ciencia_tecnologia,train
+Premio Nobel de Economía: la macro es micro,economia,ciencia_tecnologia,train
+"El Perú podría producir 5,7 millones toneladas de cobre anualmente, pero, ¿qué falta para lograrlo?",economia,politica,train
+Precio del dólar en Perú: cierre del tipo de cambio del viernes 16 de octubre,economia,ciencia_tecnologia,train
+SwissCham Summit 2026: Líderes empresariales se reúnen para debatir sobre innovación e IA,economia,ciencia_tecnologia,test
+Sector Pesquero ante la no autorización de de pesca de anchoveta: “Frente a situaciones extraordinarias se requieren medidas extraordinarias”,economia,deportes,train
+"Wall Street cierra en rojo y el Nasdaq pierde un 4,5% en la semana",economia,ciencia_tecnologia,train
+"El dólar cierra al alza en S/3,43 pese al retroceso de la divisa estadounidense",economia,ciencia_tecnologia,train
+Elmer Cuba: “Tenemos un Ministerio de Economía que va a responder para que la economía no se enfríe”,economia,deportes,train
+Halloween y Día de la Canción Criolla: celebraciones aumentarían hasta en 12% ventas de las pymes,economia,ciencia_tecnologia,val
+¿Trabajas por horas? Conoce cómo acceder a una pensión de la ONP con aportes desde S/160,economia,ciencia_tecnologia,train
+"SNP, Produce e Imarpe suscriben convenio de cooperación para una pesca más sostenible",economia,deportes,test
+"De consultar saldos a delegar operaciones, ¿cómo cambiará la banca con la IA hacia 2030?",economia,deportes,train
+"INEI: producción nacional presenta un crecimiento de 3,23% en agosto del 2026",economia,ciencia_tecnologia,train
+PBI se desacelera en agosto: ¿qué frenó el crecimiento y cuáles son los riesgos para el cierre del año?,economia,deportes,train
+"El dólar abre a la baja en S/3,42 ante debilitamiento de la divisa estadounidense",economia,ciencia_tecnologia,train
+Wall Street abre mixto arrastrado por los fabricantes de semiconductores,economia,ciencia_tecnologia,train
+"El precio del petróleo de Texas baja 0,31% pendiente de las tensiones en Medio Oriente",economia,deportes,val
+MTC plantea reducir la TUUA de transferencia internacional en “no menos del 50%” en el aeropuerto Jorge Chávez,economia,deportes,train
+IA y Sandbox regulatorio,economia,ciencia_tecnologia,train
+Rextie se prepara para su primer salto internacional: ¿a qué mercados mira la fintech de cambio de dólares y otras divisas?,economia,ciencia_tecnologia,train
+"Justin Trudeau, exprimer ministro de Canadá, sobre crisis de turismo en EE.UU.: “No han sido muy buenos haciendo que los viajeros se sientan bienvenidos”",economia,deportes,train
+"EE.UU. busca sostener su liderazgo turístico pese al retroceso de visitantes, ¿cómo planea lograrlo el gobierno de Trump?",economia,deportes,train
+"Turismo mundial crecerá 2,5% en el 2026: ¿cómo los destinos peruanos deberían crecer sin afectar sus principales atractivos?",economia,ciencia_tecnologia,train
+Indecopi se pronuncia sobre presunta filtración de datos en Interseguro,economia,deportes,val
+Adex destaca que el nuevo embajador de Perú en Estados Unidos incluya la eliminación de aranceles a las exportaciones peruanas entre sus prioridades,economia,ciencia_tecnologia,train
+"El dólar cierra a la baja en S/3,42 ante retroceso de la divisa estadounidense",economia,politica,train
+Wall Street cierra en verde pese a las dudas sobre el futuro de la IA,economia,ciencia_tecnologia,train
+Gobierno destina más de S/16 millones para financiar subsidio a mototaxistas de tres regiones de la Amazonía,economia,deportes,train
+Indecopi advierte que rechazar injustificadamente pagos con monedas o billetes podría vulnerar derechos de consumidores,economia,deportes,val
+"El precio del petróleo de Texas sube un leve 0,11%, hasta los US$95,19 el barril",economia,deportes,train
+Creación de agentes de IA se multiplicó por 15 en el último año: ¿cómo impacta en la productividad empresarial?,economia,ciencia_tecnologia,train
+"Pablo Nano, gerente de Estudios Económicos de Scotiabank: “El 2027 será atípico, el primer semestre crecerá menos de 2% y el segundo superaría el 4%”",economia,ciencia_tecnologia,train
+"La inflación de Estados Unidos en septiembre sube al 3,7% interanual impulsada por los combustibles, ¿tiene impacto en el Perú?",economia,politica,train
+SBS sobre posible filtración de datos de Interseguro: “Estamos ya realizando el seguimiento y las acciones de supervisión que corresponden”,economia,ciencia_tecnologia,train
+"Mallplaza inaugura su primer Premium Outlets en Perú con una inversión de US$6,1 millones",economia,ciencia_tecnologia,train
+Gobierno transfiere más de S/19 millones a gobiernos regionales para cumplir con beneficios laborales en el sector Educación,economia,ciencia_tecnologia,train
+"Inccosac trae las primeras ‘tapas antirrobo’ para agua y desagüe del Perú, ¿cómo funcionan?",economia,politica,val
+BTS en Perú: 15 operaciones aéreas y cerca de 1.000 toneladas de carga detrás de sus conciertos,economia,ciencia_tecnologia,val
+Gobierno designa presidenta del directorio y directora ejecutiva del Fonafe,economia,politica,test
+El Indecopi eliminó barreras burocráticas por S/ 429 millones en el 2025,economia,ciencia_tecnologia,train
+"‘OxI Exprés’: obras para enfrentar El Niño aún no tienen convenios suscritos, ¿por qué?",economia,ciencia_tecnologia,test
+Interseguro sobre incidente de ciberseguridad: “El 7 de octubre detectamos el acceso no autorizado del ciberdelincuente”,economia,ciencia_tecnologia,train
+Gilat obtiene contrato de US$28 millones para ampliar la conectividad en Perú,economia,ciencia_tecnologia,test
+Pensionistas de la ONP recibirán su pensión en casa desde este jueves 15 de octubre,economia,ciencia_tecnologia,test
+"Formalización minera podría aportar 1,5% adicional al PBI y generar hasta 400.000 empleos",economia,deportes,train
+SPH: producción de petróleo en Perú supera los 39 MBDP en septiembre de 2026,economia,ciencia_tecnologia,train
+Invocación por el Perú,economia,ciencia_tecnologia,val
+La evolución de la confianza en los pagos,economia,ciencia_tecnologia,train
+SNI pide que Temu y aplicativos similares paguen impuestos: movimientos vinculados a estas plataformas alcanzarían los US$1.000 millones,economia,ciencia_tecnologia,train
+La gloria gastronómica que debemos multiplicar,economia,ciencia_tecnologia,train
+"Seguros paramétricos estarán enfocados en entidades públicas, empresas y organizaciones: los alcances del producto aprobado por la SBS",economia,ciencia_tecnologia,train
+"El dólar abre al alza en S/3,44, pero retrocede ante mayor oferta local",economia,ciencia_tecnologia,train
+"Wall Street abre mixto y el Nasdaq cae 1,08% por la inflación y las dudas sobre la IA",economia,ciencia_tecnologia,train
+"Proinversión: adjudicaciones de Obras por Impuestos superarán los S/10 millones en 2026, más del doble que en 2025",economia,ciencia_tecnologia,test
+Infracon Perú 2026 se inaugura en el Valle Sagrado de los Incas: el evento busca promover el desarrollo de infraestructura en el país,economia,ciencia_tecnologia,test
+Precio del dólar en Perú: cierre del tipo de cambio del jueves 15 de octubre,economia,deportes,train
+De residuos y empaques a empoderamiento económico: la estrategia de sostenibilidad de Coca-Cola con tres frentes,economia,deportes,train
+"Aranwa Hotels: Por qué la gastronomía ya representa hasta 48% de sus ingresos, sus proyectos en Costa Rica y un 2027 más prudente en Perú",economia,ciencia_tecnologia,train
+IATA sobre la TUUA de conexión internacional: “El MTC prepara un borrador de propuesta para la industria en las siguientes dos semanas”,economia,deportes,test
+"Nombramientos de la semana: CEO Corporativo de Grupo DC, miembro del directorio de Banbif y más",economia,ciencia_tecnologia,train
+"Alberto Goachet, director general del Grupo Fahrenheit: “Mi primer trabajo fue ser ilustrador en un medio de Puerto Rico”",economia,deportes,train
+Biministro de Economía y Minería de Chile: “Al 2035 casi toda la nueva oferta de cobre del planeta saldrá del Cono Sur de América Latina”,economia,ciencia_tecnologia,train
+"Daniel Velandia, economista jefe de Credicorp Capital: “Si las condiciones se dan después de El Niño, al 2028 podremos crecer más de 4%”",economia,ciencia_tecnologia,train
+Norway–Peru Investment Forum 2026 reunirá a empresas líderes para impulsar nuevas oportunidades de inversión entre Noruega y el Perú,economia,ciencia_tecnologia,val
+Proinversión: “Puerto Corío será la infraestructura más importante que tendrá el país en los próximos años”,economia,ciencia_tecnologia,test
+"Construcción crecería cerca de 10% este año, pero el FEN frenaría su avance en 2027",economia,ciencia_tecnologia,val
+"Luis Felipe Gazitúa, del Consejo Empresarial Chileno- Peruano: “El principal destino de la inversión extranjera chilena es el Perú”",economia,deportes,val
+"Eduardo Grisolle, CEO de 121: “El modelo de las agencias de holding está cumpliendo un ciclo,es el momento de las agencias independientes”",economia,ciencia_tecnologia,train
+Consejo Empresarial entre Perú y Chile: “Hay más de US$32.000 millones de inversiones entre ambos países”,economia,ciencia_tecnologia,train
+"Mario Gonzales, CEO de Luz del Sur: “Nuestra intención es llevar la medición inteligente a todos los clientes”",economia,ciencia_tecnologia,val
+Tras caer ante Cienciano: UTC descendió de la Liga 1 a cinco fechas del final,deportes,ciencia_tecnologia,val
+Monterrey vs. Pachuca por Liga MX: a qué hora juegan y en qué canal ver transmisión,deportes,ciencia_tecnologia,train
+Sporting Cristal ganó 4 - 2 a Comerciantes Unidos y es líder del Torneo Clausura 2026,deportes,ciencia_tecnologia,train
+Cienciano vs UTC Cajamarca EN VIVO: transmisión del partido por fecha 12 del Torneo Clausura,deportes,ciencia_tecnologia,train
+Alianza Lima vs Rebaza Acosta EN VIVO: transmisión del partido por la Liga Peruana de Vóley,deportes,ciencia_tecnologia,train
+“Estoy muy contento con el triunfo”: Gianluca Lapadula se mostró satisfecho por la victoria de la ‘U’ ante Alianza Atlético,deportes,ciencia_tecnologia,train
+¡Victoria ‘crema’! Universitario goleó 4-1 a Alianza Atlético por Liga 1 | RESUMEN Y GOLES,deportes,ciencia_tecnologia,train
+VIDEO: Universitario goleó 4-1 a Alianza Atlético y sigue en la pelea por el Torneo Clausura,deportes,ciencia_tecnologia,train
+Universitario (4-1) Alianza Atlético: resumen y goles del partido por fecha 12 del Torneo Clausura de la Liga 1,deportes,ciencia_tecnologia,val
+Álex Valera tras marcar en la victoria de Universitario: “Esta lucha por el torneo está muy apretada”,deportes,ciencia_tecnologia,train
+"Universitario vs. Independiente del Valle hoy: horario, canal TV y cómo ver por Copa Libertadores Femenina 2026",deportes,ciencia_tecnologia,train
+Tabla de la Liga 1 EN VIVO: así van las posiciones del Torneo Clausura tras victoria de Universitario,deportes,ciencia_tecnologia,train
+"ESPN Premium hoy en vivo, River Plate vs. Belgrano por la fecha 13 de la Liga Profesional Argentina",deportes,ciencia_tecnologia,train
+¿Dónde ver River Plate vs. Belgrano y a qué hora juega el partido por Liga Argentina?,deportes,ciencia_tecnologia,test
+CD Moquegua venció a FC Cajamarca por el Torneo Clausura,deportes,ciencia_tecnologia,test
+¡Dejando en alto el nombre de Perú! Angelo Caro finalizó quinto en los World Skate Games Asunción 2026,deportes,ciencia_tecnologia,train
+Debut y victoria: Annia Cillóniz finaliza su primer Caminos del Inca y gana la categoría S1600,deportes,ciencia_tecnologia,train
+Universitario venció 3-0 a Deportivo Soan por la fecha 1 de la Liga Peruana de Vóley,deportes,ciencia_tecnologia,train
+¡Ya es goleada! Álex Valera marcó golazo para el 3-0 de Universitario sobre Alianza Atlético | VIDEO,deportes,ciencia_tecnologia,val
+Liga Peruana de Vóley 2026-2027: fixture y calendario completo,deportes,ciencia_tecnologia,test
+"Mosquera tras vencer a Comerciantes Unidos y seguir en la punta del Clausura: “No solo se ha ganado con talento, sino con personalidad”",deportes,ciencia_tecnologia,val
+"VIDEO: ver goles del partido, Real Madrid 4-1 Sevilla por LaLiga 2026",deportes,ciencia_tecnologia,train
+"VIDEO: ver repetición del partido, Real Madrid 4-1 Sevilla por",deportes,ciencia_tecnologia,train
+"¿Dónde ver repetición del partido, Real Madrid 4-1 Sevilla por LaLiga 2026?",deportes,ciencia_tecnologia,train
+"Gol de Andy Polo: Universitario vence 2-0 a Alianza Atlético por el Torneo Clausura, Liga 1 | VIDEO",deportes,ciencia_tecnologia,train
+"Autogol de Román Suárez: Universitario vence 1-0 a Alianza Atlético por el Torneo Clausura, Liga 1 | VIDEO",deportes,ciencia_tecnologia,train
+De Lima a Arequipa haciendo show: Así Orlandini ganó la categoría TIN de Caminos del Inca | GALERÍA,deportes,ciencia_tecnologia,val
+¡Apareció ‘Kiki’! Mbappé marcó el 2-0 de Real Madrid vs Sevilla por LaLiga | VIDEO,deportes,ciencia_tecnologia,train
+“¿A quién le sirve un VAR que funciona con tantas deficiencias?“: Ortiz Bisso y por qué los clubes son solo lamentos y no soluciones con el arbitraje,deportes,politica,train
+"“El jugador peruano tiene un déficit grande en nutrición y táctica que resuelve a los 20 años, eso en Argentina es a los 12″: Urciuoli, el técnico revelación con Alianza Atlético",deportes,politica,train
+El furioso “Que se dedique a administrar” de Guede a Franco Velazco y un Quevedo que reconquistó a Comando Sur: Lo que no se vio del 3-1 que mantiene a Alianza en la pelea,deportes,ciencia_tecnologia,test
+Remontada del ‘Mono’: Raúl Orlandini se impone en la exigente categoría TIN en Caminos del Inca 2026,deportes,ciencia_tecnologia,train
+ASICS Golden Run 2026: así fue la premiación de los ganadores de la competencia | GALERÍA,deportes,ciencia_tecnologia,train
+"Con doblete de Hernán Barcos: goles de Sporting Cristal vs. Comerciantes Unidos (4-2) por Torneo Clausura, Liga 1",deportes,ciencia_tecnologia,val
+"¿Dónde ver repetición del partido, Sporting Cristal 4-2 Comerciantes por Torneo Clausura, Liga 1?",deportes,ciencia_tecnologia,train
+"Partidos de hoy, domingo 18 de octubre del 2026: a qué hora juega y en qué canales ver fútbol en vivo",deportes,deportes,train
+"ASICS Golden Run 2026: con el dominio de Jhon Atachagua y Sheyla Eulogio, así fueron los resultados de la competencia",deportes,ciencia_tecnologia,train
+Eduardo Castro gana Caminos del Inca 2026 tras espectacular final en la sexta etapa entre Puno y Arequipa,deportes,ciencia_tecnologia,train
+Luis Iberico marcó el 1-0 de Sporting Cristal vs. Comerciantes Unidos por el Torneo Clausura | VIDEO,deportes,ciencia_tecnologia,train
+¡Insólito! Roban camiseta firmada de Messi durante las protestas en París,deportes,ciencia_tecnologia,train
+“Lo importante es que ganamos y con arco en cero”: El mensaje del Dibu Martínez desde el hospital tras operación,deportes,ciencia_tecnologia,train
+“El árbitro inclinó mucho la cancha. Es imposible jugar al fútbol”: Jostin Alarcón tras derrota de Sport Boys ante Juan Pablo II,deportes,ciencia_tecnologia,train
+ASICS Golden Run 2026: repasa las mejores postales que dejó la competencia en la Costa Verde,deportes,ciencia_tecnologia,train
+"Franco Navarro Mandayo: “En el Clausura de Alianza, hay 7 u 8 jugadas que nos han hecho tener menos puntos”",deportes,ciencia_tecnologia,train
+"Pablo Guede arremete contra Franco Velazco: “No sé ni quién es. ¿Habla de fútbol?"" | VIDEO",deportes,ciencia_tecnologia,train
+ASICS Golden Run 2026: todo sobre la carrera en la Costa Verde con 21K certificado y 5000 corredores en competencia,deportes,ciencia_tecnologia,val
+¡Triunfo en casa! Alianza Lima venció 3-1 a Atlético Grau en Matute | RESUMEN Y GOLES,deportes,ciencia_tecnologia,train
+Alianza Lima (3-1) Atlético Grau: resumen y goles del partido por fecha 12 del Torneo Clausura de Liga 1 | VIDEO,deportes,ciencia_tecnologia,train
+VIDEO: Alianza Lima derrotó a Atlético Grau y se coloca en la lucha por el Torneo Clausura,deportes,ciencia_tecnologia,test
+¡Más líderes que nunca! América venció 5-3 a León por Liga MX | RESUMEN Y GOLES,deportes,ciencia_tecnologia,train
+¡Con doblete de Lionel Messi! Inter Miami derrotó 3-1 a Atlanta United por MLS | RESUMEN Y GOLES,deportes,ciencia_tecnologia,val
+¡Repartieron puntos! Chivas empató 1 a 1 con Tigres UANL por Liga MX | RESUMEN Y GOLES,deportes,ciencia_tecnologia,train
+¡Golazo! Vélez desparramó rivales y anotó el 3-1 de Alianza en Matute | VIDEO,deportes,ciencia_tecnologia,train
+Apareció la ‘Culebra’: Castillo pone el 2-1 de Alianza ante Grau en Matute | VIDEO,deportes,ciencia_tecnologia,train
+Sorpresa en Matute: Vásquez puso el 1-1 para Grau al cierre del primer tiempo | VIDEO,deportes,ciencia_tecnologia,train
+Melgar venció 4-2 a Deportivo Garcilaso y apretó la tabla del Torneo Clausura de Liga 1 | RESUMEN Y GOLES,deportes,ciencia_tecnologia,train
+¡Llegó el primero! Quevedo marcó el 1-0 de Alianza ante Atlético Grau | VIDEO,deportes,ciencia_tecnologia,val
+¡De otro planeta! Lionel Messi marcó doblete en el duelo de Inter Miami vs. Atlanta United por MLS | VIDEO,deportes,ciencia_tecnologia,val
+¡Entre los ocho mejores! Angelo Caro clasificó a la final del World Skate Games Asunción 2026,deportes,ciencia_tecnologia,val
+Juan Pablo II venció a Sport Boys 2-0 por la fecha 12 del Torneo Clausura,deportes,ciencia_tecnologia,train
+“Vamos a dar todo”: Piero Quispe y su mensaje a la hinchada de Universitario de Deportes,deportes,ciencia_tecnologia,train
+A una etapa del objetivo: Annia Cillóniz completó el tramo entre Cusco y Puno y mantiene liderato en Caminos del Inca,deportes,ciencia_tecnologia,train
+Fabián Bustos previo al duelo ante Alianza Atlético: “El equipo va a seguir creciendo”,deportes,ciencia_tecnologia,train
+Lamine Yamal fue agredido por Facundo Bernal en el Barcelona vs Real Betis y el uruguayo se fue expulsado | VIDEO,deportes,ciencia_tecnologia,train
+El show de Raúl Orlandini entre Cusco y Puno: lidera su categoría y se acerca al podio de la general,deportes,ciencia_tecnologia,val
+"Neymar se rinde ante Lamine Yamal: ""Es el mejor del mundo""",deportes,ciencia_tecnologia,train
+A falta de una etapa: Eduardo Castro mantiene liderato de Caminos del Inca seguido de cerca por André Martínez,deportes,ciencia_tecnologia,val
+"VIDEO: ver resumen y goles del partido, Barcelona 5-2 Real Betis por LaLiga 2026",deportes,ciencia_tecnologia,train
+"VIDEO: ver goles del partido, Barcelona 5-2 Real Betis por LaLiga 2026",deportes,ciencia_tecnologia,val
+"Partidos de hoy, sábado 17 de octubre del 2026: hora, canales de televisión y dónde ver fútbol EN VIVO",deportes,deportes,train
+Bayern Múnich vs. Leipzig (6-1): resumen y goles del partido por la Bundesliga | VIDEO,deportes,ciencia_tecnologia,train
+Barcelona 5-2 Real Betis: ver resumen y goles ddel partido por LaLiga 2026,deportes,ciencia_tecnologia,test
+"Físico, compromiso y entorno: las razones que alejaron a Piero Cari de Pablo Guede y por qué hoy Alianza vuelve a apostar por él tras casi 5 meses",deportes,deportes,train
+"De Kluiverth en Alianza a Osorio de la ‘U’: la Liga 1 vendió 18 promesas a Europa desde 2020, pero casi la mitad ya regresó al fútbol peruano",deportes,ciencia_tecnologia,train
+¡Gol de Lamine Yamal! Barcelona derrota 1-0 a Real Betis por LaLiga en La Cartuja | VIDEO,deportes,ciencia_tecnologia,test
+"Annia Cillóniz y su objetivo en las últimas dos etapas de Caminos: “A mí me encanta ir a fondo siempre, pero la idea es cuidar el auto”",deportes,ciencia_tecnologia,train
+"Ignacio Buse sorprende al superar el reto ""The Impossible Shot Challenge"" en Shangai",deportes,ciencia_tecnologia,train
+‘Dibu’ Martínez enciende las alarmas: salió en camilla e inmovilizado tras un fuerte choque en la Premier League | VIDEO,deportes,ciencia_tecnologia,train
+"Mourinho sorprende con mensaje sobre Vinícius: “Si estuviese en su lugar, probablemente no estaría aquí”",deportes,deportes,train
+Resultados ONPE 2026: últimas noticias del conteo de las actas,politica,ciencia_tecnologia,val
+“Creo que puedo llegar a un top 3 sin que nadie se quede botado”: Raúl ‘Mono’ Orlandini le responde a El Comercio sobre las dos últimas etapas de Caminos del Inca 2026,deportes,deportes,train
+Los Chankas derrotó 2-1 a ADT por la fecha 12 del Torneo Clausura de la Liga 1 2026,deportes,ciencia_tecnologia,test
+Sport Huancayo venció 2 - 1 a Cusco FC por la fecha 12 del Torneo Clausura 2026,deportes,ciencia_tecnologia,train
+Resultados ONPE región Loreto al 91.599 %: aquí el conteo oficial de las Elecciones Regionales y Municipales 2026,politica,ciencia_tecnologia,train
+Resultados ONPE en región Huánuco al 98.670 %: aquí el conteo oficial de las Elecciones Regionales y Municipales 2026,politica,ciencia_tecnologia,test
+Resultados ONPE en región Callao al 98.828 %: aquí el conteo oficial de las Elecciones Regionales y Municipales 2026,politica,ciencia_tecnologia,train
+Resultados ONPE en región Ica al 98.233 %: aquí el conteo oficial de las Elecciones Regionales y Municipales 2026,politica,ciencia_tecnologia,train
+Resultados ONPE región Puno al 99.970 %: aquí el conteo oficial de las Elecciones Regionales y Municipales 2026,politica,ciencia_tecnologia,train
+Resultados ONPE región Áncash al 98.658 %: aquí el conteo oficial de las Elecciones Regionales y Municipales 2026,politica,ciencia_tecnologia,train
+Resultados ONPE en región Lambayeque al 98.577 %: aquí el conteo oficial de las Elecciones Regionales y Municipales 2026,politica,ciencia_tecnologia,val
+Resultados ONPE en región Junín al 99.701 %: aquí el conteo oficial de las Elecciones Regionales y Municipales 2026,politica,ciencia_tecnologia,train
+Resultados ONPE región Cusco al 99.365 %: aquí el conteo oficial de las Elecciones Regionales y Municipales 2026,politica,ciencia_tecnologia,train
+Resultados ONPE en región Cajamarca al 99.811 %: aquí el conteo oficial de las Elecciones Regionales y Municipales 2026,politica,ciencia_tecnologia,train
+Resultados ONPE en región Arequipa al 99.905 %: aquí el conteo oficial de las Elecciones Regionales y Municipales 2026,politica,ciencia_tecnologia,train
+Resultados ONPE en región Piura al 97.681 %: aquí el conteo oficial de las Elecciones Regionales y Municipales 2026,politica,ciencia_tecnologia,train
+Resultados ONPE en región La Libertad al 98.452 %: aquí el conteo oficial de las Elecciones Regionales y Municipales 2026,politica,ciencia_tecnologia,val
+Resultados ONPE en región Lima al 98.889 %: aquí el conteo oficial de las Elecciones Regionales y Municipales 2026,politica,ciencia_tecnologia,train
+Resultados ONPE en Callao al 98.586 %: sigue aquí el conteo oficial de las Elecciones Regionales y Municipales 2026,politica,ciencia_tecnologia,train
+Resultados ONPE en Ventanilla al 95.571 %: sigue aquí el conteo oficial de las Elecciones Regionales y Municipales 2026,politica,ciencia_tecnologia,test
+Resultados ONPE en San Juan de Miraflores al 92.646 %: sigue aquí el conteo oficial de las Elecciones Regionales y Municipales 2026,politica,ciencia_tecnologia,train
+Resultados ONPE en Villa El Salvador al 93.766 %: sigue aquí el conteo oficial de las Elecciones Regionales y Municipales 2026,politica,ciencia_tecnologia,train
+Resultados ONPE en Villa María del Triunfo al 91.329 %: aquí el conteo oficial de las Elecciones Regionales y Municipales 2026,politica,ciencia_tecnologia,val
+Resultados ONPE en Ate al 93.656 %: sigue aquí el conteo oficial de las Elecciones Regionales y Municipales 2026,politica,ciencia_tecnologia,train
+Resultados ONPE en Comas al 91.728 %: sigue aquí el conteo oficial de las Elecciones Regionales y Municipales 2026,politica,ciencia_tecnologia,train
+Resultados ONPE en San Martín de Porres al 91.908 %: sigue aquí el conteo oficial de las Elecciones Regionales y Municipales 2026,politica,ciencia_tecnologia,train
+Resultados ONPE en San Juan de Lurigancho al 91.908 %: sigue aquí el conteo oficial de las Elecciones Regionales y Municipales 2026,politica,ciencia_tecnologia,test
+Resultados ONPE en San Isidro al 96.454 %: sigue aquí el conteo oficial de las Elecciones Regionales y Municipales 2026,politica,ciencia_tecnologia,val
+Resultados ONPE en San Borja al 99.526 %: sigue aquí el conteo oficial de las Elecciones Regionales y Municipales 2026,politica,ciencia_tecnologia,val
+Resultados ONPE en La Molina al 99.652 %: sigue aquí el conteo oficial de las Elecciones Regionales y Municipales 2026,politica,ciencia_tecnologia,test
+Resultados ONPE en Surco al 99.746 %: sigue aquí el conteo oficial de las Elecciones Regionales y Municipales 2026,politica,ciencia_tecnologia,val
+Resultados ONPE al 94.387% de las Elecciones Regionales y Municipales 2026,politica,ciencia_tecnologia,train
+Resultados ONPE en Miraflores al 98.954 %: aquí el conteo oficial de las Elecciones Regionales y Municipales 2026,politica,ciencia_tecnologia,val
