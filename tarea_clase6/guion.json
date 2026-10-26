@@ -1,0 +1,36 @@
+{
+  "titulo": "Monitor de Incendios Perú 2026",
+  "fuente": "NASA FIRMS, Sentinel-2, Open Buildings, WorldPop, CENEPRED",
+  "escenas": [
+    {
+      "frase": "Del quince al veintiuno de octubre, tres satélites con datos de la NASA detectaron siete mil ciento cuarenta y cinco focos de calor en el Perú.",
+      "cifra": "7,145",
+      "etiqueta": "Focos de calor · 15 al 21 oct 2026"
+    },
+    {
+      "frase": "Al unir los focos cercanos en espacio y tiempo, salen cuarenta y siete incendios activos. Diez superan las cien hectáreas.",
+      "cifra": "47",
+      "etiqueta": "Incendios activos · 10 superan 100 ha"
+    },
+    {
+      "frase": "El más urgente no es el más grande: en Paracas se estiman dos mil doscientas setenta y ocho personas a menos de un kilómetro del fuego.",
+      "cifra": "2,278",
+      "etiqueta": "Personas a ≤ 1 km · Paracas, Ica"
+    },
+    {
+      "frase": "Y casi tres de cada cuatro focos cayeron fuera del bosque: en puna, pastos, costa y cultivos.",
+      "cifra": "74.1 %",
+      "etiqueta": "Focos en zonas sin bosque"
+    },
+    {
+      "frase": "Ojo: en Mollendo, el satélite Sentinel dos marca ciento dieciocho hectáreas quemadas, pero ningún foco cae dentro y casi todo es suelo desnudo. Aún no está validado.",
+      "cifra": "118 ha",
+      "etiqueta": "Área dNBR en Mollendo · sin validar"
+    },
+    {
+      "frase": "Y ocho incendios están en regiones con aviso de lluvia del veintidós al veinticuatro de octubre. Mira el tablero completo: enlace en mi perfil.",
+      "cifra": "8",
+      "etiqueta": "Incendios en regiones con aviso de lluvia"
+    }
+  ]
+}

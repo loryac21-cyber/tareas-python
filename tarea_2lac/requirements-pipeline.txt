@@ -1,0 +1,21 @@
+# Solo para ejecutar los notebooks en local (NO lo usa Streamlit Cloud)
+paddlepaddle==3.2.0
+paddleocr==3.3.0
+faster-whisper==1.2.0
+easyocr==1.7.2
+torch
+transformers>=4.44,<5
+pypdfium2==4.30.0
+soundfile==0.13.1
+scipy
+librosa==0.11.0
+scikit-learn
+jiwer==4.0.0
+pandas==2.2.3
+plotly==6.3.0
+kaleido==1.1.0
+pillow
+requests
+google-genai
+jupyter
+streamlit==1.50.0

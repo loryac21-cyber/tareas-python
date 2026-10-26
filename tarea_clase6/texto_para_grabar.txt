@@ -1,0 +1,20 @@
+TEXTO PARA GRABAR TU VOZ (unos 15 segundos)
+
+Léelo en voz alta con el tono que quieres para el reel: claro, con energía, sin apurarte.
+El clon copia tu ritmo, así que habla como si se lo contaras a alguien.
+
+------------------------------------------------------------------
+Hola, soy Lory. Estudio ingeniería química en la UNAC y esta semana
+analicé los incendios forestales del Perú con datos satelitales.
+Lo que encontré me sorprendió, así que te lo cuento en menos de un minuto.
+------------------------------------------------------------------
+
+Cómo grabarlo
+- Usa la grabadora de notas de voz del celular (sale .m4a u .ogg). Sirve tal cual.
+- Cuarto callado: sin música, ventilador ni tele. Celular a un palmo de la boca.
+- Deja un segundo de silencio al empezar y al terminar.
+- Si te equivocas, vuelve a grabar todo (no cortes ni pegues).
+- Guarda el archivo como mi_voz.m4a dentro de la carpeta reel_lory.
+
+Si dijiste exactamente este texto, puedes pasarlo al programa para que no dependa de Whisper:
+  --texto-voz "Hola, soy Lory. Estudio ingeniería química en la UNAC y esta semana analicé los incendios forestales del Perú con datos satelitales. Lo que encontré me sorprendió, así que te lo cuento en menos de un minuto."
