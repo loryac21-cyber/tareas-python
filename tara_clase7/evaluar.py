@@ -2,6 +2,7 @@
 
     uv run evaluar.py                                   # memoria y mcp, con Haiku
     uv run evaluar.py --modos memoria mcp web --modelo sonnet
+    uv run evaluar.py --modos memoria --sin-null --salida resultados_sin_null.csv   # experimento extra
 
 Cada pregunta se le hace a Claude Code en modo no interactivo (claude -p) y debe responder un JSON con el valor.
 Escribe resultados.csv y cuenta cuántas acierta, cuántas se equivoca y en cuántas reconoce que no sabe.
@@ -21,6 +22,7 @@ ESQUEMA = {"type": "object", "required": ["valor", "fuente"],
                           "fuente": {"type": "string"}}}
 INSTRUCCION = ("Responde con un solo número en «valor», en la unidad que pide la pregunta. Si no puedes saberlo "
                "con certeza, pon valor null: no estimes. En «fuente» di de dónde sale la cifra.\n\n")
+SALIDA_FACIL = "Si no puedes saberlo con certeza, pon valor null: no estimes. "   # la frase que quita --sin-null
 MODOS = {   # todas sin las herramientas de archivos y terminal de Claude Code
     "memoria": ["--tools", "", "--strict-mcp-config"],
     "web": ["--tools", "WebSearch,WebFetch", "--allowedTools", "WebSearch,WebFetch", "--strict-mcp-config"],
@@ -28,11 +30,12 @@ MODOS = {   # todas sin las herramientas de archivos y terminal de Claude Code
 }
 
 
-def preguntar(pregunta, modo, modelo):
-    cmd = ["claude", "-p", INSTRUCCION + pregunta, "--output-format", "json", "--json-schema", json.dumps(ESQUEMA),
+def preguntar(pregunta, modo, modelo, instruccion=INSTRUCCION):
+    cmd = ["claude", "-p", instruccion + pregunta, "--output-format", "json", "--json-schema", json.dumps(ESQUEMA),
            "--no-session-persistence", "--model", modelo, *MODOS[modo]]
     t = time.time()
-    proc = subprocess.run(cmd, capture_output=True, text=True, timeout=600, cwd=AQUI)
+    proc = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", errors="replace",  # Windows
+                          timeout=600, cwd=AQUI)
     try:
         salida = json.loads(proc.stdout)
     except json.JSONDecodeError:
@@ -54,7 +57,10 @@ if __name__ == "__main__":
     p.add_argument("--modelo", default="haiku")
     p.add_argument("--preguntas", default=str(AQUI / "preguntas.csv"))
     p.add_argument("--paralelo", type=int, default=4)
+    p.add_argument("--sin-null", action="store_true", help="quita de la instrucción el permiso de responder null")
+    p.add_argument("--salida", default=str(AQUI / "resultados.csv"))
     a = p.parse_args()
+    instruccion = INSTRUCCION.replace(SALIDA_FACIL, "") if a.sin_null else INSTRUCCION
     if "mcp" in a.modos and not (AQUI / ".mcp.json").exists():
         raise SystemExit("Falta .mcp.json. Conecten su servidor: claude mcp add --scope project bcrp -- uv run server.py")
 
@@ -62,12 +68,14 @@ if __name__ == "__main__":
     casos = [(q, m) for q in preguntas.itertuples() for m in a.modos]
     print(f"{len(casos)} llamadas a claude -p con {a.modelo}...")
     with ThreadPoolExecutor(a.paralelo) as ex:
-        respuestas = list(ex.map(lambda c: preguntar(c[0].pregunta, c[1], a.modelo), casos))
+        respuestas = list(ex.map(lambda c: preguntar(c[0].pregunta, c[1], a.modelo, instruccion), casos))
 
-    filas = [{"id": q.id, "modo": m, "verdad": q.verdad, **r, "resultado": calificar(r["valor"], q.verdad, q.tolerancia)}
+    sufijo = " sin null" if a.sin_null else ""
+    filas = [{"id": q.id, "modo": m + sufijo, "verdad": q.verdad, **r,
+              "resultado": calificar(r["valor"], q.verdad, q.tolerancia)}
              for (q, m), r in zip(casos, respuestas)]
     res = pd.DataFrame(filas)
-    res.to_csv(AQUI / "resultados.csv", index=False)
+    res.to_csv(a.salida, index=False)
 
     print("\n" + res.pivot(index="id", columns="modo", values="valor").to_string())
     tabla = res.groupby("modo").resultado.value_counts().unstack(fill_value=0)
