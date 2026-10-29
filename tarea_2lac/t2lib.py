@@ -18,7 +18,14 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-BASE = Path(__file__).resolve().parent
+# En Windows torch debe cargarse ANTES que paddle: si paddle va primero,
+# importar torch (easyocr, faster-whisper, wav2vec2) falla con WinError 127.
+try:
+    import torch  # noqa: F401
+except ImportError:
+    pass
+
+BASE =Path(__file__).resolve().parent
 DATOS = BASE / "datos"
 RAW = DATOS / "raw"
 RAW_DOCS = RAW / "documentos"
