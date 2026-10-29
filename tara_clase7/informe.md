@@ -34,8 +34,8 @@ Se corrió con `uv run evaluar.py` (Haiku, `claude -p`, 20 llamadas) → [result
 
 | Modo | Acierta | Se equivoca | No sabe | Segundos promedio |
 |---|---|---|---|---|
-| memoria | 0 | 0 | 10 | 6.6 |
-| mcp | **10** | 0 | 0 | 25.4 |
+| memoria | 0 | 0 | 10 | 10.6 |
+| mcp | **10** | 0 | 0 | 23.5 |
 | memoria sin null *(experimento)* | 0 | **1** | 9 | 6.8 |
 
 ![Aciertos por modo](grafico.png)
@@ -48,7 +48,7 @@ Se corrió con `uv run evaluar.py` (Haiku, `claude -p`, 20 llamadas) → [result
 - **mcp (10/10):** acertó todas, incluidas mis dos preguntas (exportaciones 10,815.40; desempleo 4.37). En cada una usó
   entre 4 y 6 turnos: primero `buscar_series` para encontrar el código y luego `resumen` o `serie`, sin calcular a mano.
   Cada `fuente` trae el código de la serie, el periodo y la URL de la API del BCRP, así que se puede verificar.
-- **El costo es el tiempo:** 25 s por pregunta contra 7 s de memoria, por esos turnos extra y porque cada `claude -p`
+- **El costo es el tiempo:** 23.5 s por pregunta contra 10.6 s de memoria, por esos turnos extra y porque cada `claude -p`
   arranca el servidor de nuevo.
 
 ### Experimento extra: sin salida fácil
@@ -81,6 +81,10 @@ sobre fuentes sin API, aunque depende de encontrar la página correcta y no deja
 MCP es construirlo y mantenerlo, y unos segundos más por pregunta.
 
 ## Cómo reproducirlo
+
+Los notebooks recorren todo con sus resultados: [01_servidor_mcp.ipynb](01_servidor_mcp.ipynb) (el servidor parte por
+parte y las 8 pruebas) y [02_evaluacion.ipynb](02_evaluacion.ipynb) (evaluación, experimento, gráfico y análisis).
+Desde la terminal:
 
 ```bash
 uv run pytest -q

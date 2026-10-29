@@ -6,4 +6,7 @@ requires-python = ">=3.11"
 dependencies = ["fastmcp>=4,<5", "httpx", "pandas", "matplotlib"]
 
 [dependency-groups]
-dev = ["pytest"]
+dev = [
+    "ipykernel>=7.4.0",
+    "pytest",
+]
