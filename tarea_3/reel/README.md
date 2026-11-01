@@ -48,8 +48,9 @@ uv venv .venv
 uv pip install --python .venv\Scripts\python qwen-tts faster-whisper pillow imageio-ffmpeg soundfile jiwer num2words fonttools
 ```
 
-**4. Música.** Usa una pista con licencia de uso libre, por ejemplo de la Biblioteca de audio de YouTube o de Pixabay Music. Guárdala como
-`reel/recursos/musica.mp3` y anota el título, el autor y la licencia en la sección de créditos de este README.
+**4. Música.** Usa una pista con licencia de uso libre, por ejemplo de la Biblioteca de audio de YouTube, Pixabay Music o Mixkit. Guárdala
+como `reel/recursos/musica.mp3` y anota el título, el autor y la licencia en la sección de créditos de este README. Git ignora el archivo:
+la pista se usa dentro del video, pero las licencias de música de stock no suelen permitir publicar el archivo suelto.
 
 **5. Reel final con tu voz clonada** (desde `tarea_3/`, con el Python de la sesión 15):
 
@@ -69,4 +70,5 @@ El script narra cada escena con tu voz y revisa con Whisper que se entienda (WER
 - **Voz:** generada con Qwen3-TTS (Alibaba, Apache 2.0) a partir de la grabación de mi propia voz.
 - **Subtítulos:** Whisper large-v3-turbo (MIT).
 - **Gráficos:** elaboración propia con matplotlib a partir de datos de SUNAT y del Banco Mundial.
-- **Música:** _(completar: título, autor, fuente y licencia)_.
+- **Música:** «Tech House Vibes», de Alejandro Magaña (A. M.), usada bajo la licencia gratuita de Mixkit
+  (<https://mixkit.co/free-stock-music/>).

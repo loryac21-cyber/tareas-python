@@ -21,7 +21,7 @@ Los precios internacionales no los decidimos; lo que hacemos con lo que dejan, s
 📊 Tablero interactivo: https://loryac21-cyber.github.io/tareas-python/tarea_3/web/
 💻 Código y datos: https://github.com/loryac21-cyber/tareas-python/tree/main/tarea_3
 
-Notas: el valor FOB no es el precio que recibe el productor en chacra. Las cifras de 2026 son de enero a agosto y se comparan con enero–agosto de 2025. La voz del video fue generada con IA a partir de mi voz.
+Notas: el valor FOB no es el precio que recibe el productor en chacra. Las cifras de 2026 son de enero a agosto y se comparan con enero–agosto de 2025. La voz del video fue generada con IA a partir de mi voz. Música: «Tech House Vibes», de Alejandro Magaña (Mixkit, licencia gratuita).
 
 #Peru #Cafe #Cacao #Exportaciones #Agroexportacion #Economia #CienciaDeDatos #Python
 
