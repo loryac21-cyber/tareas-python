@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.claude/
+.tmp/
+
+# Reel: la grabación de tu voz y las vistas previas no se versionan
+reel/salidas/
+reel/mi_voz.*
+
+# Cuadro G8 de SUNAT (~175 MB): supera el límite de GitHub; se descarga con 01_obtener_datos.ipynb
+datos/originales/sunat_nota_tributaria/cdro_G8.xlsx

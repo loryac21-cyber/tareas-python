@@ -1,0 +1,31 @@
+[project]
+name = "precios-cafe-cacao-peru"
+version = "0.1.0"
+description = "Precios internacionales y desempeño de las exportaciones peruanas de café y cacao, 2015-2025"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pandas",
+    "requests",
+    "openpyxl",
+    "matplotlib",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.4.0",
+    "nbconvert",
+]
+# Para el video (reel/). La voz clonada usa el entorno aparte de la sesión 15 (qwen-tts, faster-whisper)
+reel = [
+    "imageio-ffmpeg>=0.7.0",
+    "kaleido>=1.5.0",
+    "numpy>=2.5.4",
+    "pillow>=13.0.0",
+    "plotly>=7.1.0",
+    "soundfile>=0.14.0",
+]
+
+[tool.uv]
+default-groups = ["dev", "reel"]
+package = false

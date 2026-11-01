@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Café y cacao: precio y volumen</title>
+  <meta name="description" content="Dashboard interactivo: precios internacionales y desempeño de las exportaciones peruanas de café y cacao, 2015-2025, con seguimiento de la diversificación de mercados (SUNAT y Banco Mundial).">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="assets/estilos.css">
+  <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js"></script>
+</head>
+<body>
+  <button class="boton-tema" id="boton-tema" type="button" aria-label="Cambiar tema claro u oscuro">◐ Tema</button>
+
+  <header class="contenedor cabecera">
+    <span class="etiqueta">Perú · café y cacao · 2015–2025</span>
+    <h1>Precios internacionales y desempeño de las exportaciones peruanas de café y cacao</h1>
+    <p class="pregunta"><strong>Pregunta de investigación:</strong> ¿cuánto del crecimiento del valor exportado de café y cacao entre 2015
+      y 2025 se explica por los precios internacionales y cuánto por el volumen, y qué tan diversificados están sus mercados de destino
+      (Unión Europea y otros continentes)?</p>
+    <div class="chips">
+      <span class="chip">Exportaciones: SUNAT, Nota Tributaria (G8 y G9)</span>
+      <span class="chip">Precios: Banco Mundial, Pink Sheet</span>
+      <span class="chip" id="chip-cobertura">Cobertura: 2015 – 2026</span>
+      <span class="chip">US$ FOB · peso neto · US$/kg</span>
+    </div>
+  </header>
+
+  <section class="contenedor contexto" aria-label="Cómo leer este tablero">
+    <div class="tarjeta">
+      <h2>¿Por qué mirar el precio?</h2>
+      <p>El valor exportado es <strong>precio × volumen</strong>. Cuando los precios internacionales suben, el valor puede crecer aunque
+        se venda la misma cantidad, o incluso menos. Separar las dos partes ayuda a leer bien los récords y a anticipar qué pasa cuando
+        los precios bajan.</p>
+      <p>Este tablero sirve para hacer <strong>seguimiento</strong>: cuánto se vende, a qué precio y a cuántos mercados.</p>
+    </div>
+    <div class="tarjeta">
+      <h2>Cómo leer los indicadores</h2>
+      <ul class="lista-corta">
+        <li><strong>Efecto precio / efecto volumen:</strong> parte del cambio del valor FOB que viene de vender más caro o de vender más kilos.</li>
+        <li><strong>Valor unitario:</strong> FOB / peso neto en el puerto peruano. No es el precio que recibe el productor en chacra.</li>
+        <li><strong>Mercados equivalentes:</strong> cuántos destinos del mismo tamaño darían la misma concentración (10 000 / índice Herfindahl). Más es más diversificado.</li>
+      </ul>
+    </div>
+  </section>
+
+  <nav class="filtros" aria-label="Filtros">
+    <div class="contenedor">
+      <div class="control">
+        <span id="lbl-producto">Producto</span>
+        <div class="segmentado" role="group" aria-labelledby="lbl-producto" id="f-producto"></div>
+      </div>
+      <label class="control">
+        <span>Año</span>
+        <select id="f-anio"></select>
+      </label>
+      <div class="control">
+        <span id="lbl-indicador">Mapa y destinos</span>
+        <div class="segmentado" role="group" aria-labelledby="lbl-indicador" id="f-indicador"></div>
+      </div>
+      <p class="aviso-periodo" id="aviso-periodo"></p>
+    </div>
+  </nav>
+
+  <main class="contenedor" id="principal">
+    <p class="cargando" id="cargando">Cargando datos…</p>
+
+    <section class="kpis" id="kpis" aria-label="Indicadores clave"></section>
+
+    <section class="rejilla">
+      <article class="tarjeta grafico col-12">
+        <h3 id="t-precio">Precio internacional y valor unitario de exportación</h3>
+        <p class="subtitulo" id="s-precio"></p>
+        <div class="leyenda" id="l-precio"></div>
+        <div class="lienzo" id="g-precio" role="img" aria-label="Serie mensual del precio internacional y del valor unitario de exportación"></div>
+      </article>
+    </section>
+
+    <section class="rejilla">
+      <article class="tarjeta grafico col-6">
+        <h3 id="t-desc">¿Precio o volumen? Cambio anual del valor exportado</h3>
+        <p class="subtitulo" id="s-desc"></p>
+        <div class="leyenda" id="l-desc"></div>
+        <div class="lienzo" id="g-desc" role="img" aria-label="Barras con el efecto precio y el efecto volumen de cada año"></div>
+        <p class="nota-grafico" id="n-desc"></p>
+      </article>
+      <article class="tarjeta grafico col-6">
+        <h3 id="t-indice">Valor, volumen y valor unitario</h3>
+        <p class="subtitulo" id="s-indice"></p>
+        <div class="leyenda" id="l-indice"></div>
+        <div class="lienzo" id="g-indice" role="img" aria-label="Índices de valor, volumen y valor unitario con base 2015"></div>
+      </article>
+    </section>
+
+    <section class="rejilla">
+      <article class="tarjeta grafico col-8">
+        <h3 id="t-mapa">Destinos de las exportaciones</h3>
+        <p class="subtitulo" id="s-mapa"></p>
+        <div class="lienzo alto" id="g-mapa" role="img" aria-label="Mapa coroplético de países de destino"></div>
+      </article>
+      <article class="tarjeta grafico col-4">
+        <h3 id="t-top">Principales destinos</h3>
+        <p class="subtitulo" id="s-top"></p>
+        <div class="leyenda" id="l-top"></div>
+        <div class="lienzo alto" id="g-top" role="img" aria-label="Barras de los diez principales países de destino"></div>
+      </article>
+    </section>
+
+    <section class="rejilla">
+      <article class="tarjeta grafico col-6">
+        <h3 id="t-region">¿A qué regiones se vende?</h3>
+        <p class="subtitulo" id="s-region"></p>
+        <div class="leyenda" id="l-region"></div>
+        <div class="lienzo" id="g-region" role="img" aria-label="Barras apiladas con la participación de cada región de destino por año"></div>
+      </article>
+      <article class="tarjeta grafico col-6">
+        <h3>Diversificación de mercados</h3>
+        <p class="subtitulo" id="s-divers"></p>
+        <div class="leyenda" id="l-divers"></div>
+        <div class="lienzo" id="g-divers" role="img" aria-label="Mercados equivalentes por año para café y cacao"></div>
+      </article>
+    </section>
+
+    <section class="rejilla">
+      <article class="tarjeta col-12">
+        <div class="barra-tabla">
+          <div>
+            <h3 id="t-tabla">Tabla por país de destino</h3>
+            <p class="subtitulo" id="s-tabla" style="margin:0"></p>
+          </div>
+          <button class="boton" id="descargar" type="button">Descargar CSV filtrado</button>
+        </div>
+        <div class="tabla-envoltura">
+          <table id="tabla">
+            <thead><tr>
+              <th data-col="nombre">País</th>
+              <th data-col="region">Región</th>
+              <th data-col="fob" aria-sort="descending">FOB (US$)</th>
+              <th data-col="kg">Peso neto (t)</th>
+              <th data-col="vu">US$/kg</th>
+              <th data-col="part">% del total</th>
+              <th data-col="var">Var. FOB %</th>
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+
+    <h2 class="seccion-titulo">Tres hallazgos</h2>
+    <section class="hallazgos" id="hallazgos"></section>
+
+    <h2 class="seccion-titulo">¿Qué podemos hacer con esto?</h2>
+    <p class="seccion-intro">Propuestas para conversar, no recetas: se desprenden de los datos y cada una se puede seguir con este mismo tablero.</p>
+    <section class="propuestas" id="propuestas"></section>
+
+    <h2 class="seccion-titulo">Metodología, fuentes y limitaciones</h2>
+    <section class="metodo">
+      <div class="tarjeta">
+        <h3>Metodología</h3>
+        <ul>
+          <li>Exportaciones definitivas por país de destino y subpartida, mensual (Cuadro G8 de SUNAT), validadas con los totales anuales del Cuadro G9.</li>
+          <li>Café: partida 0901. Cacao: 1801 a 1806. Producto base para comparar con el precio internacional: café verde (0901.11) y cacao en grano (1801).</li>
+          <li>Efecto precio y efecto volumen con la fórmula de punto medio, calculada por tipo de producto (verde, tostado, grano, manteca, chocolate…), de modo que suman exacto el cambio del valor.</li>
+          <li>Diversificación: índice Herfindahl-Hirschman por país de destino según valor FOB.</li>
+          <li>Proceso reproducible en los notebooks <code>01</code>–<code>03</code> del repositorio.</li>
+        </ul>
+      </div>
+      <div class="tarjeta">
+        <h3>Fuentes</h3>
+        <ul>
+          <li><a href="https://www.sunat.gob.pe/estadisticasestudios/exportaciones.html" target="_blank" rel="noopener">SUNAT · Estadísticas de exportaciones (Nota Tributaria, cuadros G8 y G9)</a></li>
+          <li><a href="https://www.worldbank.org/en/research/commodity-markets" target="_blank" rel="noopener">Banco Mundial · Commodity Markets (Pink Sheet), precios mensuales</a>: café arábica (precio indicativo OIC, otros suaves) y cacao (ICCO).</li>
+        </ul>
+      </div>
+      <div class="tarjeta">
+        <h3>Limitaciones</h3>
+        <ul id="limitaciones">
+          <li>El valor unitario FOB no es el precio que recibe el productor: incluye acopio, procesamiento, transporte interno y márgenes.</li>
+          <li>El precio internacional es una referencia de bolsa en Nueva York, Londres o Europa; el café y el cacao peruanos se negocian con diferenciales por calidad y certificaciones, y con meses de desfase.</li>
+          <li>El país de destino es el declarado en el embarque: Bélgica, Países Bajos o Estados Unidos pueden reexportar.</li>
+          <li id="lim-parcial">2026 solo tiene datos parciales.</li>
+          <li>La descomposición mide asociaciones contables, no causas: el clima, la demanda y los costos también influyen.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="contenedor">
+      Tarea 3 · Curso Python Intermedio (D2CML). Datos: SUNAT y Banco Mundial. Elaboración propia con apoyo de IA (Claude Code).
+      <span id="pie-actualizado"></span>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

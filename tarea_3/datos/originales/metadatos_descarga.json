@@ -1,0 +1,21 @@
+{
+  "G8": {
+    "url": "https://www.sunat.gob.pe/estadisticasestudios/nota_tributaria/cdro_G8.xlsx",
+    "archivo": "datos/originales/sunat_nota_tributaria/cdro_G8.xlsx",
+    "fecha_descarga": "2026-10-31",
+    "tamano_mb": 175.7
+  },
+  "G9": {
+    "url": "https://www.sunat.gob.pe/estadisticasestudios/nota_tributaria/cdro_G9.xlsx",
+    "archivo": "datos/originales/sunat_nota_tributaria/cdro_G9.xlsx",
+    "fecha_descarga": "2026-10-31",
+    "tamano_mb": 6.9
+  },
+  "PINK": {
+    "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx",
+    "archivo": "datos/originales/banco_mundial/CMO-Historical-Data-Monthly.xlsx",
+    "fecha_descarga": "2026-11-01",
+    "tamano_mb": 0.6,
+    "actualizado_por_bm": "2026-10-02"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "titulo": "Café y cacao: ¿vendimos más o más caro?",
+  "duracion_objetivo_s": "55 a 70",
+  "datos_al": "SUNAT descargado el 31/10/2026 (enero 2015 a agosto 2026); Banco Mundial, Pink Sheet del 02/10/2026",
+  "escenas": [
+    {
+      "frase": "Entre dos mil quince y dos mil veinticinco, el valor del café que exporta el Perú casi se triplicó. ¿Vendimos el triple? No: el volumen creció treinta y uno por ciento.",
+      "cifra": "x2,9",
+      "etiqueta": "valor del café exportado, 2015–2025 (volumen: +31 %)",
+      "visual": "recursos/escena_1_cafe_valor_volumen.png",
+      "estilo": "curious, engaging news anchor, strong emphasis on the number",
+      "cifra_en_texto": true,
+      "verificacion": "FOB café: US$ 613,7 M (2015) → 1 802,0 M (2025) = x2,94; peso neto 185,1 → 242,5 mil t = +31,0 % (indicadores_anuales.csv; 03_analisis.ipynb, hallazgo 1)."
+    },
+    {
+      "frase": "Tres de cada cuatro dólares adicionales llegaron por el precio internacional del café, que en dos mil veinticinco tocó su nivel más alto desde mil novecientos sesenta.",
+      "cifra": "74 %",
+      "etiqueta": "del aumento del valor del café vino del precio",
+      "visual": "recursos/escena_2_precio_o_volumen.png",
+      "estilo": "confident news anchor, clear emphasis on the numbers",
+      "cifra_en_texto": true,
+      "verificacion": "Descomposición 2015→2025 café: efecto precio 881,5 de 1 188,3 M = 74,2 % (descomposicion_ventanas.csv). Arábica OIC: 9,05 US$/kg en 02/2025, máximo nominal desde 1960 (Pink Sheet; 03_analisis.ipynb, sección 1)."
+    },
+    {
+      "frase": "El cacao fue distinto: su valor se multiplicó por seis y su volumen por más de dos. Ahí creció la producción, no solo el precio.",
+      "cifra": "x6,1",
+      "etiqueta": "valor del cacao exportado, 2015–2025 (volumen: x2,4)",
+      "visual": "recursos/escena_3_cacao_valor_volumen.png",
+      "estilo": "confident news anchor, warm",
+      "cifra_en_texto": true,
+      "verificacion": "FOB cacao: US$ 266,6 M (2015) → 1 618,3 M (2025) = x6,07; peso neto 74,4 → 178,0 mil t = x2,39; efecto precio 51,9 % (hallazgo 2)."
+    },
+    {
+      "frase": "Pero los precios también bajan. En lo que va de dos mil veintiséis, el precio promedio del cacao fue la mitad que un año antes, y el valor exportado bajó cuarenta y ocho por ciento.",
+      "cifra": "−48 %",
+      "etiqueta": "valor del cacao exportado, enero–agosto 2026 frente a 2025",
+      "visual": "recursos/escena_4_cacao_precio.png",
+      "estilo": "serious, calm news anchor",
+      "cifra_en_texto": true,
+      "verificacion": "Enero–agosto 2026 vs 2025: FOB cacao −48,1 %, precio ICCO promedio −49,0 % (8,65 → 4,42 US$/kg), volumen −10,8 % (indicadores_anuales.csv, periodo ene_ago)."
+    },
+    {
+      "frase": "En mercados, el cacao se abrió al mundo: Europa, Norteamérica, América Latina y Asia. El café depende cada vez más de Estados Unidos, que ya compra un tercio.",
+      "cifra": "10,4 vs 6,1",
+      "etiqueta": "mercados equivalentes en 2025: cacao frente a café",
+      "visual": "recursos/escena_5_regiones.png",
+      "estilo": "confident news anchor, thoughtful",
+      "cifra_en_texto": false,
+      "verificacion": "Mercados equivalentes (10 000 / IHH) 2025: cacao 10,4, café 6,1. UE en cacao 65,6 % (2015) → 40,3 % (2025). EE. UU. 33,2 % del FOB de café 2025 (hallazgo 3)."
+    },
+    {
+      "frase": "Los buenos precios no duran para siempre. Usémoslos para invertir en productividad, calidad y nuevos mercados. El tablero completo está en el enlace de mi perfil.",
+      "cifra": "",
+      "etiqueta": "Los precios no los decidimos. La productividad y los mercados, sí.",
+      "visual": "recursos/escena_6_dashboard.png",
+      "estilo": "warm, hopeful, inviting tone",
+      "cifra_en_texto": true,
+      "verificacion": "Cierre propositivo (propuestas del notebook 03) e invitación al dashboard."
+    }
+  ],
+  "hashtags": ["#Peru", "#Cafe", "#Cacao", "#Exportaciones", "#Agroexportacion", "#Economia", "#CienciaDeDatos", "#Python"],
+  "posts": {
+    "linkedin": "¿Nuestras exportaciones de café y cacao crecieron por vender más o por vender más caro?\n\nCon datos de SUNAT y del Banco Mundial (2015–2025) separé el crecimiento del valor exportado en dos partes: precio y volumen.\n\n• Café: el valor casi se triplicó (de US$ 614 a US$ 1 802 millones), pero el volumen creció 31 %. El 74 % del aumento vino del precio internacional, que en 2025 llegó a su nivel más alto desde 1960.\n• Cacao: creció en precio y también en volumen (x2,4), gracias al trabajo de miles de productores. Pero en enero–agosto de 2026, con un precio internacional promedio que fue la mitad del de un año antes, el valor exportado bajó 48 %.\n• Mercados: el cacao se abrió al mundo (la Unión Europea pasó de 66 % a 40 % de sus compras, con más Norteamérica, América Latina y Asia). El café se concentra cada vez más en Estados Unidos (33 %).\n\n¿Qué podemos hacer con esto?\n✅ Comunicar valor y volumen juntos: un récord por precio no es un salto productivo.\n✅ Usar los buenos años para invertir en productividad y calidad.\n✅ Gestionar el riesgo de precio desde las organizaciones de productores y exportadores.\n✅ Seguir la diversificación de mercados con un indicador simple (mercados equivalentes).\n\nLos precios internacionales no los decidimos; la productividad y los mercados, sí podemos trabajarlos.\n\n📊 Tablero interactivo: https://loryac21-cyber.github.io/tareas-python/tarea_3/web/\n💻 Código y datos: https://github.com/loryac21-cyber/tareas-python/tree/main/tarea_3\n\nNotas: el valor FOB no es el precio que recibe el productor en chacra. 2026 tiene datos hasta agosto. La voz del video fue generada con IA a partir de mi voz.",
+    "x": "Café peruano 2015–2025: el valor exportado casi se triplicó, pero el volumen solo creció 31 %. El 74 % del aumento fue precio. El cacao creció en ambos, y en 2026 su valor baja 48 % con el precio.\n\nTablero: https://loryac21-cyber.github.io/tareas-python/tarea_3/web/",
+    "facebook": "El valor del café que exporta el Perú casi se triplicó entre 2015 y 2025, pero el volumen solo creció 31 %: tres de cada cuatro dólares adicionales vinieron del precio internacional. El cacao creció en precio y en volumen, aunque en 2026 su valor baja con el precio.\n\nHice un tablero con datos de SUNAT y del Banco Mundial: https://loryac21-cyber.github.io/tareas-python/tarea_3/web/\n\n(Voz generada con IA a partir de mi voz)"
+  },
+  "cifras_dudosas_en_posts": []
+}

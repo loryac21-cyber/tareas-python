@@ -1,0 +1,241 @@
+pais_sunat,iso3,pais,region
+AFGANISTAN,AFG,Afganistán,Asia y Medio Oriente
+AGUAS INTERNACIONALES,XAI,Aguas internacionales,Sin país declarado
+ALBANIA,ALB,Albania,Resto de Europa
+ALEMANIA,DEU,Alemania,Unión Europea
+ANDORRA,AND,Andorra,Resto de Europa
+ANGOLA,AGO,Angola,África
+ANGUILLA,AIA,Anguila,América Latina y el Caribe
+ANTIGUA Y BARBUDA,ATG,Antigua y Barbuda,América Latina y el Caribe
+ANTILLAS HOLANDESAS,XAN,Antillas Neerlandesas (extinta),América Latina y el Caribe
+ARABIA SAUDITA,SAU,Arabia Saudita,Asia y Medio Oriente
+ARGELIA,DZA,Argelia,África
+ARGENTINA,ARG,Argentina,América Latina y el Caribe
+ARMENIA,ARM,Armenia,Asia y Medio Oriente
+ARUBA,ABW,Aruba,América Latina y el Caribe
+AUSTRALIA,AUS,Australia,Oceanía
+AUSTRIA,AUT,Austria,Unión Europea
+AZERBAIJAN,AZE,Azerbaiyán,Asia y Medio Oriente
+BAHAMAS,BHS,Bahamas,América Latina y el Caribe
+BAHREIN,BHR,Baréin,Asia y Medio Oriente
+BANGLADESH,BGD,Bangladés,Asia y Medio Oriente
+BARBADOS,BRB,Barbados,América Latina y el Caribe
+BELARUS,BLR,Bielorrusia,Resto de Europa
+BELGICA,BEL,Bélgica,Unión Europea
+BELICE,BLZ,Belice,América Latina y el Caribe
+BENIN,BEN,Benín,África
+BERMUDAS,BMU,Bermudas,Norteamérica
+BOLIVIA,BOL,Bolivia,América Latina y el Caribe
+"BONAIRE,SAN EUSTAQUIO Y SABA",BES,"Bonaire, San Eustaquio y Saba",América Latina y el Caribe
+BOSNIA-HERZEGOVINA,BIH,Bosnia y Herzegovina,Resto de Europa
+BOTSWANA,BWA,Botsuana,África
+BRASIL,BRA,Brasil,América Latina y el Caribe
+BRUNEI DARUSSALAM,BRN,Brunéi,Asia y Medio Oriente
+BULGARIA,BGR,Bulgaria,Unión Europea
+BURKINA FASO,BFA,Burkina Faso,África
+BURUNDI,BDI,Burundi,África
+BUTAN,BTN,Bután,Asia y Medio Oriente
+CABO VERDE,CPV,Cabo Verde,África
+"CAIMAN,ISLAS",CYM,Islas Caimán,América Latina y el Caribe
+CAMBOYA,KHM,Camboya,Asia y Medio Oriente
+"CAMERUN,REPUBLICA UNIDA DEL",CMR,Camerún,África
+CANADA,CAN,Canadá,Norteamérica
+CHAD,TCD,Chad,África
+CHILE,CHL,Chile,América Latina y el Caribe
+CHINA,CHN,China,Asia y Medio Oriente
+CHIPRE,CYP,Chipre,Unión Europea
+"COCOS (KEELING),ISLAS",CCK,Islas Cocos,Oceanía
+COLOMBIA,COL,Colombia,América Latina y el Caribe
+COMORAS,COM,Comoras,África
+"COOK, ISLAS",COK,Islas Cook,Oceanía
+"COREA (NORTE), REPUBLICA POPULAR DEMOCRATICA DE",PRK,Corea del Norte,Asia y Medio Oriente
+"COREA (SUR), REPUBLICA DE",KOR,Corea del Sur,Asia y Medio Oriente
+COSTA DE MARFIL,CIV,Costa de Marfil,África
+COSTA RICA,CRI,Costa Rica,América Latina y el Caribe
+COTE D'IVOIRE,CIV,Costa de Marfil,África
+CROACIA,HRV,Croacia,Unión Europea
+CUBA,CUB,Cuba,América Latina y el Caribe
+CURACAO,CUW,Curazao,América Latina y el Caribe
+DINAMARCA,DNK,Dinamarca,Unión Europea
+DJIBOUTI,DJI,Yibuti,África
+DOMINICA,DMA,Dominica,América Latina y el Caribe
+ECUADOR,ECU,Ecuador,América Latina y el Caribe
+EGIPTO,EGY,Egipto,África
+EL SALVADOR,SLV,El Salvador,América Latina y el Caribe
+EMIRATOS ARABES UNIDOS,ARE,Emiratos Árabes Unidos,Asia y Medio Oriente
+ERITREA,ERI,Eritrea,África
+ESCOCIA,GBR,Reino Unido,Resto de Europa
+ESLOVAQUIA,SVK,Eslovaquia,Unión Europea
+ESLOVENIA,SVN,Eslovenia,Unión Europea
+ESPAÑA,ESP,España,Unión Europea
+ESTADOS UNIDOS,USA,Estados Unidos,Norteamérica
+ESTONIA,EST,Estonia,Unión Europea
+ETIOPIA,ETH,Etiopía,África
+"FEROE, ISLAS",FRO,Islas Feroe,Resto de Europa
+FIJI,FJI,Fiyi,Oceanía
+FILIPINAS,PHL,Filipinas,Asia y Medio Oriente
+FINLANDIA,FIN,Finlandia,Unión Europea
+"FRANCE, METROPOLITAN",FRA,Francia,Unión Europea
+FRANCIA,FRA,Francia,Unión Europea
+GABON,GAB,Gabón,África
+GAMBIA,GMB,Gambia,África
+GEORGIA,GEO,Georgia,Asia y Medio Oriente
+GHANA,GHA,Ghana,África
+GIBRALTAR,GIB,Gibraltar,Resto de Europa
+GRANADA,GRD,Granada,América Latina y el Caribe
+GRECIA,GRC,Grecia,Unión Europea
+GROENLANDIA,GRL,Groenlandia,Norteamérica
+GUADALUPE,FRA,Francia,Unión Europea
+GUAM,GUM,Guam,Oceanía
+GUATEMALA,GTM,Guatemala,América Latina y el Caribe
+GUAYANA FRANCESA,FRA,Francia,Unión Europea
+GUINEA,GIN,Guinea,África
+GUINEA ECUATORIAL,GNQ,Guinea Ecuatorial,África
+GUINEA-BISSAU,GNB,Guinea-Bisáu,África
+GUYANA,GUY,Guyana,América Latina y el Caribe
+HAITI,HTI,Haití,América Latina y el Caribe
+HONDURAS,HND,Honduras,América Latina y el Caribe
+HONG KONG,HKG,Hong Kong,Asia y Medio Oriente
+HUNGRIA,HUN,Hungría,Unión Europea
+INDIA,IND,India,Asia y Medio Oriente
+INDONESIA,IDN,Indonesia,Asia y Medio Oriente
+IRAK,IRQ,Irak,Asia y Medio Oriente
+"IRAN, REPUBLICA ISLAMICA DEL",IRN,Irán,Asia y Medio Oriente
+IRLANDA (EIRE),IRL,Irlanda,Unión Europea
+ISLANDIA,ISL,Islandia,Resto de Europa
+ISRAEL,ISR,Israel,Asia y Medio Oriente
+ITALIA,ITA,Italia,Unión Europea
+JAMAICA,JAM,Jamaica,América Latina y el Caribe
+JAPON,JPN,Japón,Asia y Medio Oriente
+JORDANIA,JOR,Jordania,Asia y Medio Oriente
+KAZAJSTAN,KAZ,Kazajistán,Asia y Medio Oriente
+KENIA,KEN,Kenia,África
+KIRGUIZISTAN,KGZ,Kirguistán,Asia y Medio Oriente
+KIRIBATI,KIR,Kiribati,Oceanía
+KUWAIT,KWT,Kuwait,Asia y Medio Oriente
+"LAOS, REPUBLICA POPULAR DEMOCRATICA DE",LAO,Laos,Asia y Medio Oriente
+LETONIA,LVA,Letonia,Unión Europea
+LIBANO,LBN,Líbano,Asia y Medio Oriente
+LIBERIA,LBR,Liberia,África
+LIBIA,LBY,Libia,África
+LIECHTENSTEIN,LIE,Liechtenstein,Resto de Europa
+LITUANIA,LTU,Lituania,Unión Europea
+LUXEMBURGO,LUX,Luxemburgo,Unión Europea
+MACAO,MAC,Macao,Asia y Medio Oriente
+MACEDONIA F.Y.R.,MKD,Macedonia del Norte,Resto de Europa
+MADAGASCAR,MDG,Madagascar,África
+MALAWI,MWI,Malaui,África
+MALAYSIA,MYS,Malasia,Asia y Medio Oriente
+MALDIVAS,MDV,Maldivas,Asia y Medio Oriente
+MALI,MLI,Malí,África
+MALTA,MLT,Malta,Unión Europea
+"MARIANAS DEL NORTE, ISLAS",MNP,Islas Marianas del Norte,Oceanía
+MARRUECOS,MAR,Marruecos,África
+"MARSHALL, ISLAS",MHL,Islas Marshall,Oceanía
+MARTINICA,FRA,Francia,Unión Europea
+MAURICIO,MUS,Mauricio,África
+MAURITANIA,MRT,Mauritania,África
+MAYOTTE,FRA,Francia,Unión Europea
+MEXICO,MEX,México,América Latina y el Caribe
+"MICRONESIA, ESTADOS FEDERADOS DE",FSM,Micronesia,Oceanía
+MOLDAVIA,MDA,Moldavia,Resto de Europa
+MONACO,MCO,Mónaco,Resto de Europa
+MONGOLIA,MNG,Mongolia,Asia y Medio Oriente
+MONTENEGRO,MNE,Montenegro,Resto de Europa
+"MONTSERRAT, ISLA",MSR,Montserrat,América Latina y el Caribe
+MOZAMBIQUE,MOZ,Mozambique,África
+MYANMAR,MMR,Myanmar,Asia y Medio Oriente
+NAMIBIA,NAM,Namibia,África
+NAURU,NRU,Nauru,Oceanía
+"NAVIDAD (CHRISTMAS), ISLA",CXR,Isla de Navidad,Oceanía
+NEPAL,NPL,Nepal,Asia y Medio Oriente
+NICARAGUA,NIC,Nicaragua,América Latina y el Caribe
+NIGER,NER,Níger,África
+NIGERIA,NGA,Nigeria,África
+NO DECLARADOS,XND,No declarado,Sin país declarado
+"NORFOLK, ISLA",NFK,Isla Norfolk,Oceanía
+NORUEGA,NOR,Noruega,Resto de Europa
+NUEVA CALEDONIA,NCL,Nueva Caledonia,Oceanía
+NUEVA ZELANDA,NZL,Nueva Zelanda,Oceanía
+OMAN,OMN,Omán,Asia y Medio Oriente
+PAISES BAJOS,NLD,Países Bajos,Unión Europea
+PAISES NO PRECISADOS EN OTRA PARTE Y DESCONOCIDOS,XNP,País no precisado,Sin país declarado
+PAKISTAN,PAK,Pakistán,Asia y Medio Oriente
+"PALAU, ISLAS",PLW,Palaos,Oceanía
+PANAMA,PAN,Panamá,América Latina y el Caribe
+PAPUASIA NUEVA GUINEA,PNG,Papúa Nueva Guinea,Oceanía
+PARAGUAY,PRY,Paraguay,América Latina y el Caribe
+PERÚ,XPE,Perú (destino nacional),Sin país declarado
+POLINESIA FRANCESA,PYF,Polinesia Francesa,Oceanía
+POLONIA,POL,Polonia,Unión Europea
+PORTUGAL,PRT,Portugal,Unión Europea
+PUERTO RICO,PRI,Puerto Rico,América Latina y el Caribe
+QATAR,QAT,Catar,Asia y Medio Oriente
+REINO UNIDO,GBR,Reino Unido,Resto de Europa
+REPUBLICA CENTROAFRICANA,CAF,República Centroafricana,África
+REPUBLICA CHECA,CZE,Chequia,Unión Europea
+REPUBLICA DOMINICANA,DOM,República Dominicana,América Latina y el Caribe
+REPÚBLICA DEL CONGO,COG,República del Congo,África
+REPÚBLICA DEMOCRÁTICA DEL CONGO,COD,R. D. del Congo,África
+REUNION,FRA,Francia,Unión Europea
+RUANDA,RWA,Ruanda,África
+RUMANIA,ROU,Rumania,Unión Europea
+RUSIA,RUS,Rusia,Resto de Europa
+"SALOMON, ISLAS",SLB,Islas Salomón,Oceanía
+SAMOA,WSM,Samoa,Oceanía
+SAMOA NORTEAMERICANA,ASM,Samoa Americana,Oceanía
+SAN BARTOLOME,BLM,San Bartolomé,América Latina y el Caribe
+SAN CRISTOBAL Y NIEVES,KNA,San Cristóbal y Nieves,América Latina y el Caribe
+SAN MARINO,SMR,San Marino,Resto de Europa
+SAN MARTIN,MAF,San Martín,América Latina y el Caribe
+SAN VICENTE Y LAS GRANADINAS,VCT,San Vicente y las Granadinas,América Latina y el Caribe
+SANTA ELENA,SHN,Santa Elena,África
+SANTA LUCIA,LCA,Santa Lucía,América Latina y el Caribe
+SANTA SEDE,VAT,Santa Sede,Resto de Europa
+SANTO TOME Y PRINCIPE,STP,Santo Tomé y Príncipe,África
+SAWSILANDIA,SWZ,Esuatini,África
+SENEGAL,SEN,Senegal,África
+SERBIA,SRB,Serbia,Resto de Europa
+SERBIA Y MONTENEGRO,SRB,Serbia,Resto de Europa
+SEYCHELLES,SYC,Seychelles,África
+SIERRA LEONA,SLE,Sierra Leona,África
+SINGAPUR,SGP,Singapur,Asia y Medio Oriente
+"SIRIA, REPUBLICA ARABE DE",SYR,Siria,Asia y Medio Oriente
+SOMALIA,SOM,Somalia,África
+SRI LANKA,LKA,Sri Lanka,Asia y Medio Oriente
+"SUDAFRICA, REPUBLICA DE",ZAF,Sudáfrica,África
+SUDAN,SDN,Sudán,África
+SUECIA,SWE,Suecia,Unión Europea
+SUIZA,CHE,Suiza,Resto de Europa
+SURINAM,SUR,Surinam,América Latina y el Caribe
+SVALBARD AND JAN MAYEN ISLANDS,SJM,Svalbard y Jan Mayen,Resto de Europa
+TAILANDIA,THA,Tailandia,Asia y Medio Oriente
+TAIWAN (FORMOSA),TWN,Taiwán,Asia y Medio Oriente
+"TANZANIA, REPUBLICA UNIDA DE",TZA,Tanzania,África
+TERRITORIO ANTARTICO BRITANICO,XAT,Territorio Antártico Británico,Sin país declarado
+TERRITORIO BRITANICO DEL OCEANO INDICO,IOT,Territorio Británico del Océano Índico,Asia y Medio Oriente
+TIMOR DEL ESTE,TLS,Timor Oriental,Asia y Medio Oriente
+TOGO,TGO,Togo,África
+TOKELAU,TKL,Tokelau,Oceanía
+TONGA,TON,Tonga,Oceanía
+TRINIDAD Y TOBAGO,TTO,Trinidad y Tobago,América Latina y el Caribe
+TUNICIA,TUN,Túnez,África
+"TURCAS Y CAICOS, ISLAS",TCA,Islas Turcas y Caicos,América Latina y el Caribe
+TURKMENISTAN,TKM,Turkmenistán,Asia y Medio Oriente
+TURQUIA,TUR,Turquía,Resto de Europa
+UCRANIA,UKR,Ucrania,Resto de Europa
+UGANDA,UGA,Uganda,África
+UNITED STATES MINOR OUTLYING ISLANDS,UMI,Islas menores de EE. UU.,Oceanía
+URUGUAY,URY,Uruguay,América Latina y el Caribe
+UZBEKISTAN,UZB,Uzbekistán,Asia y Medio Oriente
+VANUATU,VUT,Vanuatu,Oceanía
+VENEZUELA,VEN,Venezuela,América Latina y el Caribe
+VIET NAM,VNM,Vietnam,Asia y Medio Oriente
+"VIRGENES, ISLAS (BRITANICAS)",VGB,Islas Vírgenes Británicas,América Latina y el Caribe
+"VIRGENES, ISLAS (NORTEAMERICANAS)",VIR,Islas Vírgenes de EE. UU.,América Latina y el Caribe
+YEMEN,YEM,Yemen,Asia y Medio Oriente
+YUGOSLAVIA,SRB,Serbia,Resto de Europa
+ZAMBIA,ZMB,Zambia,África
+ZIMBABWE,ZWE,Zimbabue,África
+ZONA NEUTRAL (PALESTINA),PSE,Palestina,Asia y Medio Oriente
+ZONAS FRANCAS DEL PERU,XZF,Zonas francas del Perú,Sin país declarado
