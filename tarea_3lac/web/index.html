@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Café, cacao y madera hacia la UE</title>
+  <meta name="description" content="Dashboard interactivo de las exportaciones peruanas de café, cacao y madera a la Unión Europea (SUNAT), en el marco del Reglamento (UE) 2023/1115 sobre productos libres de deforestación (EUDR).">
+  <link rel="stylesheet" href="assets/estilos.css">
+  <script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.35.2/plotly.min.js"></script>
+</head>
+<body>
+  <button class="boton-tema" id="boton-tema" type="button" aria-label="Cambiar tema claro u oscuro">◐ Tema</button>
+
+  <header class="contenedor cabecera">
+    <span class="etiqueta">Perú → Unión Europea · Reglamento EUDR</span>
+    <h1>Café, cacao y madera: ¿cuánto exporta el Perú a la Unión Europea bajo la lupa del reglamento antideforestación?</h1>
+    <p class="pregunta"><strong>Pregunta de investigación:</strong> ¿cuál es el valor FOB y el volumen de las exportaciones peruanas de café, cacao y madera
+      hacia la Unión Europea, a qué países llegan y qué tan dependiente es cada producto de ese mercado ahora que entra en aplicación el Reglamento (UE) 2023/1115 (EUDR)?</p>
+    <div class="chips">
+      <span class="chip">Fuente: SUNAT, Nota Tributaria (cuadros G8 y G9)</span>
+      <span class="chip" id="chip-cobertura">Cobertura: 2005 – 2026</span>
+      <span class="chip">Valores: US$ FOB · volumen: peso neto</span>
+      <span class="chip">UE-27 (composición actual)</span>
+    </div>
+  </header>
+
+  <section class="contenedor contexto" aria-label="Contexto">
+    <div class="tarjeta">
+      <h2>¿Qué es el EUDR y por qué importa al Perú?</h2>
+      <p>El Reglamento (UE) 2023/1115 prohíbe comercializar en la Unión Europea café, cacao, madera, soya, palma, caucho y ganado
+        (y sus derivados) si provienen de tierras deforestadas después del 31 de diciembre de 2020 o si no cumplen la ley del país de origen.
+        Cada envío necesita una <em>declaración de diligencia debida</em> con la geolocalización de las parcelas de producción.</p>
+      <p>Para el Perú, tres de esos productos son exportaciones agrarias y forestales clave de la Amazonía y la selva central.
+        Este tablero mide cuánto de ese comercio va a la UE y, por lo tanto, cuánto queda expuesto a las nuevas exigencias.</p>
+    </div>
+    <div class="tarjeta">
+      <h2>Línea de tiempo</h2>
+      <ul class="linea-tiempo">
+        <li><time>29/06/2023</time><span>Entra en vigor el Reglamento (UE) 2023/1115.</span></li>
+        <li><time>Dic. 2024</time><span>Primer aplazamiento de un año (Reglamento (UE) 2024/3234).</span></li>
+        <li><time>Mayo 2025</time><span>La Comisión clasifica al Perú como país de <strong>riesgo estándar</strong> (Reg. de Ejecución 2025/1093).</span></li>
+        <li><time>Dic. 2025</time><span>Segundo aplazamiento y simplificación (Reglamento (UE) 2025/2650).</span></li>
+        <li class="clave"><time>30/12/2026</time><span>Aplicación para operadores grandes y medianos.</span></li>
+        <li><time>30/06/2027</time><span>Aplicación para micro y pequeñas empresas.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <nav class="filtros" aria-label="Filtros">
+    <div class="contenedor">
+      <div class="control">
+        <span id="lbl-producto">Producto</span>
+        <div class="segmentado" role="group" aria-labelledby="lbl-producto" id="f-producto"></div>
+      </div>
+      <label class="control">
+        <span>Año</span>
+        <select id="f-anio"></select>
+      </label>
+      <div class="control">
+        <span id="lbl-periodo">Periodo</span>
+        <div class="segmentado" role="group" aria-labelledby="lbl-periodo" id="f-periodo"></div>
+      </div>
+      <div class="control">
+        <span id="lbl-indicador">Indicador</span>
+        <div class="segmentado" role="group" aria-labelledby="lbl-indicador" id="f-indicador"></div>
+      </div>
+      <div class="control">
+        <span id="lbl-ambito">Mapa</span>
+        <div class="segmentado" role="group" aria-labelledby="lbl-ambito" id="f-ambito"></div>
+      </div>
+      <div class="control">
+        <span>Rango de la serie</span>
+        <div class="rango">
+          <select id="f-desde" aria-label="Año inicial de la serie"></select>
+          <span>a</span>
+          <select id="f-hasta" aria-label="Año final de la serie"></select>
+        </div>
+      </div>
+      <p class="aviso-periodo" id="aviso-periodo"></p>
+    </div>
+  </nav>
+
+  <main class="contenedor" id="principal">
+    <p class="cargando" id="cargando">Cargando datos…</p>
+
+    <section class="kpis" id="kpis" aria-label="Indicadores clave"></section>
+
+    <section class="rejilla">
+      <article class="tarjeta grafico col-8">
+        <h3 id="t-mapa">Destinos de las exportaciones</h3>
+        <p class="subtitulo" id="s-mapa"></p>
+        <div class="lienzo alto" id="g-mapa" role="img" aria-label="Mapa coroplético de países de destino"></div>
+      </article>
+      <article class="tarjeta grafico col-4">
+        <h3 id="t-top">Principales destinos en la UE</h3>
+        <p class="subtitulo" id="s-top"></p>
+        <div class="lienzo alto" id="g-top" role="img" aria-label="Barras de los principales destinos en la Unión Europea"></div>
+      </article>
+    </section>
+
+    <section class="rejilla">
+      <article class="tarjeta grafico col-6">
+        <h3 id="t-serie">Exportaciones a la UE-27 por producto</h3>
+        <p class="subtitulo" id="s-serie"></p>
+        <div class="leyenda" id="l-serie"></div>
+        <div class="lienzo" id="g-serie" role="img" aria-label="Serie anual de exportaciones a la UE por producto"></div>
+      </article>
+      <article class="tarjeta grafico col-6">
+        <h3>¿Qué parte de cada producto va a la UE?</h3>
+        <p class="subtitulo" id="s-part">Participación de la UE-27 en el total exportado del producto, %</p>
+        <div class="leyenda" id="l-part"></div>
+        <div class="lienzo" id="g-part" role="img" aria-label="Participación de la UE en las exportaciones de cada producto"></div>
+      </article>
+    </section>
+
+    <section class="rejilla">
+      <article class="tarjeta grafico col-6">
+        <h3 id="t-comp">Composición: ¿qué se exporta a la UE y qué al resto?</h3>
+        <p class="subtitulo" id="s-comp"></p>
+        <div class="leyenda" id="l-comp"></div>
+        <div class="lienzo" id="g-comp" role="img" aria-label="Composición por tipo de producto, UE frente al resto del mundo"></div>
+      </article>
+      <article class="tarjeta grafico col-6">
+        <h3>Valor unitario: ¿paga más la UE?</h3>
+        <p class="subtitulo" id="s-precio"></p>
+        <div class="leyenda" id="l-precio"></div>
+        <div class="lienzo" id="g-precio" role="img" aria-label="Valor unitario en dólares por kilogramo"></div>
+      </article>
+    </section>
+
+    <section class="rejilla">
+      <article class="tarjeta col-12">
+        <div class="barra-tabla">
+          <div>
+            <h3 id="t-tabla">Tabla por país de destino</h3>
+            <p class="subtitulo" id="s-tabla" style="margin:0"></p>
+          </div>
+          <button class="boton" id="descargar" type="button">Descargar CSV filtrado</button>
+        </div>
+        <div class="tabla-envoltura">
+          <table id="tabla">
+            <thead><tr>
+              <th data-col="nombre">País</th>
+              <th data-col="fob" aria-sort="descending">FOB (US$)</th>
+              <th data-col="kg">Peso neto (t)</th>
+              <th data-col="vu">US$/kg</th>
+              <th data-col="part">% del total</th>
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+
+    <h2 class="seccion-titulo">Tres hallazgos</h2>
+    <section class="hallazgos" id="hallazgos"></section>
+
+    <h2 class="seccion-titulo">Metodología, fuentes y limitaciones</h2>
+    <section class="metodo">
+      <div class="tarjeta">
+        <h3>Metodología</h3>
+        <ul>
+          <li>Se descargó el Cuadro G8 de SUNAT (exportación definitiva por país de destino y subpartida nacional, mensual, 2005 a setiembre 2026).</li>
+          <li>Se filtraron las subpartidas del Anexo I del EUDR: café (0901), cacao y derivados (1801–1806) y madera (capítulo 44).</li>
+          <li>Se validó que la suma por subpartida coincide con el Cuadro G9 (totales anuales).</li>
+          <li>La UE se define con sus 27 miembros actuales en todos los años (el Reino Unido figura como país aparte).</li>
+          <li>Valor unitario = FOB / peso neto. Variaciones: mismo periodo del año anterior.</li>
+          <li>Proceso reproducible en los notebooks <code>01</code>–<code>03</code> del repositorio.</li>
+        </ul>
+      </div>
+      <div class="tarjeta">
+        <h3>Fuentes</h3>
+        <ul>
+          <li><a href="https://www.sunat.gob.pe/estadisticasestudios/exportaciones.html" target="_blank" rel="noopener">SUNAT · Estadísticas de exportaciones (Nota Tributaria, cuadros G8 y G9)</a></li>
+          <li><a href="https://eur-lex.europa.eu/eli/reg/2023/1115/oj" target="_blank" rel="noopener">Reglamento (UE) 2023/1115 (EUR-Lex)</a></li>
+          <li><a href="https://www.consilium.europa.eu/en/press/press-releases/2025/12/18/deforestation-council-signs-off-targeted-revision-to-simplify-and-postpone-the-regulation/" target="_blank" rel="noopener">Consejo de la UE · aplazamiento y simplificación (dic. 2025)</a></li>
+          <li><a href="https://eur-lex.europa.eu/eli/reg_impl/2025/1093/oj" target="_blank" rel="noopener">Reglamento de Ejecución (UE) 2025/1093 · clasificación de países</a></li>
+        </ul>
+      </div>
+      <div class="tarjeta">
+        <h3>Limitaciones</h3>
+        <ul>
+          <li>El país de destino es el declarado en el embarque. Lo que llega a Bélgica o Países Bajos puede reexportarse dentro o fuera de la UE.</li>
+          <li>No incluye pulpa y papel (cap. 47–49) ni muebles de madera (9401/9403), que el EUDR también cubre.</li>
+          <li>2026 cubre solo enero–setiembre. Para compararlo se usa el mismo periodo de los años previos.</li>
+          <li>El volumen es el peso neto declarado. Mezcla productos de distinta densidad (por ejemplo, café verde y café tostado).</li>
+          <li>Los datos muestran comercio, no deforestación: no permiten saber qué envíos cumplirían el EUDR.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="contenedor">
+      Tarea 3 · Curso Python Intermedio (D2CML). Datos: SUNAT. Elaboración propia con apoyo de IA (Claude Code).
+      <span id="pie-actualizado"></span>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

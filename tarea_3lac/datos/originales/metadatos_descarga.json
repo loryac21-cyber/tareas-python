@@ -1,0 +1,14 @@
+{
+  "G8": {
+    "url": "https://www.sunat.gob.pe/estadisticasestudios/nota_tributaria/cdro_G8.xlsx",
+    "archivo": "datos/originales/sunat_nota_tributaria/cdro_G8.xlsx",
+    "fecha_descarga": "2026-10-31",
+    "tamano_mb": 175.7
+  },
+  "G9": {
+    "url": "https://www.sunat.gob.pe/estadisticasestudios/nota_tributaria/cdro_G9.xlsx",
+    "archivo": "datos/originales/sunat_nota_tributaria/cdro_G9.xlsx",
+    "fecha_descarga": "2026-10-31",
+    "tamano_mb": 6.9
+  }
+}

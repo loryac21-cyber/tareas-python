@@ -1,0 +1,18 @@
+[project]
+name = "eudr-exportaciones-peru"
+version = "0.1.0"
+description = "Exportaciones peruanas de café, cacao y madera a la Unión Europea en el marco del Reglamento (UE) 2023/1115 (EUDR)"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pandas",
+    "requests",
+    "openpyxl",
+    "matplotlib",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.4.0",
+    "nbconvert",
+]

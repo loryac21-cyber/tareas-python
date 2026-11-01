@@ -1,0 +1,241 @@
+pais_sunat,iso3,pais,ue27
+AFGANISTAN,AFG,Afganistán,False
+AGUAS INTERNACIONALES,XAI,Aguas internacionales,False
+ALBANIA,ALB,Albania,False
+ALEMANIA,DEU,Alemania,True
+ANDORRA,AND,Andorra,False
+ANGOLA,AGO,Angola,False
+ANGUILLA,AIA,Anguila,False
+ANTIGUA Y BARBUDA,ATG,Antigua y Barbuda,False
+ANTILLAS HOLANDESAS,XAN,Antillas Neerlandesas (extinta),False
+ARABIA SAUDITA,SAU,Arabia Saudita,False
+ARGELIA,DZA,Argelia,False
+ARGENTINA,ARG,Argentina,False
+ARMENIA,ARM,Armenia,False
+ARUBA,ABW,Aruba,False
+AUSTRALIA,AUS,Australia,False
+AUSTRIA,AUT,Austria,True
+AZERBAIJAN,AZE,Azerbaiyán,False
+BAHAMAS,BHS,Bahamas,False
+BAHREIN,BHR,Baréin,False
+BANGLADESH,BGD,Bangladés,False
+BARBADOS,BRB,Barbados,False
+BELARUS,BLR,Bielorrusia,False
+BELGICA,BEL,Bélgica,True
+BELICE,BLZ,Belice,False
+BENIN,BEN,Benín,False
+BERMUDAS,BMU,Bermudas,False
+BOLIVIA,BOL,Bolivia,False
+"BONAIRE,SAN EUSTAQUIO Y SABA",BES,"Bonaire, San Eustaquio y Saba",False
+BOSNIA-HERZEGOVINA,BIH,Bosnia y Herzegovina,False
+BOTSWANA,BWA,Botsuana,False
+BRASIL,BRA,Brasil,False
+BRUNEI DARUSSALAM,BRN,Brunéi,False
+BULGARIA,BGR,Bulgaria,True
+BURKINA FASO,BFA,Burkina Faso,False
+BURUNDI,BDI,Burundi,False
+BUTAN,BTN,Bután,False
+CABO VERDE,CPV,Cabo Verde,False
+"CAIMAN,ISLAS",CYM,Islas Caimán,False
+CAMBOYA,KHM,Camboya,False
+"CAMERUN,REPUBLICA UNIDA DEL",CMR,Camerún,False
+CANADA,CAN,Canadá,False
+CHAD,TCD,Chad,False
+CHILE,CHL,Chile,False
+CHINA,CHN,China,False
+CHIPRE,CYP,Chipre,True
+"COCOS (KEELING),ISLAS",CCK,Islas Cocos,False
+COLOMBIA,COL,Colombia,False
+COMORAS,COM,Comoras,False
+"COOK, ISLAS",COK,Islas Cook,False
+"COREA (NORTE), REPUBLICA POPULAR DEMOCRATICA DE",PRK,Corea del Norte,False
+"COREA (SUR), REPUBLICA DE",KOR,Corea del Sur,False
+COSTA DE MARFIL,CIV,Costa de Marfil,False
+COSTA RICA,CRI,Costa Rica,False
+COTE D'IVOIRE,CIV,Costa de Marfil,False
+CROACIA,HRV,Croacia,True
+CUBA,CUB,Cuba,False
+CURACAO,CUW,Curazao,False
+DINAMARCA,DNK,Dinamarca,True
+DJIBOUTI,DJI,Yibuti,False
+DOMINICA,DMA,Dominica,False
+ECUADOR,ECU,Ecuador,False
+EGIPTO,EGY,Egipto,False
+EL SALVADOR,SLV,El Salvador,False
+EMIRATOS ARABES UNIDOS,ARE,Emiratos Árabes Unidos,False
+ERITREA,ERI,Eritrea,False
+ESCOCIA,GBR,Reino Unido,False
+ESLOVAQUIA,SVK,Eslovaquia,True
+ESLOVENIA,SVN,Eslovenia,True
+ESPAÑA,ESP,España,True
+ESTADOS UNIDOS,USA,Estados Unidos,False
+ESTONIA,EST,Estonia,True
+ETIOPIA,ETH,Etiopía,False
+"FEROE, ISLAS",FRO,Islas Feroe,False
+FIJI,FJI,Fiyi,False
+FILIPINAS,PHL,Filipinas,False
+FINLANDIA,FIN,Finlandia,True
+"FRANCE, METROPOLITAN",FRA,Francia,True
+FRANCIA,FRA,Francia,True
+GABON,GAB,Gabón,False
+GAMBIA,GMB,Gambia,False
+GEORGIA,GEO,Georgia,False
+GHANA,GHA,Ghana,False
+GIBRALTAR,GIB,Gibraltar,False
+GRANADA,GRD,Granada,False
+GRECIA,GRC,Grecia,True
+GROENLANDIA,GRL,Groenlandia,False
+GUADALUPE,FRA,Francia,True
+GUAM,GUM,Guam,False
+GUATEMALA,GTM,Guatemala,False
+GUAYANA FRANCESA,FRA,Francia,True
+GUINEA,GIN,Guinea,False
+GUINEA ECUATORIAL,GNQ,Guinea Ecuatorial,False
+GUINEA-BISSAU,GNB,Guinea-Bisáu,False
+GUYANA,GUY,Guyana,False
+HAITI,HTI,Haití,False
+HONDURAS,HND,Honduras,False
+HONG KONG,HKG,Hong Kong,False
+HUNGRIA,HUN,Hungría,True
+INDIA,IND,India,False
+INDONESIA,IDN,Indonesia,False
+IRAK,IRQ,Irak,False
+"IRAN, REPUBLICA ISLAMICA DEL",IRN,Irán,False
+IRLANDA (EIRE),IRL,Irlanda,True
+ISLANDIA,ISL,Islandia,False
+ISRAEL,ISR,Israel,False
+ITALIA,ITA,Italia,True
+JAMAICA,JAM,Jamaica,False
+JAPON,JPN,Japón,False
+JORDANIA,JOR,Jordania,False
+KAZAJSTAN,KAZ,Kazajistán,False
+KENIA,KEN,Kenia,False
+KIRGUIZISTAN,KGZ,Kirguistán,False
+KIRIBATI,KIR,Kiribati,False
+KUWAIT,KWT,Kuwait,False
+"LAOS, REPUBLICA POPULAR DEMOCRATICA DE",LAO,Laos,False
+LETONIA,LVA,Letonia,True
+LIBANO,LBN,Líbano,False
+LIBERIA,LBR,Liberia,False
+LIBIA,LBY,Libia,False
+LIECHTENSTEIN,LIE,Liechtenstein,False
+LITUANIA,LTU,Lituania,True
+LUXEMBURGO,LUX,Luxemburgo,True
+MACAO,MAC,Macao,False
+MACEDONIA F.Y.R.,MKD,Macedonia del Norte,False
+MADAGASCAR,MDG,Madagascar,False
+MALAWI,MWI,Malaui,False
+MALAYSIA,MYS,Malasia,False
+MALDIVAS,MDV,Maldivas,False
+MALI,MLI,Malí,False
+MALTA,MLT,Malta,True
+"MARIANAS DEL NORTE, ISLAS",MNP,Islas Marianas del Norte,False
+MARRUECOS,MAR,Marruecos,False
+"MARSHALL, ISLAS",MHL,Islas Marshall,False
+MARTINICA,FRA,Francia,True
+MAURICIO,MUS,Mauricio,False
+MAURITANIA,MRT,Mauritania,False
+MAYOTTE,FRA,Francia,True
+MEXICO,MEX,México,False
+"MICRONESIA, ESTADOS FEDERADOS DE",FSM,Micronesia,False
+MOLDAVIA,MDA,Moldavia,False
+MONACO,MCO,Mónaco,False
+MONGOLIA,MNG,Mongolia,False
+MONTENEGRO,MNE,Montenegro,False
+"MONTSERRAT, ISLA",MSR,Montserrat,False
+MOZAMBIQUE,MOZ,Mozambique,False
+MYANMAR,MMR,Myanmar,False
+NAMIBIA,NAM,Namibia,False
+NAURU,NRU,Nauru,False
+"NAVIDAD (CHRISTMAS), ISLA",CXR,Isla de Navidad,False
+NEPAL,NPL,Nepal,False
+NICARAGUA,NIC,Nicaragua,False
+NIGER,NER,Níger,False
+NIGERIA,NGA,Nigeria,False
+NO DECLARADOS,XND,No declarado,False
+"NORFOLK, ISLA",NFK,Isla Norfolk,False
+NORUEGA,NOR,Noruega,False
+NUEVA CALEDONIA,NCL,Nueva Caledonia,False
+NUEVA ZELANDA,NZL,Nueva Zelanda,False
+OMAN,OMN,Omán,False
+PAISES BAJOS,NLD,Países Bajos,True
+PAISES NO PRECISADOS EN OTRA PARTE Y DESCONOCIDOS,XNP,País no precisado,False
+PAKISTAN,PAK,Pakistán,False
+"PALAU, ISLAS",PLW,Palaos,False
+PANAMA,PAN,Panamá,False
+PAPUASIA NUEVA GUINEA,PNG,Papúa Nueva Guinea,False
+PARAGUAY,PRY,Paraguay,False
+PERÚ,XPE,Perú (destino nacional),False
+POLINESIA FRANCESA,PYF,Polinesia Francesa,False
+POLONIA,POL,Polonia,True
+PORTUGAL,PRT,Portugal,True
+PUERTO RICO,PRI,Puerto Rico,False
+QATAR,QAT,Catar,False
+REINO UNIDO,GBR,Reino Unido,False
+REPUBLICA CENTROAFRICANA,CAF,República Centroafricana,False
+REPUBLICA CHECA,CZE,Chequia,True
+REPUBLICA DOMINICANA,DOM,República Dominicana,False
+REPÚBLICA DEL CONGO,COG,República del Congo,False
+REPÚBLICA DEMOCRÁTICA DEL CONGO,COD,R. D. del Congo,False
+REUNION,FRA,Francia,True
+RUANDA,RWA,Ruanda,False
+RUMANIA,ROU,Rumania,True
+RUSIA,RUS,Rusia,False
+"SALOMON, ISLAS",SLB,Islas Salomón,False
+SAMOA,WSM,Samoa,False
+SAMOA NORTEAMERICANA,ASM,Samoa Americana,False
+SAN BARTOLOME,BLM,San Bartolomé,False
+SAN CRISTOBAL Y NIEVES,KNA,San Cristóbal y Nieves,False
+SAN MARINO,SMR,San Marino,False
+SAN MARTIN,MAF,San Martín,False
+SAN VICENTE Y LAS GRANADINAS,VCT,San Vicente y las Granadinas,False
+SANTA ELENA,SHN,Santa Elena,False
+SANTA LUCIA,LCA,Santa Lucía,False
+SANTA SEDE,VAT,Santa Sede,False
+SANTO TOME Y PRINCIPE,STP,Santo Tomé y Príncipe,False
+SAWSILANDIA,SWZ,Esuatini,False
+SENEGAL,SEN,Senegal,False
+SERBIA,SRB,Serbia,False
+SERBIA Y MONTENEGRO,SRB,Serbia,False
+SEYCHELLES,SYC,Seychelles,False
+SIERRA LEONA,SLE,Sierra Leona,False
+SINGAPUR,SGP,Singapur,False
+"SIRIA, REPUBLICA ARABE DE",SYR,Siria,False
+SOMALIA,SOM,Somalia,False
+SRI LANKA,LKA,Sri Lanka,False
+"SUDAFRICA, REPUBLICA DE",ZAF,Sudáfrica,False
+SUDAN,SDN,Sudán,False
+SUECIA,SWE,Suecia,True
+SUIZA,CHE,Suiza,False
+SURINAM,SUR,Surinam,False
+SVALBARD AND JAN MAYEN ISLANDS,SJM,Svalbard y Jan Mayen,False
+TAILANDIA,THA,Tailandia,False
+TAIWAN (FORMOSA),TWN,Taiwán,False
+"TANZANIA, REPUBLICA UNIDA DE",TZA,Tanzania,False
+TERRITORIO ANTARTICO BRITANICO,XAT,Territorio Antártico Británico,False
+TERRITORIO BRITANICO DEL OCEANO INDICO,IOT,Territorio Británico del Océano Índico,False
+TIMOR DEL ESTE,TLS,Timor Oriental,False
+TOGO,TGO,Togo,False
+TOKELAU,TKL,Tokelau,False
+TONGA,TON,Tonga,False
+TRINIDAD Y TOBAGO,TTO,Trinidad y Tobago,False
+TUNICIA,TUN,Túnez,False
+"TURCAS Y CAICOS, ISLAS",TCA,Islas Turcas y Caicos,False
+TURKMENISTAN,TKM,Turkmenistán,False
+TURQUIA,TUR,Turquía,False
+UCRANIA,UKR,Ucrania,False
+UGANDA,UGA,Uganda,False
+UNITED STATES MINOR OUTLYING ISLANDS,UMI,Islas menores de EE. UU.,False
+URUGUAY,URY,Uruguay,False
+UZBEKISTAN,UZB,Uzbekistán,False
+VANUATU,VUT,Vanuatu,False
+VENEZUELA,VEN,Venezuela,False
+VIET NAM,VNM,Vietnam,False
+"VIRGENES, ISLAS (BRITANICAS)",VGB,Islas Vírgenes Británicas,False
+"VIRGENES, ISLAS (NORTEAMERICANAS)",VIR,Islas Vírgenes de EE. UU.,False
+YEMEN,YEM,Yemen,False
+YUGOSLAVIA,SRB,Serbia,False
+ZAMBIA,ZMB,Zambia,False
+ZIMBABWE,ZWE,Zimbabue,False
+ZONA NEUTRAL (PALESTINA),PSE,Palestina,False
+ZONAS FRANCAS DEL PERU,XZF,Zonas francas del Perú,False
