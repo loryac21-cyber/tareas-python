@@ -6,7 +6,7 @@
     },
     {
       "titulo": "Cacao: creció en precio y en volumen, y ya muestra lo rápido que se revierte el precio",
-      "texto": "El cacao multiplicó su valor por 6,1 entre 2015 y 2025 (US$ 267 → 1 618 millones). Aquí el volumen sí acompañó: se multiplicó por 2,4, y el precio explica el 52 % del aumento. Pero el valor unitario sigue al precio internacional con uno o dos meses de desfase (correlación 0,99). En enero–agosto de 2026, el precio internacional promedió 4,42 US$/kg, 49 % menos que un año antes, y el valor exportado cayó 48 % (US$ 536 millones menos), aunque el volumen bajó solo 11 %."
+      "texto": "El cacao multiplicó su valor por 6,1 entre 2015 y 2025 (US$ 267 → 1 618 millones). Aquí el volumen sí acompañó: se multiplicó por 2,4, y el precio explica el 52 % del aumento. Pero el valor unitario sigue al precio internacional con uno o dos meses de desfase (correlación 0,99). En enero–agosto de 2026, el precio internacional promedió 4,42 US$/kg, 49 % menos que en enero–agosto de 2025, y el valor exportado cayó 48 % (US$ 536 millones menos), aunque el volumen bajó solo 11 %."
     },
     {
       "titulo": "Diversificación: el cacao se abrió al mundo; el café se concentra en Norteamérica",
@@ -15,16 +15,16 @@
   ],
   "propuestas": [
     {
+      "titulo": "Invertir lo que dejan los buenos precios en productividad, calidad y mercados",
+      "texto": "El precio internacional no depende del Perú; lo que se hace con los ingresos extraordinarios, sí. En café el volumen apenas creció 31 % en diez años. Esos ingresos pueden financiar renovación de plantaciones y asistencia técnica (productividad), mejoras en el beneficio, el secado y la selección del grano (calidad) y promoción comercial en destinos nuevos (mercados). Es lo que sostiene el valor cuando el precio baja."
+    },
+    {
       "titulo": "Comunicar valor y volumen juntos",
       "texto": "Un récord de valor exportado con el volumen casi igual no es un salto productivo: es una mejora de precio. Reportar siempre el valor, el volumen y el valor unitario evita expectativas que luego se frustran cuando el precio corrige."
     },
     {
-      "titulo": "Usar los buenos años para invertir en productividad y calidad",
-      "texto": "El precio no depende del Perú; la productividad sí. En café el volumen apenas creció 31 % en diez años. Los ingresos extraordinarios pueden financiar renovación de plantaciones, asistencia técnica y mejoras de calidad, que sostienen el valor cuando el precio baja."
-    },
-    {
       "titulo": "Gestionar el riesgo de precio",
-      "texto": "El valor unitario sigue al precio internacional con 1 a 2 meses de desfase. Contratos con precio fijado, coberturas a través de cooperativas y exportadores, y fondos de reserva en las organizaciones de productores ayudan a suavizar caídas como la del cacao en 2026."
+      "texto": "El valor unitario sigue al precio internacional con 1 a 2 meses de desfase. Contratos con precio fijado, coberturas a través de cooperativas y exportadores, y fondos de reserva en las organizaciones de productores ayudan a suavizar caídas como la del cacao en enero–agosto de 2026."
     },
     {
       "titulo": "Seguir la diversificación con un indicador simple",

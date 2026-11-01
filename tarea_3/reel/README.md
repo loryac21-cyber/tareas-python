@@ -1,15 +1,15 @@
 # Reel · Café y cacao: ¿vendimos más o más caro?
 
-Video vertical de unos 60 s (1080 × 1920) en 6 escenas, cada una con su cifra y un gráfico:
+Video vertical de unos 70 s (1080 × 1920) en 6 escenas, cada una con su cifra y un gráfico:
 
 | # | Cifra | Visual | Narración (resumen) |
 |---|---|---|---|
 | 1 | x2,9 | Café: valor frente a volumen (2015 = 1) | El valor del café casi se triplicó, pero el volumen creció 31 % |
 | 2 | 74 % | Barras: aumento del valor por precio y por volumen | Tres de cada cuatro dólares adicionales vinieron del precio |
 | 3 | x6,1 | Cacao: valor frente a volumen | El cacao creció en valor y también en volumen |
-| 4 | −48 % | Cacao: precio internacional y valor unitario, 2023–2026 | En 2026 el precio promedio fue la mitad y el valor bajó 48 % |
+| 4 | −48 % | Cacao: precio internacional y valor unitario, 2023–2026 | En enero–agosto de 2026 el precio promedio fue la mitad que en enero–agosto de 2025 y el valor bajó 48 % |
 | 5 | 10,4 vs 6,1 | Regiones de destino 2015 frente a 2025 | El cacao se abrió al mundo; el café depende más de EE. UU. |
-| 6 | — | Captura del dashboard | Usar los buenos precios para invertir en productividad, calidad y mercados |
+| 6 | — | Captura del dashboard | Invertir lo que dejan los buenos precios en productividad, calidad y mercados |
 
 Cada cifra está anotada en `guion.json` (campo `verificacion`) con su origen en los datos procesados y en `03_analisis.ipynb`. El tono
 sigue la guía [`../comunicacion.md`](../comunicacion.md): datos con fuente, sin alarmismo y con un cierre propositivo.

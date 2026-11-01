@@ -29,9 +29,9 @@ destino y *mercados equivalentes* (10 000 / índice Herfindahl-Hirschman).
    grano, manteca, chocolate…).
 3. Se calcula, para cada año, el cambio del valor FOB separado en **efecto precio** y **efecto volumen**, y los indicadores de
    diversificación.
-4. Se publica un **dashboard interactivo** (HTML + Plotly.js) con 7 KPIs, la serie mensual del precio internacional frente al valor
+4. Se publica un **dashboard interactivo** (HTML + Plotly.js) con 8 KPIs, la serie mensual del precio internacional frente al valor
    unitario peruano, la descomposición precio/volumen, índices, un mapa de destinos, los 10 principales países, la evolución por región, la
-   diversificación y una tabla descargable. Controles: producto, año (incluye 2026 parcial) e indicador del mapa (valor o volumen).
+   diversificación y una tabla descargable. Controles: producto, año (incluye enero–agosto 2026) e indicador del mapa (valor o volumen).
 
 ## 3. Fuentes de datos y metodología
 
@@ -53,7 +53,7 @@ Exportaciones descargadas el 31/10/2026; precios actualizados por el Banco Mundi
 - **Diversificación:** índice Herfindahl-Hirschman (IHH) por país de destino según valor FOB; *mercados equivalentes* = 10 000 / IHH.
 - **Regiones:** Unión Europea (27 miembros actuales en todos los años), resto de Europa (incluye Reino Unido), Norteamérica (EE. UU. y
   Canadá), América Latina y el Caribe (incluye México), Asia y Medio Oriente, Oceanía y África.
-- **Año parcial:** 2026 se compara con enero–agosto de 2025.
+- **Año parcial:** enero–agosto de 2026 se compara con enero–agosto de 2025. En los gráficos se rotula «2026 (ene–ago)».
 
 ## 4. Tres hallazgos principales
 
@@ -63,8 +63,8 @@ Exportaciones descargadas el 31/10/2026; precios actualizados por el Banco Mundi
    arábica en su nivel nominal más alto desde 1960 (9,05 US$/kg en febrero de 2025).
 2. **Cacao: creció en precio y en volumen, y ya muestra lo rápido que se revierte el precio.** El valor se multiplicó por 6,1 (US$ 267 →
    1 618 millones) y el volumen por 2,4; el precio explica el 52 % del aumento. El valor unitario sigue al precio internacional con uno o
-   dos meses de desfase (correlación 0,99). En enero–agosto de 2026, el precio internacional promedió 4,42 US$/kg, 49 % menos que un año
-   antes, y el valor exportado cayó 48 % (US$ 536 millones menos), aunque el volumen bajó solo 11 %.
+   dos meses de desfase (correlación 0,99). En enero–agosto de 2026, el precio internacional promedió 4,42 US$/kg, 49 % menos que en
+   enero–agosto de 2025, y el valor exportado cayó 48 % (US$ 536 millones menos), aunque el volumen bajó solo 11 %.
 3. **Diversificación: el cacao se abrió al mundo; el café se concentra en Norteamérica.** La Unión Europea pasó de comprar el 66 % del
    cacao (2015) al 40 % (2025), mientras crecían Norteamérica (24 %), América Latina (20 %) y Asia (14 %); sus mercados equivalentes
    subieron de 5,9 a 10,4. En café, la UE bajó de 54 % a 40 % y Norteamérica subió de 30 % a 43 %: Estados Unidos ya compra el 33 %. Sus
@@ -78,8 +78,10 @@ Gráficos del análisis (notebook 03): [precio vs. valor unitario](figuras/01_pr
 
 ### Propuestas (para conversar)
 
-1. **Comunicar valor y volumen juntos.** Un récord de valor con el volumen casi igual es una mejora de precio, no un salto productivo.
-2. **Usar los buenos años para invertir en productividad y calidad.** El precio no depende del Perú; la productividad sí.
+1. **Invertir lo que dejan los buenos precios en productividad, calidad y mercados.** El precio internacional no depende del Perú; lo que
+   se hace con los ingresos extraordinarios, sí: renovar plantaciones y dar asistencia técnica, mejorar la calidad del grano y abrir
+   destinos nuevos. Es lo que sostiene el valor cuando el precio baja.
+2. **Comunicar valor y volumen juntos.** Un récord de valor con el volumen casi igual es una mejora de precio, no un salto productivo.
 3. **Gestionar el riesgo de precio** desde las organizaciones de productores y exportadores (contratos con precio fijado, coberturas,
    fondos de reserva).
 4. **Seguir la diversificación con un indicador simple:** mercados equivalentes por producto, cada año, desde este mismo tablero.
@@ -92,7 +94,7 @@ publicar.
 
 ## Reel
 
-Guion de 6 escenas (unos 60 s), con un gráfico en cada escena, subtítulos y aviso de voz generada con IA. Está en [`reel/`](reel/). Los
+Guion de 6 escenas (unos 70 s), con un gráfico en cada escena, subtítulos y aviso de voz generada con IA. Está en [`reel/`](reel/). Los
 pasos para narrarlo con mi voz clonada (flujo de la sesión 15 del curso) están en [`reel/README.md`](reel/README.md).
 
 ![Portada del reel](reel/portada.png)
@@ -104,7 +106,7 @@ pasos para narrarlo con mi voz clonada (flujo de la sesión 15 del curso) están
   se negocian con diferenciales por calidad, certificaciones y origen, y con meses de desfase.
 - **Destino declarado ≠ consumo final.** Países Bajos, Bélgica o Estados Unidos pueden reexportar.
 - **Asociación, no causa.** La descomposición es contable: el clima, la demanda, los costos y el tipo de cambio también influyen.
-- **Año parcial.** 2026 solo tiene enero–agosto.
+- **Año parcial.** De 2026 solo hay datos de enero a agosto; toda cifra de 2026 se refiere a esos meses.
 
 ## 6. Enlaces
 

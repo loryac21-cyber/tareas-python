@@ -70,6 +70,10 @@
   const periodo = (anio) => (esParcial(anio) ? "ene_ago" : "anual");
   const textoPeriodo = () => `enero–${MESES[D.meta.ultimo_mes - 1]}`;
   const etiqueta = (anio) => (esParcial(anio) ? `${anio} (ene–${MESES[D.meta.ultimo_mes - 1].slice(0, 3)})` : String(anio));
+  // Año anterior con los mismos meses, para que 2026 nunca se lea como año completo
+  const anioPrevio = (anio) => (esParcial(anio) ? `${anio - 1} (ene–${MESES[D.meta.ultimo_mes - 1].slice(0, 3)})` : String(anio - 1));
+  // Eje categórico: «2026 (ene–ago)» se parte en dos líneas
+  const ticks = (x) => ({ tickvals: x, ticktext: x.map((s) => s.replace(" (", "<br>(")) });
   const nombrePais = (iso) => (D.paises[iso] ? D.paises[iso][0] : iso);
   const regionPais = (iso) => (D.paises[iso] ? D.paises[iso][1] : D.regiones.length - 1);
   const anios = () => rango(D.meta.anio_inicio, D.meta.anio_fin);
@@ -179,17 +183,18 @@
     const prev = ind(per, p, a - 1);
     const etq = etiqueta(a);
     const cambio = x.efecto_precio + x.efecto_volumen;
-    // Parte del cambio total: solo tiene sentido si el efecto va en la misma dirección que el cambio
-    const parte = (efecto) => (cambio !== 0 && Math.sign(efecto) === Math.sign(cambio) ? ` (${nf0.format((efecto / cambio) * 100)} %)` : "");
+    // Parte del cambio total: solo tiene sentido si el efecto va en la misma dirección que el cambio y no lo supera
+    const parte = (efecto) => (cambio !== 0 && Math.sign(efecto) === Math.sign(cambio) && Math.abs(efecto) <= Math.abs(cambio)
+      ? ` · ${nf0.format((efecto / cambio) * 100)} % del total` : "");
     const tarjetas = [
-      { titulo: `Valor exportado · ${etq}`, valor: unidadPequena(fmtUSD(x.fob)), detalle: `${deltaPct(x.var_fob)} vs ${a - 1}` },
-      { titulo: `Volumen · ${etq}`, valor: unidadPequena(fmtPeso(x.kg)), detalle: `${deltaPct(x.var_kg)} vs ${a - 1}` },
+      { titulo: `Valor exportado · ${etq}`, valor: unidadPequena(fmtUSD(x.fob)), detalle: `${deltaPct(x.var_fob)} vs ${anioPrevio(a)}` },
+      { titulo: `Volumen · ${etq}`, valor: unidadPequena(fmtPeso(x.kg)), detalle: `${deltaPct(x.var_kg)} vs ${anioPrevio(a)}` },
       { titulo: `Valor unitario del ${D.base[p].toLowerCase()}`, valor: `${nf2.format(x.vu_base)} <small>US$/kg</small>`, detalle: `${deltaPct(x.var_vu_base)} · FOB en puerto peruano` },
       { titulo: `Precio internacional · ${D.precio_ref[p].split(" (")[0].toLowerCase()}`, valor: `${nf2.format(x.precio_int)} <small>US$/kg</small>`, detalle: `${deltaPct(x.var_precio_int)} · promedio ${per === "ene_ago" ? textoPeriodo() : "del año"}` },
-      { titulo: `Cambio del valor por precio`, valor: unidadPequena(fmtConSigno(x.efecto_precio)), detalle: `de un cambio total de ${fmtConSigno(cambio)} vs ${a - 1}${parte(x.efecto_precio)}` },
-      { titulo: `Cambio del valor por volumen`, valor: unidadPequena(fmtConSigno(x.efecto_volumen)), detalle: `de un cambio total de ${fmtConSigno(cambio)} vs ${a - 1}${parte(x.efecto_volumen)}` },
+      { titulo: `Cambio del valor por precio`, valor: unidadPequena(fmtConSigno(x.efecto_precio)), detalle: `de un cambio total de ${fmtConSigno(cambio)} vs ${anioPrevio(a)}${parte(x.efecto_precio)}` },
+      { titulo: `Cambio del valor por volumen`, valor: unidadPequena(fmtConSigno(x.efecto_volumen)), detalle: `de un cambio total de ${fmtConSigno(cambio)} vs ${anioPrevio(a)}${parte(x.efecto_volumen)}` },
       { titulo: "Mercados equivalentes", valor: nf1.format(x.mercados_equivalentes), detalle: `${nf0.format(x.n_destinos)} destinos · 1.º ${nombrePais(x.principal)} (${fmtPct(x.principal_part)})` },
-      { titulo: "Parte de la Unión Europea", valor: fmtPct(x.part_ue), detalle: `${deltaPP(x.part_ue, prev ? prev.part_ue : null)} vs ${a - 1}` },
+      { titulo: "Parte de la Unión Europea", valor: fmtPct(x.part_ue), detalle: `${deltaPP(x.part_ue, prev ? prev.part_ue : null)} vs ${anioPrevio(a)}` },
     ];
     $("kpis").innerHTML = tarjetas
       .map((k) => `<div class="kpi"><div class="titulo">${k.titulo}</div><div class="valor">${k.valor}</div><div class="detalle">${k.detalle}</div></div>`)
@@ -234,7 +239,7 @@
   function renderDescomposicion() {
     const p = estado.producto;
     const filas = anios().map((a) => ind("anual", p, a)).concat([ind("ene_ago", p, D.meta.anio_parcial)]);
-    const x = anios().map(String).concat([`${D.meta.anio_parcial}*`]);
+    const x = anios().map(String).concat([etiqueta(D.meta.anio_parcial)]);
     const ep = filas.map((f) => f.efecto_precio / 1e6);
     const ev = filas.map((f) => f.efecto_volumen / 1e6);
     const tot = filas.map((f) => (f.efecto_precio + f.efecto_volumen) / 1e6);
@@ -243,7 +248,7 @@
       type: "bar", x, y: ys, name: nombre, marker: { color, cornerradius: 3, line: { color: css("--surface-1"), width: 1 } },
       customdata: ys.map((v) => fmtConSigno(v * 1e6)), hovertemplate: hover(nombre),
     });
-    const i = x.indexOf(esParcial(estado.anio) ? `${estado.anio}*` : String(estado.anio));
+    const i = x.indexOf(etiqueta(estado.anio));
     Plotly.react("g-desc", [
       barra(ep, "Efecto precio", css("--m-precio")),
       barra(ev, "Efecto volumen", css("--m-volumen")),
@@ -257,7 +262,7 @@
       bargap: 0.3,
       hovermode: "closest",
       yaxis: { gridcolor: css("--grid"), zeroline: true, zerolinecolor: css("--axis"), fixedrange: true, tickprefix: "$", ticksuffix: " M", separatethousands: true },
-      xaxis: { showgrid: false, linecolor: css("--axis"), fixedrange: true, type: "category", tickangle: 0 },
+      xaxis: { showgrid: false, linecolor: css("--axis"), fixedrange: true, type: "category", tickangle: 0, ...ticks(x) },
       shapes: i >= 0 ? [{ type: "rect", xref: "x", yref: "paper", x0: i - 0.5, x1: i + 0.5, y0: 0, y1: 1, fillcolor: css("--grid"), opacity: 0.6, line: { width: 0 }, layer: "below" }] : [],
     }), CONFIG);
     leyenda("l-desc", [
@@ -267,7 +272,7 @@
     ]);
     $("t-desc").textContent = `¿Precio o volumen? ${D.productos[p]}: cambio anual del valor exportado`;
     $("s-desc").textContent = "Millones de US$ FOB respecto al año anterior. Las barras suman el cambio total.";
-    $("n-desc").textContent = `* ${D.meta.anio_parcial}: ${textoPeriodo()} frente al mismo periodo de ${D.meta.anio_parcial - 1}.`;
+    $("n-desc").textContent = `${etiqueta(D.meta.anio_parcial)}: ${textoPeriodo()} de ${D.meta.anio_parcial} frente a ${textoPeriodo()} de ${D.meta.anio_parcial - 1}.`;
   }
 
   // ---------- Índices valor, volumen y valor unitario ----------
@@ -370,7 +375,7 @@
     const p = estado.producto;
     const col = estado.indicador === "fob" ? 4 : 5;
     const lista = anios().map((a) => [a, "anual"]).concat([[D.meta.anio_parcial, "ene_ago"]]);
-    const x = lista.map(([a]) => etiqueta(a).replace(/ \(.*\)/, "*"));
+    const x = lista.map(([a]) => etiqueta(a));
     const acum = lista.map(() => new Array(GRUPOS.length).fill(0));
     lista.forEach(([a, per], i) => {
       for (const f of D.region) if (f[0] === per && f[1] === p && f[2] === a) acum[i][grupoDe(f[3])] += f[col];
@@ -386,11 +391,11 @@
     Plotly.react("g-region", trazas, layoutBase({
       barmode: "stack", bargap: 0.25, hovermode: "closest",
       yaxis: { gridcolor: css("--grid"), zeroline: false, fixedrange: true, range: [0, 100], ticksuffix: " %" },
-      xaxis: { showgrid: false, linecolor: css("--axis"), fixedrange: true, type: "category", tickangle: 0 },
+      xaxis: { showgrid: false, linecolor: css("--axis"), fixedrange: true, type: "category", tickangle: 0, ...ticks(x) },
     }), CONFIG);
     leyenda("l-region", GRUPOS.map((nombre, g) => ({ nombre, color: colorGrupo(g) })));
     $("t-region").textContent = `${D.productos[p]}: ¿a qué regiones se vende?`;
-    $("s-region").textContent = `% del ${nombreIndicador(estado.indicador)} por región de destino. * ${D.meta.anio_parcial}: ${textoPeriodo()}.`;
+    $("s-region").textContent = `% del ${nombreIndicador(estado.indicador)} por región de destino. ${D.meta.anio_parcial}: solo ${textoPeriodo()}.`;
   }
 
   // ---------- Diversificación ----------
@@ -439,7 +444,7 @@
     });
     dibujarTabla();
     $("t-tabla").textContent = `Tabla por país de destino · ${D.productos[p]} · ${etiqueta(estado.anio)}`;
-    $("s-tabla").textContent = `${filasTabla.length} destinos. % del total según valor FOB; variación frente a ${estado.anio - 1} (mismo periodo).`;
+    $("s-tabla").textContent = `${filasTabla.length} destinos. % del total según valor FOB; variación frente a ${anioPrevio(estado.anio)}.`;
   }
   function dibujarTabla() {
     const { col, desc } = ordenTabla;
@@ -533,7 +538,7 @@
     estado.anio = D.meta.anio_fin;
     $("cargando").remove();
     $("chip-cobertura").textContent = `Cobertura: ${D.meta.anio_inicio} – ${MESES[D.meta.ultimo_mes - 1]} ${D.meta.anio_parcial}`;
-    $("lim-parcial").textContent = `${D.meta.anio_parcial} solo tiene ${textoPeriodo()}: se compara con el mismo periodo de ${D.meta.anio_parcial - 1} y se marca con *.`;
+    $("lim-parcial").textContent = `${D.meta.anio_parcial} solo tiene ${textoPeriodo()}: se compara con ${textoPeriodo()} de ${D.meta.anio_parcial - 1} y se rotula «${etiqueta(D.meta.anio_parcial)}».`;
     $("pie-actualizado").textContent = ` Exportaciones descargadas el ${D.meta.actualizado_sunat}; precios del Banco Mundial actualizados el ${D.meta.actualizado_precios}.`;
     construirControles();
     renderTextos();
