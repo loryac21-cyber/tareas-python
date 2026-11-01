@@ -67,6 +67,13 @@ Gráficos del análisis (notebook 03): [FOB a la UE por producto](figuras/01_fob
 [participación UE](figuras/02_participacion_ue.png) · [cacao: valor vs volumen](figuras/03_cacao_valor_vs_volumen.png) ·
 [destinos UE](figuras/04_destinos_ue.png).
 
+## Reel
+
+Guion de 6 escenas (unos 64 s), con un gráfico o mapa en cada escena, subtítulos y aviso de voz generada con IA. Está en
+[`reel/`](reel/). Los pasos para narrarlo con mi voz clonada (flujo de la sesión 15 del curso) están en [`reel/README.md`](reel/README.md).
+
+![Portada del reel](reel/portada.png)
+
 ## 5. Limitaciones
 
 - **Destino declarado ≠ consumo final.** Bélgica y Países Bajos son puertos de entrada (Amberes, Róterdam). Parte de lo que llega se reexporta.
@@ -121,12 +128,14 @@ tarea_3lac/
 │   └── procesados/      # tabla mensual limpia, indicadores, países
 ├── figuras/             # gráficos del análisis y capturas del dashboard
 ├── web/                 # dashboard (index.html, assets/, data/)
+├── reel/                # guion.json, subtitulos.srt, recursos/, scripts del video y reel.mp4
 ├── pyproject.toml · uv.lock · requirements.txt
 └── README.md
 ```
 
 ## 8. Uso de inteligencia artificial
 
-Usé **Claude Code** (Anthropic) para buscar las fuentes, escribir el código de descarga, limpieza y análisis, y construir el dashboard. Revisé
+Usé **Claude Code** (Anthropic) para buscar las fuentes, escribir el código de descarga, limpieza y análisis, construir el dashboard y
+preparar el guion y las imágenes del reel. La narración se genera con Qwen3-TTS a partir de mi propia voz. Revisé
 y validé los datos: los totales del G8 se contrastaron con el G9, y las cifras de los hallazgos se calculan en el notebook 03 y se leen
 directamente desde el dashboard.

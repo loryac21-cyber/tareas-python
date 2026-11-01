@@ -1,0 +1,68 @@
+{
+  "titulo": "Café, cacao y madera bajo la lupa de Europa",
+  "duracion_objetivo_s": "55 a 70",
+  "datos_al": "Datos de SUNAT descargados el 31/10/2026 (enero 2005 a agosto 2026)",
+  "escenas": [
+    {
+      "frase": "Cuatro de cada diez dólares de café y de cacao que exporta el Perú se venden en la Unión Europea.",
+      "cifra": "40 %",
+      "etiqueta": "del café y del cacao peruano se vende a la UE (2025)",
+      "visual": "recursos/escena_1_mapa_ue.png",
+      "estilo": "curious, engaging news anchor, strong emphasis on the number",
+      "cifra_en_texto": true,
+      "verificacion": "Participación UE-27 en el FOB 2025: café 40,4 %, cacao 40,3 % (03_analisis.ipynb, hallazgo 1)."
+    },
+    {
+      "frase": "Desde el treinta de diciembre de dos mil veintiséis, Europa exigirá probar que esos productos no vienen de tierras deforestadas después de dos mil veinte, con la ubicación de cada parcela.",
+      "cifra": "30/12/2026",
+      "etiqueta": "entra en aplicación el reglamento antideforestación (EUDR) para grandes y medianas empresas",
+      "visual": "recursos/escena_2_linea_tiempo.png",
+      "estilo": "serious, clear news anchor",
+      "cifra_en_texto": true,
+      "verificacion": "Reglamento (UE) 2023/1115, art. 3 (corte 31/12/2020) y Reglamento (UE) 2025/2650 (aplicación 30/12/2026 para grandes y medianas)."
+    },
+    {
+      "frase": "En dos mil veinticinco, el Perú vendió a Europa mil cuatrocientos millones de dólares en café, cacao y madera: casi el catorce por ciento de todo lo que le exporta.",
+      "cifra": "US$ 1400 M",
+      "etiqueta": "en café, cacao y madera a la UE-27 (2025)",
+      "visual": "recursos/escena_3_fob_ue.png",
+      "estilo": "confident news anchor, energetic, clear emphasis on the numbers",
+      "cifra_en_texto": true,
+      "verificacion": "FOB a la UE-27 2025: 727,5 + 651,6 + 21,1 = 1400,2 millones de US$; 13,7 % del total exportado a la UE."
+    },
+    {
+      "frase": "El cacao vendido a Europa se multiplicó por cinco en dos años, pero el volumen apenas se duplicó: el salto fue sobre todo de precio.",
+      "cifra": "x5",
+      "etiqueta": "cacao a la UE: de US$ 129 M (2023) a US$ 652 M (2025)",
+      "visual": "recursos/escena_4_cacao.png",
+      "estilo": "confident news anchor, energetic, clear emphasis on the numbers",
+      "cifra_en_texto": true,
+      "verificacion": "FOB cacao UE: 128,9 (2023) → 651,6 (2025) = x5,1; volumen 34,2 → 73,5 mil t = x2,1."
+    },
+    {
+      "frase": "El café va en sentido contrario: Europa pasó de comprar el cincuenta y cuatro por ciento al cuarenta por ciento del café peruano, y Estados Unidos ya es su primer comprador.",
+      "cifra": "54 % → 40 %",
+      "etiqueta": "parte del café peruano que compra la UE (2015 → 2025)",
+      "visual": "recursos/escena_5_cafe.png",
+      "estilo": "confident news anchor, thoughtful",
+      "cifra_en_texto": true,
+      "verificacion": "Participación UE en el FOB de café: 54,4 % (2015) → 40,4 % (2025). EE. UU. 33,2 % del FOB de café 2025."
+    },
+    {
+      "frase": "Explora el tablero con datos de SUNAT para ver cada producto y cada país de destino. El enlace está en mi perfil.",
+      "cifra": "",
+      "etiqueta": "Explora el tablero: enlace en mi perfil",
+      "visual": "recursos/escena_6_dashboard.png",
+      "estilo": "warm, friendly, inviting tone",
+      "cifra_en_texto": true,
+      "verificacion": "Cierre e invitación al dashboard."
+    }
+  ],
+  "hashtags": ["#EUDR", "#Cafe", "#Cacao", "#ComercioExterior", "#Peru", "#DatosAbiertos", "#CienciaDeDatos", "#Python"],
+  "posts": {
+    "linkedin": "¿Cuánto del café y del cacao peruano depende de Europa justo cuando entra en aplicación su reglamento antideforestación (EUDR)?\n\nConstruí un dashboard interactivo con datos de SUNAT (2005 a agosto de 2026) para responderlo:\n\n• En 2025 el Perú vendió a la UE US$ 1 400 millones en café, cacao y madera: el 40 % del café y el 40 % del cacao, y casi el 14 % de todo lo que exporta a la UE.\n• El cacao vendido a la UE se multiplicó por 5 entre 2023 y 2025, pero el volumen solo se duplicó: fue sobre todo precio. El 77 % es cacao en grano, lo que el EUDR exige rastrear hasta la parcela.\n• El café se aleja de Europa: la UE pasó de comprar el 54 % (2015) al 40 % (2025) del café peruano.\n\nDesde el 30/12/2026, cada envío a la UE necesitará una declaración de diligencia debida con la geolocalización de las parcelas.\n\nDashboard: https://loryac21-cyber.github.io/tareas-python/tarea_3lac/web/\nCódigo y datos: https://github.com/loryac21-cyber/tareas-python/tree/main/tarea_3lac\n\nLa voz de este video fue generada con IA a partir de mi voz. Fuente: SUNAT.",
+    "x": "En 2025 el Perú vendió a la UE US$ 1 400 M en café, cacao y madera. El EUDR exigirá probar que no vienen de deforestación desde el 30/12/2026.\n\nDashboard con datos de SUNAT: https://loryac21-cyber.github.io/tareas-python/tarea_3lac/web/\n\n(Voz generada con IA a partir de mi voz)",
+    "facebook": "4 de cada 10 dólares de café y cacao que exporta el Perú se venden en la Unión Europea. Desde el 30 de diciembre de 2026, Europa exigirá probar que no vienen de tierras deforestadas.\n\nHice un tablero con datos de SUNAT para ver cada producto y cada país: https://loryac21-cyber.github.io/tareas-python/tarea_3lac/web/\n\n(Voz generada con IA a partir de mi voz)"
+  },
+  "cifras_dudosas_en_posts": []
+}
