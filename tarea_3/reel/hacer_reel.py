@@ -18,6 +18,7 @@ Salidas: reel/reel.mp4, reel/subtitulos.srt, reel/portada.png y reel/posts.md
 (la vista previa va a reel/salidas/, que git ignora).
 """
 import argparse
+import difflib
 import importlib.util
 import json
 import subprocess
@@ -77,11 +78,16 @@ def narracion_estimada(guion, sr=24000):
     return Narracion(audio, sr, escenas, palabras)
 
 
-def cargar_voz(voz, motor, tts, device, sesion15):
-    """Clona la voz con el módulo reel.py de la sesión 15 (Whisper transcribe la grabación de referencia)."""
-    spec = importlib.util.spec_from_file_location("reel_sesion15", sesion15 / "reel.py")
+def cargar_sesion15(sesion15):
+    spec = importlib.util.spec_from_file_location("reel_sesion15", Path(sesion15) / "reel.py")
     r15 = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(r15)
+    return r15
+
+
+def cargar_voz(voz, motor, tts, device, sesion15):
+    """Clona la voz con el módulo reel.py de la sesión 15 (Whisper transcribe la grabación de referencia)."""
+    r15 = cargar_sesion15(sesion15)
     v = r15.VozExpresiva(voz, device=device) if motor == "voxcpm" else r15.Voz(voz, modelo=tts or r15.TTS, device=device)
     print(f"   referencia transcrita: «{v.texto_ref}»")
     if motor == "qwen":
@@ -92,8 +98,36 @@ def cargar_voz(voz, motor, tts, device, sesion15):
 def narracion_con_voz(guion, r15, v, velocidad, matiz):
     """Narra todas las escenas y saca los tiempos de cada palabra; el matiz va al final, después de Whisper."""
     n = r15.narrar(v, guion, max_wer=0.15, reintentos=2, velocidad=velocidad)   # 0.15: una frase omitida ya cuenta
-    r15.subtitulos(n, guion)
-    return Narracion(matizar(n.audio, n.sr, matiz), n.sr, n.escenas, n.palabras)
+    palabras = palabras_del_guion(r15.subtitulos(n, guion), guion, r15._normalizar)
+    return Narracion(matizar(n.audio, n.sr, matiz), n.sr, n.escenas, palabras)
+
+
+def palabras_del_guion(palabras, guion, normalizar):
+    """Subtítulos con el texto del guion y los tiempos de Whisper.
+
+    Con el guion como contexto, Whisper a veces repite o cambia palabras (escribió «su volumen se multiplicó por seis»
+    donde la voz dijo «su volumen por más de dos»). La voz lee el guion (WER por escena cercano a 0), así que en
+    pantalla van las palabras del guion; de Whisper solo se toman los tiempos, y las que no calzan se reparten el hueco.
+    """
+    texto = [w for e in guion["escenas"] for w in e["frase"].split()]
+    tiempos = [None] * len(texto)
+    pares = difflib.SequenceMatcher(None, [normalizar(p[2]) for p in palabras], [normalizar(w) for w in texto],
+                                    autojunk=False)
+    for b in pares.get_matching_blocks():
+        for k in range(b.size):
+            tiempos[b.b + k] = palabras[b.a + k][:2]
+    i = 0
+    while i < len(texto):
+        if tiempos[i] is None:
+            j = next((k for k in range(i, len(texto)) if tiempos[k] is not None), len(texto))
+            ini = tiempos[i - 1][1] if i else INICIO
+            fin = tiempos[j][0] if j < len(texto) else palabras[-1][1]
+            paso = max(fin - ini, 0) / (j - i)
+            for k in range(i, j):
+                tiempos[k] = (ini + (k - i) * paso, ini + (k - i + 1) * paso)
+            i = j
+        i += 1
+    return [(ini, fin, w) for (ini, fin), w in zip(tiempos, texto)]
 
 
 def muestra_con_voz(guion, k, r15, v, velocidad, matiz):

@@ -94,7 +94,7 @@ publicar.
 
 ## Reel
 
-Reel de 76 s en 6 escenas, con un gráfico en cada escena, subtítulos y aviso de voz generada con IA. Está en [`reel/`](reel/). Los
+Reel de 75 s en 6 escenas, con un gráfico en cada escena, subtítulos y aviso de voz generada con IA. Está en [`reel/`](reel/). Los
 pasos para narrarlo con mi voz clonada (flujo de la sesión 15 del curso) están en [`reel/README.md`](reel/README.md). La voz lleva un
 matiz en el tono, para que no sea una copia exacta de la mía.
 

@@ -41,7 +41,7 @@
       "estilo": "serious, calm news anchor",
       "cifra_en_texto": true,
       "verificacion": "Enero–agosto 2026 vs enero–agosto 2025: FOB cacao −48,1 %, precio ICCO promedio −49,0 % (8,65 → 4,42 US$/kg), volumen −10,8 % (indicadores_anuales.csv, periodo ene_ago).",
-      "wer": 0.0
+      "wer": 0.025
     },
     {
       "frase": "El cacao se abrió al mundo: Europa, Norteamérica, América Latina y Asia. El café depende cada vez más de Estados Unidos, que ya compra un tercio.",
@@ -61,7 +61,7 @@
       "estilo": "warm, hopeful, inviting tone",
       "cifra_en_texto": true,
       "verificacion": "Cierre propositivo (propuestas del notebook 03) e invitación al dashboard.",
-      "wer": 0.0
+      "wer": 0.03333333333333333
     }
   ],
   "hashtags": [

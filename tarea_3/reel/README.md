@@ -1,6 +1,6 @@
 # Reel · Café y cacao: ¿vendimos más o más caro?
 
-Video vertical de 76 s (1080 × 1920) en 6 escenas, cada una con su cifra y un gráfico:
+Video vertical de 75 s (1080 × 1920) en 6 escenas, cada una con su cifra y un gráfico:
 
 | # | Cifra | Visual | Narración (resumen) |
 |---|---|---|---|
@@ -61,23 +61,27 @@ la pista se usa dentro del video, pero las licencias de música de stock no suel
 `reel/salidas/muestra_escena_1.wav`. Sirve para decidir si conviene volver a grabar antes de la corrida completa:
 
 ```bash
-..\..\Data-Science-Python\sessions\15-texto-a-reel\.venv\Scripts\python reel\hacer_reel.py --voz reel\mi_voz.m4a ^
-    --tts Qwen/Qwen3-TTS-12Hz-0.6B-Base --velocidad 1.2 --muestra 1
+..\..\Data-Science-Python\sessions\15-texto-a-reel\.venv\Scripts\python reel\hacer_reel.py --voz reel\mi_voz_recorte.wav ^
+    --tts Qwen/Qwen3-TTS-12Hz-0.6B-Base --muestra 1
 ```
 
 **5. Reel final con tu voz clonada** (desde `tarea_3/`, con el Python de la sesión 15):
 
 ```bash
 ..\..\Data-Science-Python\sessions\15-texto-a-reel\.venv\Scripts\python reel\hacer_reel.py ^
-    --voz reel\mi_voz.m4a --musica reel\recursos\musica.mp3 --autor "Lory Acosta" ^
-    --tts Qwen/Qwen3-TTS-12Hz-0.6B-Base --velocidad 1.2
+    --voz reel\mi_voz_recorte.wav --musica reel\recursos\musica.mp3 --autor "Lory Acosta" ^
+    --tts Qwen/Qwen3-TTS-12Hz-0.6B-Base
 ```
+
+`mi_voz_recorte.wav` son los primeros 13 s de la grabación, hasta «creció 31 %». El resto terminaba casi igual que el inicio de la
+escena 2, y el modelo puede saltarse una frase que cree que ya se dijo.
 
 El script narra cada escena con tu voz y revisa con Whisper que se entienda (WER por escena en `guion.json`; si pasa de 0,15, la
 escena se vuelve a generar). Cada frase tiene un tope de largo: sin él, una frase que el modelo no cierra puede seguir por horas en
-CPU. `--velocidad 1.2` acelera la narración sin cambiar el tono, porque la voz clonada copia el ritmo pausado de la grabación. En un
-procesador de portátil (i5 de 4 núcleos) tarda unos 25 minutos. Luego escribe `reel.mp4`,
-`subtitulos.srt` con los tiempos reales, `portada.png` y `posts.md`. Míralo completo antes de publicar: las cifras deben sonar bien.
+CPU. Los subtítulos muestran el texto del guion con los tiempos de Whisper, porque Whisper a veces repite o cambia palabras. Si la
+grabación es pausada y el reel pasa de 80 s, agrega `--velocidad 1.2`, que acelera la narración sin cambiar el tono. En un
+procesador de portátil (i5 de 4 núcleos) tarda unos 12 minutos. Luego escribe `reel.mp4`, `subtitulos.srt`, `portada.png` y
+`posts.md`. Míralo completo antes de publicar: las cifras deben sonar bien.
 
 **Matiz en la voz.** Antes de mezclarla con la música, la voz clonada se corre 1,5 semitonos hacia lo grave (`--matiz -1.5`): cambian
 el tono y el timbre, pero no la duración, así que los subtítulos siguen calzando. La voz se parece a la mía sin ser una copia exacta, lo
