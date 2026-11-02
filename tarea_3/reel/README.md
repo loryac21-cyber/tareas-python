@@ -25,7 +25,7 @@ sigue la guía [`../comunicacion.md`](../comunicacion.md): datos con fuente, sin
 | `subtitulos.srt` | Subtítulos con los tiempos reales de la narración (la vista previa los cambia por tiempos estimados) |
 | `portada.png` | Miniatura para LinkedIn |
 | `posts.md` | Textos para LinkedIn, X y Facebook |
-| `reel.mp4` | El video final, con la voz clonada y el matiz (paso 5) |
+| `reel.mp4` | El video final, con la voz clonada (paso 5) |
 
 ## Pasos
 
@@ -57,11 +57,12 @@ uv pip install --python .venv\Scripts\python qwen-tts faster-whisper pillow imag
 como `reel/recursos/musica.mp3` y anota el título, el autor y la licencia en la sección de créditos de este README. Git ignora el archivo:
 la pista se usa dentro del video, pero las licencias de música de stock no suelen permitir publicar el archivo suelto.
 
-**Antes del reel, una muestra** (unos 6 minutos): narra solo una escena con tu voz, sin video, y la deja en
-`reel/salidas/muestra_escena_1.wav`. Sirve para decidir si conviene volver a grabar antes de la corrida completa:
+**Antes del reel, una muestra** (unos 4 minutos): narra solo una escena con tu voz, sin video, y la deja en
+`reel/salidas/muestra_escena_1.wav`. Sirve para decidir si conviene volver a grabar antes de la corrida completa. Con `--matiz -1.5`
+deja también `muestra_escena_1_sin_matiz.wav`, la misma toma sin matiz, para compararlas:
 
 ```bash
-..\..\Data-Science-Python\sessions\15-texto-a-reel\.venv\Scripts\python reel\hacer_reel.py --voz reel\mi_voz_recorte.wav ^
+..\..\Data-Science-Python\sessions\15-texto-a-reel\.venv\Scripts\python reel\hacer_reel.py --voz reel\mi_voz.m4a ^
     --tts Qwen/Qwen3-TTS-12Hz-0.6B-Base --muestra 1
 ```
 
@@ -69,36 +70,34 @@ la pista se usa dentro del video, pero las licencias de música de stock no suel
 
 ```bash
 ..\..\Data-Science-Python\sessions\15-texto-a-reel\.venv\Scripts\python reel\hacer_reel.py ^
-    --voz reel\mi_voz_recorte.wav --musica reel\recursos\musica.mp3 --autor "Lory Acosta" ^
-    --tts Qwen/Qwen3-TTS-12Hz-0.6B-Base
+    --voz reel\mi_voz.m4a --musica reel\recursos\musica.mp3 --autor "Lory Acosta" ^
+    --tts Qwen/Qwen3-TTS-12Hz-0.6B-Base --velocidad 1.12
 ```
-
-`mi_voz_recorte.wav` son los primeros 13 s de la grabación, hasta «creció 31 %». El resto terminaba casi igual que el inicio de la
-escena 2, y el modelo puede saltarse una frase que cree que ya se dijo.
 
 El script narra cada escena con tu voz y revisa con Whisper que se entienda (WER por escena en `guion.json`; si pasa de 0,15, la
 escena se vuelve a generar). Cada frase tiene un tope de largo: sin él, una frase que el modelo no cierra puede seguir por horas en
-CPU. Los subtítulos muestran el texto del guion con los tiempos de Whisper, porque Whisper a veces repite o cambia palabras. Si la
-grabación es pausada y el reel pasa de 80 s, agrega `--velocidad 1.2`, que acelera la narración sin cambiar el tono. En un
+CPU. Los subtítulos muestran el texto del guion con los tiempos de Whisper, porque Whisper a veces repite o cambia palabras.
+`--velocidad 1.12` acelera un poco la narración sin cambiar el tono, porque la voz clonada copia el ritmo de la grabación. En un
 procesador de portátil (i5 de 4 núcleos) tarda unos 12 minutos. Luego escribe `reel.mp4`, `subtitulos.srt`, `portada.png` y
 `posts.md`. Míralo completo antes de publicar: las cifras deben sonar bien.
 
-**Matiz en la voz.** Antes de mezclarla con la música, la voz clonada se corre 1,5 semitonos hacia lo grave (`--matiz -1.5`): cambian
-el tono y el timbre, pero no la duración, así que los subtítulos siguen calzando. La voz se parece a la mía sin ser una copia exacta, lo
-que dificulta usar el reel como muestra fiel para clonarla. Es un matiz, no un anonimizador. Para escucharlo en segundos, sin clonar
-nada (escribe `reel/salidas/muestra_matiz.wav`):
+Si la grabación termina casi igual que el inicio de alguna escena, recórtala antes de usarla: el modelo puede saltarse una frase que
+cree que ya se dijo.
+
+**Matiz en la voz (opcional).** `--matiz -1.5` corre la voz clonada 1,5 semitonos hacia lo grave: cambian el tono y el timbre, pero no
+la duración, así que los subtítulos siguen calzando. La voz se parece a la tuya sin ser una copia exacta, lo que dificulta usar el reel
+como muestra fiel para clonarla (es un matiz, no un anonimizador). Lo probé, pero después de comparar las dos muestras el reel va sin
+matiz. Para escucharlo en segundos sobre la grabación, sin clonar nada (escribe `reel/salidas/muestra_matiz.wav`):
 
 ```bash
-uv run python reel/hacer_reel.py --voz reel/mi_voz.m4a --probar-matiz
+uv run python reel/hacer_reel.py --voz reel/mi_voz.m4a --probar-matiz --matiz -1.5
 ```
-
-Más matiz: `--matiz -2.5`. Hacia lo agudo: `--matiz 1.5`. Sin matiz: `--matiz 0`.
 
 ## Transparencia y créditos
 
 - El video muestra «VOZ GENERADA CON IA» durante todo el reel, y en el pie la fuente de los datos: SUNAT (Nota Tributaria) y Banco Mundial
   (Pink Sheet).
-- **Voz:** generada con Qwen3-TTS (Alibaba, Apache 2.0) a partir de la grabación de mi propia voz, con el tono corrido 1,5 semitonos.
+- **Voz:** generada con Qwen3-TTS (Alibaba, Apache 2.0) a partir de la grabación de mi propia voz.
 - **Subtítulos:** Whisper large-v3-turbo (MIT).
 - **Gráficos:** elaboración propia con matplotlib a partir de datos de SUNAT y del Banco Mundial.
 - **Música:** «Tech House Vibes», de Alejandro Magaña (A. M.), usada bajo la licencia gratuita de Mixkit

@@ -95,9 +95,7 @@ publicar.
 ## Reel
 
 Reel de 75 s en 6 escenas, con un gráfico en cada escena, subtítulos y aviso de voz generada con IA. Está en [`reel/`](reel/). Los
-pasos para narrarlo con mi voz clonada (flujo de la sesión 15 del curso) están en [`reel/README.md`](reel/README.md). La voz lleva un
-matiz en el tono, para que no sea una copia exacta de la mía.
-
+pasos para narrarlo con mi voz clonada (flujo de la sesión 15 del curso) están en [`reel/README.md`](reel/README.md).
 ![Portada del reel](reel/portada.png)
 
 ## 5. Limitaciones
@@ -164,7 +162,6 @@ tarea_3/
 ## 8. Uso de inteligencia artificial
 
 Usé **Claude Code** (Anthropic) para buscar las fuentes, escribir el código de descarga, limpieza y análisis, construir el dashboard y
-preparar el guion, las imágenes del reel y la guía de comunicación. La narración se genera con Qwen3-TTS a partir de mi propia voz,
-con el tono corrido 1,5 semitonos.
+preparar el guion, las imágenes del reel y la guía de comunicación. La narración se genera con Qwen3-TTS a partir de mi propia voz.
 Revisé y validé los datos: los totales del G8 se contrastaron con el G9, la descomposición se verifica para que sume exacto el cambio del
 valor, y las cifras de los hallazgos se calculan en el notebook 03 y se leen directamente desde el dashboard.

@@ -2,14 +2,17 @@
 
 Cada escena muestra su cifra, su etiqueta y su imagen (reel/recursos/), con subtítulos palabra por palabra,
 música de fondo opcional y el aviso «Voz generada con IA». La voz y los subtítulos reutilizan el módulo de la
-sesión 15 del curso (Qwen3-TTS o VoxCPM2 para clonar la voz y Whisper para los tiempos de cada palabra). Al final
-la voz clonada lleva un matiz (tono y timbre corridos unos semitonos), para que no sea una copia exacta de la mía.
+sesión 15 del curso (Qwen3-TTS o VoxCPM2 para clonar la voz y Whisper para los tiempos de cada palabra). Con
+--matiz, la voz clonada se corre unos semitonos (tono y timbre) para que no sea una copia exacta de la tuya.
 
 Vista previa, sin voz (tiempos estimados, para revisar el diseño):
     uv run python reel/hacer_reel.py --vista-previa
 
 Escuchar el matiz sobre tu grabación, en segundos y sin clonar nada:
-    uv run python reel/hacer_reel.py --voz reel/mi_voz.m4a --probar-matiz
+    uv run python reel/hacer_reel.py --voz reel/mi_voz.m4a --probar-matiz --matiz -1.5
+
+Muestra de una escena con tu voz clonada, sin video (unos 4 minutos en CPU):
+    <sesion15>/.venv/Scripts/python reel/hacer_reel.py --voz reel/mi_voz.m4a --muestra 1
 
 Reel final con tu voz (usa el entorno .venv de la sesión 15, ver README):
     <sesion15>/.venv/Scripts/python reel/hacer_reel.py --voz reel/mi_voz.m4a --musica reel/recursos/musica.mp3
@@ -130,14 +133,14 @@ def palabras_del_guion(palabras, guion, normalizar):
     return [(ini, fin, w) for (ini, fin), w in zip(tiempos, texto)]
 
 
-def muestra_con_voz(guion, k, r15, v, velocidad, matiz):
-    """Solo la escena k, sin video: para escuchar la voz antes de armar el reel completo."""
+def muestra_con_voz(guion, k, r15, v, velocidad):
+    """Solo la escena k, sin video y sin matiz: para escuchar la voz antes de armar el reel completo."""
     frase = guion["escenas"][k - 1]["frase"]
     w = np.asarray(v.decir([frase])[0], np.float32)
     if velocidad != 1:
         w = r15._acelerar(w, v.sr, velocidad)
     print(f"   WER de la muestra: {r15._wer(frase, r15._a16k(w, v.sr)):.2f}")
-    return matizar(w, v.sr, matiz), v.sr
+    return w, v.sr
 
 
 def decir_con_tope(v, reintentos=2):
@@ -409,8 +412,8 @@ if __name__ == "__main__":
     a.add_argument("--tts", default=None, help="modelo Qwen3-TTS; Qwen/Qwen3-TTS-12Hz-0.6B-Base es más rápido en CPU")
     a.add_argument("--device", default="cpu", help="cpu o cuda")
     a.add_argument("--velocidad", type=float, default=1.0)
-    a.add_argument("--matiz", type=float, default=-1.5,
-                   help="semitonos que se corre la voz clonada (negativo = más grave, 0 = sin cambio)")
+    a.add_argument("--matiz", type=float, default=0,
+                   help="semitonos que se corre la voz clonada (negativo = más grave; p. ej. -1.5 para no ser una copia exacta)")
     a.add_argument("--probar-matiz", action="store_true", help="solo aplica el matiz a --voz, para escucharlo")
     a.add_argument("--muestra", type=int, metavar="N", help="solo narra la escena N (1 a 6) con tu voz, sin video")
     a.add_argument("--sesion15", default=str(SESION15), help="carpeta sessions/15-texto-a-reel del curso")
@@ -432,11 +435,13 @@ if __name__ == "__main__":
 
     if args.muestra:
         r15, v = cargar_voz(args.voz, args.motor, args.tts, args.device, Path(args.sesion15))
-        w, sr = muestra_con_voz(guion, args.muestra, r15, v, args.velocidad, args.matiz)
-        muestra = AQUI / "salidas" / f"muestra_escena_{args.muestra}.wav"
-        muestra.parent.mkdir(exist_ok=True)
-        sf.write(muestra, w, sr)
-        _reloj(f"listo: {muestra.relative_to(AQUI.parent)} ({len(w) / sr:.1f} s, matiz {args.matiz:+g})", t0)
+        w, sr = muestra_con_voz(guion, args.muestra, r15, v, args.velocidad)
+        (AQUI / "salidas").mkdir(exist_ok=True)
+        # con matiz se guarda la misma toma dos veces, con y sin matiz, para compararlas
+        tomas = {"": args.matiz, "_sin_matiz": 0} if args.matiz else {"": 0}
+        for sufijo, st in tomas.items():
+            sf.write(AQUI / "salidas" / f"muestra_escena_{args.muestra}{sufijo}.wav", matizar(w, sr, st), sr)
+        _reloj(f"listo: reel/salidas/muestra_escena_{args.muestra}*.wav ({len(w) / sr:.1f} s, matiz {args.matiz:+g})", t0)
         raise SystemExit
 
     if args.vista_previa:
