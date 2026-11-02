@@ -2,10 +2,14 @@
 
 Cada escena muestra su cifra, su etiqueta y su imagen (reel/recursos/), con subtítulos palabra por palabra,
 música de fondo opcional y el aviso «Voz generada con IA». La voz y los subtítulos reutilizan el módulo de la
-sesión 15 del curso (Qwen3-TTS o VoxCPM2 para clonar la voz y Whisper para los tiempos de cada palabra).
+sesión 15 del curso (Qwen3-TTS o VoxCPM2 para clonar la voz y Whisper para los tiempos de cada palabra). Al final
+la voz clonada lleva un matiz (tono y timbre corridos unos semitonos), para que no sea una copia exacta de la mía.
 
 Vista previa, sin voz (tiempos estimados, para revisar el diseño):
     uv run python reel/hacer_reel.py --vista-previa
+
+Escuchar el matiz sobre tu grabación, en segundos y sin clonar nada:
+    uv run python reel/hacer_reel.py --voz reel/mi_voz.m4a --probar-matiz
 
 Reel final con tu voz (usa el entorno .venv de la sesión 15, ver README):
     <sesion15>/.venv/Scripts/python reel/hacer_reel.py --voz reel/mi_voz.m4a --musica reel/recursos/musica.mp3
@@ -35,6 +39,7 @@ MARGEN = 90
 FONDO, TEXTO, SUAVE, ACENTO, CAJA = "#1C1A17", "#F7F3EC", "#B8AE9F", "#F08A4B", "#2A2723"
 PAUSA, INICIO, FINAL = 0.35, 0.3, 0.8      # silencios entre escenas, al inicio y al final (como en la sesión 15)
 PALABRAS_POR_SEGUNDO = 2.6                 # solo para la vista previa
+RITMO_PAUSADO, PASOS_POR_SEGUNDO = 1.8, 12  # tope de largo de cada frase con Qwen3-TTS-12Hz (12 pasos por segundo)
 Y_BLOQUE, Y_IMAGEN, Y_SUB, Y_PIE = 390, 760, 1450, 1640
 DASHBOARD = "loryac21-cyber.github.io/tareas-python/tarea_3/web"
 
@@ -72,16 +77,68 @@ def narracion_estimada(guion, sr=24000):
     return Narracion(audio, sr, escenas, palabras)
 
 
-def narracion_con_voz(guion, voz, motor, tts, device, velocidad, sesion15):
-    """Clona la voz y transcribe con el módulo reel.py de la sesión 15."""
+def narracion_con_voz(guion, voz, motor, tts, device, velocidad, sesion15, matiz):
+    """Clona la voz y transcribe con el módulo reel.py de la sesión 15; el matiz va al final, después de Whisper."""
     spec = importlib.util.spec_from_file_location("reel_sesion15", sesion15 / "reel.py")
     r15 = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(r15)
     v = r15.VozExpresiva(voz, device=device) if motor == "voxcpm" else r15.Voz(voz, modelo=tts or r15.TTS, device=device)
     print(f"   referencia transcrita: «{v.texto_ref}»")
-    n = r15.narrar(v, guion, velocidad=velocidad)
+    if motor == "qwen":
+        v.decir = decir_con_tope(v)
+    n = r15.narrar(v, guion, max_wer=0.15, reintentos=2, velocidad=velocidad)   # 0.15: una frase omitida ya cuenta
     r15.subtitulos(n, guion)
-    return Narracion(n.audio, n.sr, n.escenas, n.palabras)
+    return Narracion(matizar(n.audio, n.sr, matiz), n.sr, n.escenas, n.palabras)
+
+
+def decir_con_tope(v, reintentos=2):
+    """Reemplaza Voz.decir de la sesión 15: el mismo lote de frases, pero con tope de largo.
+
+    Sin tope, si una frase del lote no cierra, todo el lote sigue hasta 8192 pasos (horas en CPU). Con tope, esa frase
+    sale demasiado larga y se vuelve a generar; después narrar() revisa con Whisper que cada escena se entienda.
+    """
+    def esperado(frase):
+        return len(frase.split()) / RITMO_PAUSADO
+
+    def decir(frases, estilos=None):
+        wavs, pendientes = [None] * len(frases), list(range(len(frases)))
+        for _ in range(reintentos + 1):
+            tope = int(max(esperado(frases[i]) for i in pendientes) * 1.6 * PASOS_POR_SEGUNDO)
+            t = time.time()
+            nuevos, v.sr = v.tts.generate_voice_clone(text=[frases[i] for i in pendientes],
+                                                      language=["Spanish"] * len(pendientes),
+                                                      voice_clone_prompt=v.prompt, max_new_tokens=tope)
+            for i, w in zip(pendientes, nuevos):
+                wavs[i] = w
+            print("   " + " | ".join(f"escena {i + 1}: {len(wavs[i]) / v.sr:.1f} s" for i in pendientes)
+                  + f"  ({time.time() - t:.0f} s)", flush=True)
+            pendientes = [i for i in pendientes if len(wavs[i]) / v.sr > esperado(frases[i]) * 1.5]
+            if not pendientes:
+                break
+        return wavs
+    return decir
+
+
+def leer_audio(ruta, sr=24000):
+    crudo = subprocess.run([FFMPEG, "-v", "error", "-i", str(ruta), "-ac", "1", "-ar", str(sr), "-f", "f32le", "-"],
+                           capture_output=True, check=True).stdout
+    return np.frombuffer(crudo, np.float32)
+
+
+def matizar(audio, sr, semitonos):
+    """Corre el tono y el timbre unos semitonos sin cambiar la duración: la voz se parece a la mía, pero no es igual.
+
+    asetrate cambia la velocidad de lectura (tono y timbre juntos) y atempo devuelve la duración original, así los
+    tiempos de Whisper siguen calzando con los subtítulos. 0 = sin matiz.
+    """
+    if not semitonos:
+        return audio
+    f = 2 ** (semitonos / 12)
+    crudo = subprocess.run([FFMPEG, "-v", "error", "-f", "f32le", "-ar", str(sr), "-ac", "1", "-i", "-",
+                            "-af", f"asetrate={round(sr * f)},aresample={sr},atempo={1 / f:.6f}", "-f", "f32le", "-"],
+                           input=np.asarray(audio, np.float32).tobytes(), capture_output=True, check=True).stdout
+    salida = np.frombuffer(crudo, np.float32)
+    return np.pad(salida, (0, max(0, len(audio) - len(salida))))[:len(audio)]
 
 
 # Subtítulos -----------------------------------------------------------------
@@ -297,16 +354,26 @@ if __name__ == "__main__":
     a.add_argument("--voz", help="10 a 25 s de tu voz (wav, m4a, ogg/opus de WhatsApp, mp3)")
     a.add_argument("--musica", help="música de fondo con licencia de uso (mp3/wav); se repite y se atenúa")
     a.add_argument("--volumen-musica", type=float, default=0.12)
-    a.add_argument("--autor", default="Nombre Apellido", help="tu nombre, aparece en el pie del video")
+    a.add_argument("--autor", default="Lory Acosta", help="aparece en el pie del video")
     a.add_argument("--fuente", default="SUNAT (Nota Tributaria) y Banco Mundial (Pink Sheet)")
     a.add_argument("--motor", default="qwen", choices=["qwen", "voxcpm"])
     a.add_argument("--tts", default=None, help="modelo Qwen3-TTS; Qwen/Qwen3-TTS-12Hz-0.6B-Base es más rápido en CPU")
     a.add_argument("--device", default="cpu", help="cpu o cuda")
     a.add_argument("--velocidad", type=float, default=1.0)
+    a.add_argument("--matiz", type=float, default=-1.5,
+                   help="semitonos que se corre la voz clonada (negativo = más grave, 0 = sin cambio)")
+    a.add_argument("--probar-matiz", action="store_true", help="solo aplica el matiz a --voz, para escucharlo")
     a.add_argument("--sesion15", default=str(SESION15), help="carpeta sessions/15-texto-a-reel del curso")
     args = a.parse_args()
     if not args.vista_previa and not args.voz:
         a.error("usa --vista-previa o --voz mi_voz.m4a")
+
+    if args.probar_matiz:
+        muestra = AQUI / "salidas" / "muestra_matiz.wav"
+        muestra.parent.mkdir(exist_ok=True)
+        sf.write(muestra, matizar(leer_audio(args.voz), 24000, args.matiz), 24000)
+        print(f"listo: {muestra.relative_to(AQUI.parent)} (matiz {args.matiz:+g} semitonos)")
+        raise SystemExit
 
     t0 = time.time()
     guion = json.loads((AQUI / "guion.json").read_text(encoding="utf-8"))
@@ -319,7 +386,8 @@ if __name__ == "__main__":
         salidas.mkdir(exist_ok=True)
         destino, srt = salidas / "vista_previa.mp4", AQUI / "subtitulos.srt"
     else:
-        n = narracion_con_voz(guion, args.voz, args.motor, args.tts, args.device, args.velocidad, Path(args.sesion15))
+        n = narracion_con_voz(guion, args.voz, args.motor, args.tts, args.device, args.velocidad, Path(args.sesion15),
+                              args.matiz)
         (AQUI / "guion.json").write_text(json.dumps(guion, ensure_ascii=False, indent=2), encoding="utf-8")  # guarda el WER por escena
         destino, srt = AQUI / "reel.mp4", AQUI / "subtitulos.srt"
     _reloj(f"narración: {n.duracion:.1f} s en {len(n.escenas)} escenas", t0)
