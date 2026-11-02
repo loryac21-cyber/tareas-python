@@ -77,8 +77,8 @@ def narracion_estimada(guion, sr=24000):
     return Narracion(audio, sr, escenas, palabras)
 
 
-def narracion_con_voz(guion, voz, motor, tts, device, velocidad, sesion15, matiz):
-    """Clona la voz y transcribe con el módulo reel.py de la sesión 15; el matiz va al final, después de Whisper."""
+def cargar_voz(voz, motor, tts, device, sesion15):
+    """Clona la voz con el módulo reel.py de la sesión 15 (Whisper transcribe la grabación de referencia)."""
     spec = importlib.util.spec_from_file_location("reel_sesion15", sesion15 / "reel.py")
     r15 = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(r15)
@@ -86,9 +86,24 @@ def narracion_con_voz(guion, voz, motor, tts, device, velocidad, sesion15, matiz
     print(f"   referencia transcrita: «{v.texto_ref}»")
     if motor == "qwen":
         v.decir = decir_con_tope(v)
+    return r15, v
+
+
+def narracion_con_voz(guion, r15, v, velocidad, matiz):
+    """Narra todas las escenas y saca los tiempos de cada palabra; el matiz va al final, después de Whisper."""
     n = r15.narrar(v, guion, max_wer=0.15, reintentos=2, velocidad=velocidad)   # 0.15: una frase omitida ya cuenta
     r15.subtitulos(n, guion)
     return Narracion(matizar(n.audio, n.sr, matiz), n.sr, n.escenas, n.palabras)
+
+
+def muestra_con_voz(guion, k, r15, v, velocidad, matiz):
+    """Solo la escena k, sin video: para escuchar la voz antes de armar el reel completo."""
+    frase = guion["escenas"][k - 1]["frase"]
+    w = np.asarray(v.decir([frase])[0], np.float32)
+    if velocidad != 1:
+        w = r15._acelerar(w, v.sr, velocidad)
+    print(f"   WER de la muestra: {r15._wer(frase, r15._a16k(w, v.sr)):.2f}")
+    return matizar(w, v.sr, matiz), v.sr
 
 
 def decir_con_tope(v, reintentos=2):
@@ -363,6 +378,7 @@ if __name__ == "__main__":
     a.add_argument("--matiz", type=float, default=-1.5,
                    help="semitonos que se corre la voz clonada (negativo = más grave, 0 = sin cambio)")
     a.add_argument("--probar-matiz", action="store_true", help="solo aplica el matiz a --voz, para escucharlo")
+    a.add_argument("--muestra", type=int, metavar="N", help="solo narra la escena N (1 a 6) con tu voz, sin video")
     a.add_argument("--sesion15", default=str(SESION15), help="carpeta sessions/15-texto-a-reel del curso")
     args = a.parse_args()
     if not args.vista_previa and not args.voz:
@@ -380,14 +396,23 @@ if __name__ == "__main__":
     for e in guion["escenas"]:
         print(f"   {e['cifra'] or '-':>12} | {e['frase']}")
 
+    if args.muestra:
+        r15, v = cargar_voz(args.voz, args.motor, args.tts, args.device, Path(args.sesion15))
+        w, sr = muestra_con_voz(guion, args.muestra, r15, v, args.velocidad, args.matiz)
+        muestra = AQUI / "salidas" / f"muestra_escena_{args.muestra}.wav"
+        muestra.parent.mkdir(exist_ok=True)
+        sf.write(muestra, w, sr)
+        _reloj(f"listo: {muestra.relative_to(AQUI.parent)} ({len(w) / sr:.1f} s, matiz {args.matiz:+g})", t0)
+        raise SystemExit
+
     if args.vista_previa:
         n = narracion_estimada(guion)
         salidas = AQUI / "salidas"
         salidas.mkdir(exist_ok=True)
         destino, srt = salidas / "vista_previa.mp4", AQUI / "subtitulos.srt"
     else:
-        n = narracion_con_voz(guion, args.voz, args.motor, args.tts, args.device, args.velocidad, Path(args.sesion15),
-                              args.matiz)
+        r15, v = cargar_voz(args.voz, args.motor, args.tts, args.device, Path(args.sesion15))
+        n = narracion_con_voz(guion, r15, v, args.velocidad, args.matiz)
         (AQUI / "guion.json").write_text(json.dumps(guion, ensure_ascii=False, indent=2), encoding="utf-8")  # guarda el WER por escena
         destino, srt = AQUI / "reel.mp4", AQUI / "subtitulos.srt"
     _reloj(f"narración: {n.duracion:.1f} s en {len(n.escenas)} escenas", t0)

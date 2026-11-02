@@ -37,8 +37,9 @@ uv run python reel/hacer_reel.py --vista-previa      # reel/salidas/vista_previa
 ```
 
 **2. Graba tu voz (15 a 25 s).** Una nota de voz de WhatsApp sirve. Busca un cuarto callado, ponte a un palmo del micrófono y lee con el tono
-que quieres en el reel, por ejemplo la primera escena del guion y un par de frases más. No digas datos personales (DNI, dirección,
-teléfono). Guárdala como `reel/mi_voz.m4a` (o `.opus`, `.wav`). Git la ignora, y la grabación no sale de la computadora: Qwen3-TTS y
+que quieres en el reel: la voz clonada copia tu ritmo y tu entonación, así que lee con energía, como si se lo contaras a alguien, y
+marca las cifras. Usa un texto parecido al guion pero que no termine igual que ninguna escena (si termina igual, el modelo puede creer
+que esa frase ya se dijo y saltarla). No digas datos personales (DNI, dirección, teléfono). Guárdala como `reel/mi_voz.m4a` (o `.opus`, `.wav`). Git la ignora, y la grabación no sale de la computadora: Qwen3-TTS y
 Whisper corren en local.
 
 **3. Prepara el entorno de la sesión 15**, una sola vez. La primera corrida baja unos 4 GB de modelos:
@@ -55,6 +56,14 @@ uv pip install --python .venv\Scripts\python qwen-tts faster-whisper pillow imag
 **4. Música.** Usa una pista con licencia de uso libre, por ejemplo de la Biblioteca de audio de YouTube, Pixabay Music o Mixkit. Guárdala
 como `reel/recursos/musica.mp3` y anota el título, el autor y la licencia en la sección de créditos de este README. Git ignora el archivo:
 la pista se usa dentro del video, pero las licencias de música de stock no suelen permitir publicar el archivo suelto.
+
+**Antes del reel, una muestra** (unos 6 minutos): narra solo una escena con tu voz, sin video, y la deja en
+`reel/salidas/muestra_escena_1.wav`. Sirve para decidir si conviene volver a grabar antes de la corrida completa:
+
+```bash
+..\..\Data-Science-Python\sessions\15-texto-a-reel\.venv\Scripts\python reel\hacer_reel.py --voz reel\mi_voz.m4a ^
+    --tts Qwen/Qwen3-TTS-12Hz-0.6B-Base --velocidad 1.2 --muestra 1
+```
 
 **5. Reel final con tu voz clonada** (desde `tarea_3/`, con el Python de la sesión 15):
 
