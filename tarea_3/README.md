@@ -1,7 +1,7 @@
 # Tarea 3 · Precios internacionales y desempeño de las exportaciones peruanas de café y cacao, 2015–2025
 
 **Dashboard público:** <https://loryac21-cyber.github.io/tareas-python/tarea_3/web/>
-**Publicación de LinkedIn:** _(pendiente)_
+**Publicación de LinkedIn:** <https://lnkd.in/p/ewpQg_Vj>
 
 ![Dashboard: indicadores clave y precio internacional frente al valor unitario](figuras/dashboard_kpis.jpg)
 
@@ -110,7 +110,7 @@ pasos para narrarlo con mi voz clonada (flujo de la sesión 15 del curso) están
 ## 6. Enlaces
 
 - Dashboard: <https://loryac21-cyber.github.io/tareas-python/tarea_3/web/>
-- LinkedIn: _(pendiente)_
+- LinkedIn: <https://lnkd.in/p/ewpQg_Vj>
 
 ## 7. Cómo reproducir
 
